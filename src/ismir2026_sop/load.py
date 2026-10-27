@@ -82,7 +82,7 @@ def _job(data: Any, where: str) -> Job:
         time_info=_expect(d['time_info'], str, f'{where}.time_info'),
         roles=_str_list(d['roles'], f'{where}.roles'),
         short_description=_expect(d['short_description'], str, f'{where}.short_description'),
-        long_description=_expect(d['long_description'], str, f'{where}.long_description'),
+        more_info=_expect(d['more_info'], str, f'{where}.more_info'),
     )
 
 

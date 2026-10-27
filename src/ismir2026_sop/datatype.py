@@ -18,7 +18,7 @@ class Job:
     time_info: str
     roles: list[RoleName]
     short_description: str
-    long_description: str
+    more_info: str
 
 @dataclass(frozen=True)
 class Session:

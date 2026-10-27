@@ -156,10 +156,10 @@ def _runsheet_page(session: Session, roles: dict[str, Role]) -> str:
             for r in job.roles
         )
         details = ''
-        if job.long_description.strip():
+        if job.more_info.strip():
             details = (
                 '<details><summary>More</summary>'
-                f'<div class="prose">{md.render(job.long_description, link_for)}</div></details>'
+                f'<div class="prose">{md.render(job.more_info, link_for)}</div></details>'
             )
         rows.append(f'''<tr class="job" data-roles="{' '.join(slugify(r) for r in job.roles)}">
   <td class="time">{escape(job.time_info)}</td>

@@ -50,7 +50,7 @@ def find_problems(sop: SoP) -> list[str]:
                 elif name not in staffed:
                     problems.append(f'{job_where}: role {name!r} is not in this session\'s staffing')
             check_mentions(job.short_description, f'{job_where} short_description')
-            check_mentions(job.long_description, f'{job_where} long_description')
+            check_mentions(job.more_info, f'{job_where} more_info')
         try:
             idea = Path(s.the_idea_markdown_path).read_text(encoding='utf-8')
         except FileNotFoundError:
