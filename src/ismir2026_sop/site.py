@@ -168,7 +168,7 @@ def _runsheet_page(session: Session, roles: dict[str, Role]) -> str:
 <form class="controls" id="controls" hidden>
   <label class="mode">Mode
     <select id="mode">
-      <option value="totality">totality</option>
+      <option value="mastermind">mastermind</option>
       <option value="highlight">highlight</option>
       <option value="filter">filter</option>
     </select>

@@ -52,10 +52,10 @@ Lists all session types. Each links to that session's The Idea and Runsheet.
 - A table of jobs in order, showing for each: time info, roles involved, and short description. The long description can be expanded.
 - Controls:
   - **Mode** dropdown with three options:
-    - **totality**: show every job, nothing emphasized.
+    - **mastermind**: show every job, nothing emphasized.
     - **highlight**: show every job; jobs involving the selected roles stand out and the rest are de-emphasized.
     - **filter**: show only jobs involving the selected roles.
-  - **One checkbox per role** in this session, to choose the selected roles. The checkboxes are hidden in totality mode.
+  - **One checkbox per role** in this session, to choose the selected roles. The checkboxes are hidden in mastermind mode.
 - The mode and the selected roles are kept in URL parameters. A filtered or highlighted view can then be bookmarked or shared, for example "the Zoom Volunteer's cheatsheet". Role-mention links use these same parameters.
 - It should print cleanly, without the controls.
 

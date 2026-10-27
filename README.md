@@ -44,4 +44,4 @@ A runsheet's view is kept in the URL, so a cheatsheet can be bookmarked or share
 <site>/oral-session/runsheet/?mode=highlight&roles=session-chair,room-volunteer
 ```
 
-`mode` is `totality`, `highlight` or `filter`; `roles` are role names in address form (lowercase, non-alphanumerics → `-`).
+`mode` is `mastermind`, `highlight` or `filter`; `roles` are role names in address form (lowercase, non-alphanumerics → `-`).
