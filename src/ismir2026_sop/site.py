@@ -7,6 +7,7 @@
     images/                         copied from content/images/
 """
 
+import os
 import shutil
 from html import escape
 from pathlib import Path
@@ -15,7 +16,12 @@ from . import md
 from .datatype import Role, Session, SoP
 from .slug import slugify
 
-REPO_URL = 'https://github.com/Daniel-Chin/ISMIR2026-SoP'
+# Set automatically by GitHub Actions; absent in local builds, where the repo links are omitted.
+REPO_URL = (
+    f"{os.environ['GITHUB_SERVER_URL']}/{os.environ['GITHUB_REPOSITORY']}"
+    if 'GITHUB_REPOSITORY' in os.environ
+    else None
+)
 SITE_TITLE = 'ISMIR 2026 Session SoP'
 STATIC_DIR = Path(__file__).parent / 'static'
 
@@ -65,6 +71,14 @@ def _page(title: str, root: str, body: str, *, scripts: str = '', source: str = 
     source_link = (
         f' · <a href="{REPO_URL}/blob/main/{escape(source)}">source of this page</a>' if source else ''
     )
+    footer = (
+        f'''<footer class="site-footer">
+  Edit this SoP via <a href="{REPO_URL}">this repo</a>{source_link}
+</footer>
+'''
+        if REPO_URL
+        else ''
+    )
     return f'''<!doctype html>
 <html lang="en">
 <head>
@@ -80,10 +94,7 @@ def _page(title: str, root: str, body: str, *, scripts: str = '', source: str = 
 <main>
 {body}
 </main>
-<footer class="site-footer">
-  Edit this SoP via <a href="{REPO_URL}">this repo</a>{source_link}
-</footer>
-{scripts}
+{footer}{scripts}
 </body>
 </html>
 '''
