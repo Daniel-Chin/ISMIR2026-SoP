@@ -5,6 +5,7 @@ RoleName = str
 @dataclass(frozen=True)
 class Role:
     name: RoleName
+    is_volunteer: bool
     job_description: str
 
 @dataclass(frozen=True)

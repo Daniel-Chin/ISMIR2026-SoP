@@ -120,7 +120,7 @@ def _idea_page(session: Session, roles: dict[str, Role]) -> str:
     idea = Path(session.the_idea_markdown_path).read_text(encoding='utf-8')
     staff = '\n'.join(
         f'''<section class="role" id="{slugify(s.role)}">
-  <h3>{s.count}× {escape(s.role)}</h3>
+  <h3>{s.count}× {escape(s.role)}{' <span class="volunteer-chip">Volunteer</span>' if roles[s.role].is_volunteer else ''}</h3>
   <p class="role-links"><a href="{filtered_runsheet_href(root, session, s.role)}">Cheatsheet: runsheet for this role</a></p>
   <div class="prose">{md.render(roles[s.role].job_description, link_for)}</div>
 </section>'''

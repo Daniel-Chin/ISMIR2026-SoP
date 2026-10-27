@@ -12,6 +12,8 @@
   --chip-on-bg: #1f5fbf;
   --chip-on-fg: #ffffff;
   --error: #b42318;
+  --volunteer-bg: #dcf3e3;
+  --volunteer-fg: #11612f;
   color-scheme: light;
 }
 
@@ -85,6 +87,17 @@ span.mention { color: var(--muted); }
 .role { border-left: 3px solid var(--line); padding: 0.25rem 0 0.25rem 1rem; margin: 1rem 0; }
 .role:target { border-left-color: var(--hit-edge); }
 .role-links { margin: 0 0 0.5rem; font-size: 0.9rem; }
+.volunteer-chip {
+  display: inline-block;
+  margin-left: 0.4rem;
+  padding: 0.05rem 0.5rem;
+  border-radius: 999px;
+  background: var(--volunteer-bg);
+  color: var(--volunteer-fg);
+  font-size: 0.75rem;
+  font-weight: 600;
+  vertical-align: middle;
+}
 
 /* Runsheet controls */
 .controls {
@@ -161,7 +174,7 @@ span.mention { color: var(--muted); }
   .controls, .status, .tabs, .site-footer, .role-links { display: none; }
   .runsheet summary { display: none; }
   .runsheet tr.job { break-inside: avoid; }
-  .role-chip { border: 1px solid #000; }
+  .role-chip, .volunteer-chip { border: 1px solid #000; }
   a { text-decoration: none; }
   * { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
 }
