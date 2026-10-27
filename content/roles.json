@@ -1,18 +1,44 @@
 [
   {
-    "name": "Session Chair",
-    "job_description": "(Dummy) Introduces each speaker, keeps time, and moderates Q&A. Agrees on time signals with the [[Room Volunteer]] and takes remote questions from the [[Zoom Volunteer]]."
+    "name": "Keynote Inviter",
+    "is_volunteer": false,
+    "is_onsite": true,
+    "job_description": "Introduce the speaker. Keep the time during presentation and Q&A. Optionally serve as another [[Q&A Producer]]."
   },
   {
-    "name": "Room Volunteer",
-    "job_description": "(Dummy) Owns the physical room: microphones, time cards, and the audience queue. Reports problems to the [[Session Chair]]."
+    "name": "Q&A Producer",
+    "is_volunteer": true,
+    "is_onsite": true,
+    "job_description": "Best somewhat familiar with the topic of the talk. Sit on stage, not introduced. Clarify and relay online questions to the Speaker."
   },
   {
-    "name": "Zoom Volunteer",
-    "job_description": "(Dummy) Runs the Zoom meeting for remote attendees and presenters. Watches the Zoom chat and relays questions to the [[Session Chair]]."
+    "name": "Q&A Tracker",
+    "is_volunteer": true,
+    "is_onsite": true,
+    "job_description": "Sit on stage, not introduced. Relay online questions to the Speaker."
   },
   {
-    "name": "Poster Volunteer",
-    "job_description": "(Dummy) Keeps the poster area in order: boards, numbering, pins, and helping presenters find their spot."
+    "name": "Mic Runner",
+    "is_volunteer": true,
+    "is_onsite": true,
+    "job_description": "Distribute a mic to questions in the audience."
+  },
+  {
+    "name": "Webinar Sentinel",
+    "is_volunteer": true,
+    "is_onsite": true,
+    "job_description": "Sit on-site in the backstage but view only the Zoom Webinar. Not only listen, but try to understand and enjoy the talk --- you catch more issues this way. Keep the on-site screen visible so any mismatch is catched, but pay main attention to the webinar. Use headphones. If a panelist account is making noises, mute it."
+  },
+  {
+    "name": "Zoom Host",
+    "is_volunteer": true,
+    "is_onsite": true,
+    "job_description": "Critical role. Configure Zoom Meetings / Webinars under time constraints."
+  },
+  {
+    "name": "On-site Session Chair",
+    "is_volunteer": false,
+    "is_onsite": true,
+    "job_description": ""
   }
 ]

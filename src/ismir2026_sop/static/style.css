@@ -71,7 +71,6 @@ h3 { font-size: 1.1rem; margin: 0 0 0.25rem; }
 .menu li { border: 1px solid var(--line); border-radius: 8px; padding: 1rem; }
 .menu h2 { margin: 0; }
 .staffing-summary { margin: 0.25rem 0 0.5rem; }
-.menu-links { margin: 0; display: flex; gap: 1.25rem; font-weight: 600; }
 
 /* Markdown */
 .prose > :first-child { margin-top: 0; }
@@ -86,7 +85,6 @@ span.mention { color: var(--muted); }
 /* The Idea: staffing */
 .role { border-left: 3px solid var(--line); padding: 0.25rem 0 0.25rem 1rem; margin: 1rem 0; }
 .role:target { border-left-color: var(--hit-edge); }
-.role-links { margin: 0 0 0.5rem; font-size: 0.9rem; }
 .volunteer-chip {
   display: inline-block;
   margin-left: 0.4rem;
@@ -123,7 +121,7 @@ span.mention { color: var(--muted); }
 .runsheet { width: 100%; border-collapse: collapse; }
 .runsheet th { text-align: left; font-weight: 600; font-size: 0.875rem; }
 .runsheet th, .runsheet td { padding: 0.5rem; border-bottom: 1px solid var(--line); vertical-align: top; }
-.runsheet td.time { white-space: nowrap; font-variant-numeric: tabular-nums; font-weight: 600; }
+.runsheet td.time { white-space: nowrap; font-variant-numeric: tabular-nums; }
 .runsheet td.who { width: 14rem; }
 .runsheet tr.job[hidden] { display: none; }
 .runsheet details { margin-top: 0.25rem; }
@@ -171,7 +169,7 @@ span.mention { color: var(--muted); }
     --chip-bg: #fff; --chip-fg: #000; --chip-on-bg: #000; --chip-on-fg: #fff;
   }
   body { max-width: none; padding: 0; font-size: 11pt; }
-  .controls, .status, .tabs, .site-footer, .role-links { display: none; }
+  .controls, .status, .tabs, .site-footer { display: none; }
   .runsheet summary { display: none; }
   .runsheet tr.job { break-inside: avoid; }
   .role-chip, .volunteer-chip { border: 1px solid #000; }

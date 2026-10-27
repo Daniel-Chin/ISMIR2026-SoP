@@ -1,0 +1,78 @@
+{
+  "name": "Opening Session",
+  "the_idea_markdown_path": "01-opening-session.md",
+  "staffing": [
+    {"role": "Q&A Tracker", "count": 1},
+    {"role": "Mic Runner", "count": 2},
+    {"role": "Webinar Sentinel", "count": 1},
+    {"role": "Zoom Host", "count": 1}
+  ],
+  "runsheet": [
+    {
+      "time_info": "T−11 min",
+      "roles": ["Zoom Host"],
+      "short_description": "Disconnect webinar audio+video from the auditorium.",
+      "more_info": ""
+    },
+    {
+      "time_info": "T−11 min",
+      "roles": ["Zoom Host", "Webinar Sentinel"],
+      "short_description": "[[Webinar Sentinel]] confirm where [[Zoom Host]] will sit.",
+      "more_info": ""
+    },
+    {
+      "time_info": "T−10 min",
+      "roles": ["Zoom Host"],
+      "short_description": "Promote the organizing committee, [[Q&A Tracker]], [[Webinar Sentinel]], and maybe backstage to cohost in the Zoom webinar.",
+      "more_info": ""
+    },
+    {
+      "time_info": "T−10 min",
+      "roles": ["Zoom Host"],
+      "short_description": "Disable Zoom Chat for attendees.",
+      "more_info": "Chat > menu > attendees can chat with: nobody."
+    },
+    {
+      "time_info": "T−3 min",
+      "roles": ["Q&A Tracker", "Mic Runner"],
+      "short_description": "Grab a mic and keep it for the whole session.",
+      "more_info": ""
+    },
+    {
+      "time_info": "T−2 min",
+      "roles": ["Zoom Host"],
+      "short_description": "Connect webinar audio+video to the auditorium.",
+      "more_info": ""
+    },
+    {
+      "time_info": "T−2 min",
+      "roles": ["Q&A Tracker"],
+      "short_description": "Sit in the corner of the stage. Join Zoom on laptop and disconnect audio+video. Keep both the Q&A panel and the participants view (for raised hands) open at all times. Balance online VS on-site questions.",
+      "more_info": ""
+    },
+    {
+      "time_info": "Throughout",
+      "roles": ["Webinar Sentinel"],
+      "short_description": "Sit on-site in the backstage but view only the Zoom Webinar. Not only listen, but try to understand the presentations --- you catch more issues this way. Keep the on-site screen visible so any mismatch is catched, but pay main attention to the webinar. Use headphones. Upon issues, use judgement: Either unmute to raise the issue, or contact the [[Zoom Host]] immediately by walking to them.",
+      "more_info": ""
+    },
+    {
+      "time_info": "Throughout",
+      "roles": ["Webinar Sentinel"],
+      "short_description": "If a panelist account is making noises, mute it.",
+      "more_info": ""
+    },
+    {
+      "time_info": "Throughout",
+      "roles": ["Zoom Host"],
+      "short_description": "Sit in the corner of the audience.",
+      "more_info": ""
+    },
+    {
+      "time_info": "Throughout",
+      "roles": ["Mic Runner"],
+      "short_description": "Whenever a question from the on-site audience is taken, give your mic to them.",
+      "more_info": ""
+    }
+  ]
+}
