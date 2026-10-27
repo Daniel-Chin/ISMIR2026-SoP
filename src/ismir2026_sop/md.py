@@ -80,7 +80,8 @@ def find_images(text: str) -> list[str]:
 
 def render(text: str, link_for: MentionLinker, root: str = '') -> str:
     return markdown.markdown(
-        text, extensions=['extra', 'sane_lists', _MentionExtension(link_for), _ImageRootExtension(root)],
+        text, tab_length=2,  # nested lists indented by 2 spaces
+        extensions=['extra', 'sane_lists', _MentionExtension(link_for), _ImageRootExtension(root)],
     )
 
 
