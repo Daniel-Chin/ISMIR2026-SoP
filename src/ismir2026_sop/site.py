@@ -142,6 +142,13 @@ def _runsheet_page(session: Session, roles: dict[str, Role]) -> str:
         f'<label><input type="checkbox" value="{slugify(s.role)}"> {escape(s.role)}</label>'
         for s in session.staffing
     )
+    role_descs = '\n'.join(
+        f'''<section class="role role-desc" data-role="{slugify(s.role)}" hidden>
+  <h3>{escape(s.role)}</h3>
+  <div class="prose">{md.render(roles[s.role].job_description, link_for)}</div>
+</section>'''
+        for s in session.staffing
+    )
     rows = []
     for job in session.runsheet:
         chips = ' '.join(
@@ -175,6 +182,7 @@ def _runsheet_page(session: Session, roles: dict[str, Role]) -> str:
   <button type="button" id="expand-all">Expand all</button>
 </form>
 <p class="status" id="status" aria-live="polite"></p>
+{role_descs}
 <table class="runsheet">
 <thead><tr><th>Time</th><th>Who</th><th>What</th></tr></thead>
 <tbody>

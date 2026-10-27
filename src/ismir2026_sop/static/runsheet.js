@@ -7,6 +7,7 @@
   const boxes = [...picker.querySelectorAll('input[type=checkbox]')];
   const rows = [...document.querySelectorAll('tr.job')];
   const chips = [...document.querySelectorAll('.role-chip')];
+  const roleDescs = [...document.querySelectorAll('.role-desc')];
   const status = document.getElementById('status');
   const expandAll = document.getElementById('expand-all');
 
@@ -32,6 +33,9 @@
       if (!row.hidden) shown++;
     });
     chips.forEach((c) => c.classList.toggle('selected', mode !== 'totality' && selected.has(c.dataset.role)));
+    // Exactly one role ticked: show its job description above the table.
+    const only = mode !== 'totality' && selected.size === 1 ? [...selected][0] : null;
+    roleDescs.forEach((d) => { d.hidden = d.dataset.role !== only; });
 
     if (mode !== 'totality' && selected.size === 0) {
       status.textContent = 'Tick at least one role.';
