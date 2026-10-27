@@ -5,30 +5,30 @@
     {"role": "Q&A Tracker", "count": 1},
     {"role": "Mic Runner", "count": 2},
     {"role": "Webinar Sentinel", "count": 1},
-    {"role": "Zoom Host", "count": 1}
+    {"role": "Zoom Master", "count": 1}
   ],
   "runsheet": [
     {
       "time_info": "T−11 min",
-      "roles": ["Zoom Host"],
+      "roles": ["Zoom Master"],
       "short_description": "Disconnect webinar audio+video from the auditorium.",
       "more_info": ""
     },
     {
       "time_info": "T−11 min",
-      "roles": ["Zoom Host", "Webinar Sentinel"],
-      "short_description": "[[Webinar Sentinel]] confirm where [[Zoom Host]] will sit.",
+      "roles": ["Zoom Master", "Webinar Sentinel"],
+      "short_description": "[[Webinar Sentinel]] confirm where [[Zoom Master]] will sit.",
       "more_info": ""
     },
     {
       "time_info": "T−10 min",
-      "roles": ["Zoom Host"],
+      "roles": ["Zoom Master"],
       "short_description": "Promote the organizing committee, [[Q&A Tracker]], [[Webinar Sentinel]], and maybe backstage to cohost in the Zoom webinar.",
       "more_info": ""
     },
     {
       "time_info": "T−10 min",
-      "roles": ["Zoom Host"],
+      "roles": ["Zoom Master"],
       "short_description": "Disable Zoom Chat for attendees.",
       "more_info": "Chat > menu > attendees can chat with: nobody."
     },
@@ -40,7 +40,7 @@
     },
     {
       "time_info": "T−2 min",
-      "roles": ["Zoom Host"],
+      "roles": ["Zoom Master"],
       "short_description": "Connect webinar audio+video to the auditorium.",
       "more_info": ""
     },
@@ -53,7 +53,7 @@
     {
       "time_info": "Throughout",
       "roles": ["Webinar Sentinel"],
-      "short_description": "Sit on-site in the backstage but view only the Zoom Webinar. Not only listen, but try to understand the presentations --- you catch more issues this way. Keep the on-site screen visible so any mismatch is catched, but pay main attention to the webinar. Use headphones. Upon issues, use judgement: Either unmute to raise the issue, or contact the [[Zoom Host]] immediately by walking to them.",
+      "short_description": "Sit on-site in the backstage but view only the Zoom Webinar. Not only listen, but try to understand the presentations --- you catch more issues this way. Keep the on-site screen visible so any mismatch is catched, but pay main attention to the webinar. Use headphones. Upon issues, use judgement: Either unmute to raise the issue, or contact the [[Zoom Master]] immediately by walking to them.",
       "more_info": ""
     },
     {
@@ -64,7 +64,7 @@
     },
     {
       "time_info": "Throughout",
-      "roles": ["Zoom Host"],
+      "roles": ["Zoom Master"],
       "short_description": "Sit in the corner of the audience.",
       "more_info": ""
     },

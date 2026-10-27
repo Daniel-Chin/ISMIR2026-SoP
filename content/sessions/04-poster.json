@@ -2,7 +2,77 @@
   "name": "Poster Session",
   "the_idea_markdown_path": "04-poster.md",
   "staffing": [
+    {"role": "Poster Session Helpdesk On-site", "count": 1},
+    {"role": "Poster Session Helpdesk Online", "count": 1},
+    {"role": "Zoom Master", "count": 2}
   ],
   "runsheet": [
+    {
+      "time_info": "T−6 min \n(T-2 oral talks)",
+      "roles": ["Zoom Master"],
+      "short_description": "Use the helpdesk laptop to start the Zoom Meeting.",
+      "more_info": ""
+    },
+    {
+      "time_info": "T−5 min",
+      "roles": ["Zoom Master"],
+      "short_description": "For each kiosk laptop: join Zoom, stay in Hub.",
+      "more_info": ""
+    },
+    {
+      "time_info": "T−4 min",
+      "roles": ["Zoom Master"],
+      "short_description": "The helpdesk laptop promotes each kiosk laptop to cohost. Open the breakout session while allowing participants to choose room (see screenshot in More Info). Each laptop enters a breakout room. Each laptop starts “recording to this computer",
+      "more_info": "![Screenshot with instructions](images/open_breakout.png)",
+      "dev_comment": "“Allow participants to choose room” is present in account settings too, but ticking it as the default room behavior didn’t work — you still have to manually do this every meeting."
+    },
+    {
+      "time_info": "T−3 min",
+      "roles": ["Zoom Master"],
+      "short_description": "For each kiosk laptop: enter a breakout room; start “recording to this computer”; start the Live-Overview observer app.",
+      "more_info": "Check which kiosks indicated not to be recorded."
+    },
+    {
+      "time_info": "T−1 min",
+      "roles": ["Zoom Master"],
+      "short_description": "Use the helpdesk laptop to screenshare this notice (in More Info) in the Hub. Press 'pause' in Zoom top bar to freeze the screenshare for the laptop to navigate away.",
+      "more_info": "![Hub notice.](images/poster_hub_notice.png)"
+    },
+    {
+      "time_info": "T",
+      "roles": ["Poster Session Helpdesk On-site", "Zoom Master"],
+      "short_description": "Meet to know one another. Review cheatsheet on [the idea page](../).",
+      "more_info": ""
+    },
+    {
+      "time_info": "T+1",
+      "roles": ["Poster Session Helpdesk Online", "Zoom Master"],
+      "short_description": "[[Poster Session Helpdesk Online]], join the meeting and stay in the Hub; Rename yourself to “{name} (volunteer)”; Send a message in Zoom Chat to the Meeting Host saying 'make_me_cohost()'; Review cheatsheet on [the idea page](../). [[Zoom Master]], make them co-host.",
+      "more_info": ""
+    },
+    {
+      "time_info": "Throughout",
+      "roles": ["Poster Session Helpdesk On-site", "Zoom Master"],
+      "short_description": "1 [[Poster Session Helpdesk On-site]] + 2 [[Zoom Master]]s = 3 people. Rotate and assign 1 person at the desk, while the other 2 enjoy the Poster Session. The desk person stays available. The enjoyers should check for on-site tech issues periodically. [[Zoom Master]]s additionally check [#internal-helpdesk-for-volunteer-and-organizers](https://ismir2026.slack.com/archives/C0CAA9DBFJ6).",
+      "more_info": "Tip. [[Zoom Master]]s are 4-day, while [[Poster Session Helpdesk On-site]] may rotate. [[Zoom Master]]s may coach [[Poster Session Helpdesk On-site]] by demonstration. When resolving issues, call them up to observe."
+    },
+    {
+      "time_info": "From T+1 \nto T+10 min",
+      "roles": ["Poster Session Helpdesk Online"],
+      "short_description": "Stay in the Hub. Verify that the shared screen shows an instruction notice. Listen for questions in the Hub. Monitor [#help](https://ismir2026.slack.com/archives/C0C45QQMU6A) and the current #poster-session-x on Slack. Handle requests.",
+      "more_info": "If need assistance, forward the request message to [#internal-helpdesk-for-volunteer-and-organizers](https://ismir2026.slack.com/archives/C0CAA9DBFJ6). If overwhelmed, say so in [#internal-helpdesk-for-volunteer-and-organizers](https://ismir2026.slack.com/archives/C0CAA9DBFJ6) and start forwarding requests. Tip: when handling a request, quickly reply to it (e.g. “Let me help you with this”) so others know you are already on it."
+    },
+    {
+      "time_info": "Beyond T+10 min",
+      "roles": ["Poster Session Helpdesk Online"],
+      "short_description": "Enjoy the Poster Session. Periodically check [#help](https://ismir2026.slack.com/archives/C0C45QQMU6A) and the current #poster-session-x on Slack.",
+      "more_info": "Refer to the last item for tips."
+    },
+    {
+      "time_info": "end",
+      "roles": ["Zoom Master"],
+      "short_description": "From the helpdesk laptop: End meeting for all. For each kiosk laptop: upload recording files directly to [#yesterday-on-videotape](https://ismir2026.slack.com/archives/C0C7ME3JWAH).",
+      "more_info": ""
+    }
   ]
 }

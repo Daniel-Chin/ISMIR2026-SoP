@@ -49,7 +49,8 @@ def _fields(cls: type, data: Any, where: str) -> dict[str, Any]:
     data = _expect(data, dict, where)
     keys = [f.name for f in dataclasses.fields(cls)]
     missing = [k for k in keys if k not in data]
-    unexpected = [k for k in data if k not in keys]
+    # `dev_comment` is a free-form note for organizers, allowed on any object and ignored.
+    unexpected = [k for k in data if k not in keys and k != 'dev_comment']
     if missing or unexpected:
         raise SoPError(f'{where}: missing keys {missing}, unexpected keys {unexpected}')
     return data
