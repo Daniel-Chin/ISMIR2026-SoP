@@ -159,7 +159,7 @@ def _runsheet_page(session: Session, roles: dict[str, Role]) -> str:
         details = ''
         if job.more_info.strip():
             details = (
-                '<details><summary>More</summary>'
+                '<details open><summary>More</summary>'
                 f'<div class="prose">{md.render(job.more_info, link_for, root)}</div></details>'
             )
         rows.append(f'''<tr class="job" data-roles="{' '.join(slugify(r) for r in job.roles)}">
