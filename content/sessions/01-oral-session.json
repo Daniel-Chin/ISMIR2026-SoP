@@ -1,0 +1,59 @@
+{
+  "name": "Oral Session",
+  "the_idea_markdown_path": "01-oral-session.md",
+  "staffing": [
+    {"role": "Session Chair", "count": 1},
+    {"role": "Room Volunteer", "count": 2},
+    {"role": "Zoom Volunteer", "count": 1}
+  ],
+  "runsheet": [
+    {
+      "time_info": "T−30 min",
+      "roles": ["Room Volunteer", "Zoom Volunteer"],
+      "short_description": "Arrive and set up the room.",
+      "long_description": "(Dummy) Check microphones and the projector. The [[Zoom Volunteer]] starts the Zoom meeting and tests screen sharing from the lectern laptop."
+    },
+    {
+      "time_info": "T−15 min",
+      "roles": ["Session Chair"],
+      "short_description": "Meet the speakers.",
+      "long_description": "(Dummy) Confirm each speaker is present, how to pronounce their name, and whether anyone presents remotely. Tell the [[Zoom Volunteer]] who is remote."
+    },
+    {
+      "time_info": "T−5 min",
+      "roles": ["Room Volunteer"],
+      "short_description": "Hand time cards to the [[Session Chair]].",
+      "long_description": ""
+    },
+    {
+      "time_info": "T",
+      "roles": ["Session Chair", "Zoom Volunteer"],
+      "short_description": "Open the session.",
+      "long_description": "(Dummy) The chair welcomes everyone, in the room and online. The [[Zoom Volunteer]] starts the recording."
+    },
+    {
+      "time_info": "12 min per talk",
+      "roles": ["Session Chair", "Room Volunteer"],
+      "short_description": "Talks.",
+      "long_description": "(Dummy) Show the **3 min** card, then the **1 min** card. At time, the chair stands up."
+    },
+    {
+      "time_info": "3 min per talk",
+      "roles": ["Session Chair", "Room Volunteer", "Zoom Volunteer"],
+      "short_description": "Q&A.",
+      "long_description": "(Dummy) Alternate between the room queue and remote questions:\n\n1. The [[Room Volunteer]] brings the microphone to the next person in the queue.\n2. The [[Zoom Volunteer]] reads out the next question from the chat."
+    },
+    {
+      "time_info": "End",
+      "roles": ["Session Chair"],
+      "short_description": "Thank the speakers and close the session.",
+      "long_description": ""
+    },
+    {
+      "time_info": "End + 5 min",
+      "roles": ["Room Volunteer", "Zoom Volunteer"],
+      "short_description": "Reset the room for the next session.",
+      "long_description": "(Dummy) Stop the recording, collect the microphones, and report any equipment problems."
+    }
+  ]
+}

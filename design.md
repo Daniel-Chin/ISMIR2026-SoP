@@ -15,7 +15,7 @@ A website that sets out the standard procedure (SoP) for each type of ISMIR 2026
 - **Job** (one runsheet entry) = time info × roles involved × short description × long description.
 
 ## Data model
-The data must follow [datatype.py](datatype.py). It is the source of truth for the data's shape:
+The data must follow [datatype.py](src/ismir2026_sop/datatype.py). It is the source of truth for the data's shape:
 
 - `SoP`: all roles, all sessions.
 - `Role`: name, job description. Defined once, at the top level.
@@ -32,7 +32,7 @@ Organizers write the content as JSON, plus markdown files for The Idea. Choose a
 
 ## Role mentions in markdown
 - In any markdown text (The Idea and job descriptions), an author refers to a role by writing `[[Role Name]]`, e.g. `[[Zoom Volunteer]]`. 
-- When displayed, the mention appears exactly as written, brackets included: `[[Zoom Volunteer]]`. This way the source and the page look identical. Runtime should raise KeyError on typo.
+- When displayed, the mention shows just the role name: `Zoom Volunteer`. Runtime should raise KeyError on typo.
 - Where the mention links to:
   - In a session's The Idea: that session's runsheet, filtered to that role.
   - In a role's job description: the job description is shown on many sessions' pages, so the link goes to the runsheet of whichever session is being viewed. If that session doesn't staff the role, the mention is shown but not linked.

@@ -1,0 +1,40 @@
+{
+  "name": "Poster Session",
+  "the_idea_markdown_path": "02-poster-session.md",
+  "staffing": [
+    {"role": "Session Chair", "count": 1},
+    {"role": "Poster Volunteer", "count": 3}
+  ],
+  "runsheet": [
+    {
+      "time_info": "T−45 min",
+      "roles": ["Poster Volunteer"],
+      "short_description": "Set out boards and number them.",
+      "long_description": "(Dummy) Follow the floor plan. Put a number card on every board and keep spare pins at the help desk."
+    },
+    {
+      "time_info": "T−30 min",
+      "roles": ["Poster Volunteer"],
+      "short_description": "Help presenters put up posters.",
+      "long_description": ""
+    },
+    {
+      "time_info": "T",
+      "roles": ["Session Chair"],
+      "short_description": "Announce that the session has started.",
+      "long_description": "(Dummy) Short announcement only. Remind people where the posters for remote presenters are."
+    },
+    {
+      "time_info": "Throughout",
+      "roles": ["Poster Volunteer"],
+      "short_description": "Walk the floor and answer questions.",
+      "long_description": "(Dummy) Report empty boards to the [[Session Chair]]."
+    },
+    {
+      "time_info": "End",
+      "roles": ["Session Chair", "Poster Volunteer"],
+      "short_description": "Announce the end; presenters take posters down.",
+      "long_description": ""
+    }
+  ]
+}

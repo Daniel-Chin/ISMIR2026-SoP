@@ -1,13 +1,15 @@
 [project]
 name = "ismir2026-sop"
 version = "0.1.0"
-description = "Add your description here"
+description = "Static site for the ISMIR 2026 session standard procedures (SoP)"
 readme = "README.md"
 authors = [
     { name = "Daniel Chin", email = "daniel.chin@nyu.edu" }
 ]
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "markdown>=3.11.2",
+]
 
 [project.scripts]
 ismir2026-sop = "ismir2026_sop:main"

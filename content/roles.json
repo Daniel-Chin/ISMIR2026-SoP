@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Session Chair",
+    "job_description": "(Dummy) Introduces each speaker, keeps time, and moderates Q&A. Agrees on time signals with the [[Room Volunteer]] and takes remote questions from the [[Zoom Volunteer]]."
+  },
+  {
+    "name": "Room Volunteer",
+    "job_description": "(Dummy) Owns the physical room: microphones, time cards, and the audience queue. Reports problems to the [[Session Chair]]."
+  },
+  {
+    "name": "Zoom Volunteer",
+    "job_description": "(Dummy) Runs the Zoom meeting for remote attendees and presenters. Watches the Zoom chat and relays questions to the [[Session Chair]]."
+  },
+  {
+    "name": "Poster Volunteer",
+    "job_description": "(Dummy) Keeps the poster area in order: boards, numbering, pins, and helping presenters find their spot."
+  }
+]
