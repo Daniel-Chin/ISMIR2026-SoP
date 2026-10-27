@@ -133,7 +133,7 @@ def _idea_page(session: Session, roles: dict[str, Role]) -> str:
 </article>
 <h2>Staffing</h2>
 {staff}'''
-    return _page(session.name, root, body, source=session.the_idea_markdown_path)
+    return _page(session.name, root, body, source=session.source_path)
 
 
 def _runsheet_page(session: Session, roles: dict[str, Role]) -> str:
@@ -193,4 +193,5 @@ def _runsheet_page(session: Session, roles: dict[str, Role]) -> str:
     return _page(
         f'{session.name} runsheet', root, body,
         scripts=f'<script src="{root}static/runsheet.js"></script>',
+        source=session.source_path,
     )

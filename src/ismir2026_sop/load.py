@@ -47,7 +47,7 @@ def _expect(value: Any, type_: type, where: str) -> Any:
 
 def _fields(cls: type, data: Any, where: str) -> dict[str, Any]:
     data = _expect(data, dict, where)
-    keys = [f.name for f in dataclasses.fields(cls)]
+    keys = [f.name for f in dataclasses.fields(cls) if not f.metadata.get('derived')]
     missing = [k for k in keys if k not in data]
     # `dev_comment` is a free-form note for organizers, allowed on any object and ignored.
     unexpected = [k for k in data if k not in keys and k != 'dev_comment']
@@ -99,4 +99,5 @@ def _session(path: Path) -> Session:
         the_idea_markdown_path=(path.parent / idea).as_posix(),
         staffing=[_staffing(s, f'{path}.staffing[{i}]') for i, s in enumerate(staffing)],
         runsheet=[_job(j, f'{path}.runsheet[{i}]') for i, j in enumerate(runsheet)],
+        source_path=path.as_posix(),
     )

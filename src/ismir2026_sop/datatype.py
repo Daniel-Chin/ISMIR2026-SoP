@@ -1,4 +1,4 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 
 RoleName = str
 
@@ -27,6 +27,8 @@ class Session:
     the_idea_markdown_path: str
     staffing: list[Staffing]
     runsheet: list[Job]
+    # Repo path of the session's JSON file; set by the loader, not read from the JSON.
+    source_path: str = field(default='', metadata={'derived': True})
 
 @dataclass(frozen=True)
 class SoP:
