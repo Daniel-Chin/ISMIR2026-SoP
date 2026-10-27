@@ -7,6 +7,7 @@ from collections.abc import Callable
 import markdown
 from markdown.extensions import Extension
 from markdown.inlinepatterns import InlineProcessor
+from markdown.treeprocessors import Treeprocessor
 from markdown.util import AtomicString
 
 MENTION_RE = r'\[\[([^\[\]\n]+?)\]\]'
@@ -46,15 +47,46 @@ class _MentionExtension(Extension):
         md.inlinePatterns.register(_MentionProcessor(self.link_for), 'role_mention', 175)
 
 
-def render(text: str, link_for: MentionLinker) -> str:
+IMAGE_PREFIX = 'images/'
+
+
+class _ImageRootProcessor(Treeprocessor):
+    """`images/x.png` is relative to the site root; prefix it with the page's path to the root."""
+
+    def __init__(self, md: markdown.Markdown, root: str):
+        super().__init__(md)
+        self.root = root
+
+    def run(self, root_el: etree.Element) -> None:
+        for img in root_el.iter('img'):
+            src = img.get('src', '')
+            if src.startswith(IMAGE_PREFIX):
+                img.set('src', self.root + src)
+
+
+class _ImageRootExtension(Extension):
+    def __init__(self, root: str):
+        super().__init__()
+        self.root = root
+
+    def extendMarkdown(self, md: markdown.Markdown) -> None:
+        md.treeprocessors.register(_ImageRootProcessor(md, self.root), 'image_root', 0)
+
+
+def find_images(text: str) -> list[str]:
+    """Site-root-relative image paths, e.g. `images/stage.png`."""
+    return re.findall(r'!\[[^\]]*\]\(\s*<?(' + IMAGE_PREFIX + r'[^\s)>]+)', text)
+
+
+def render(text: str, link_for: MentionLinker, root: str = '') -> str:
     return markdown.markdown(
-        text, extensions=['extra', 'sane_lists', _MentionExtension(link_for)],
+        text, extensions=['extra', 'sane_lists', _MentionExtension(link_for), _ImageRootExtension(root)],
     )
 
 
-def render_inline(text: str, link_for: MentionLinker) -> str:
+def render_inline(text: str, link_for: MentionLinker, root: str = '') -> str:
     """For one-liners: drop the wrapping <p> of a single paragraph."""
-    html = render(text, link_for)
+    html = render(text, link_for, root)
     if html.startswith('<p>') and html.endswith('</p>') and html.count('<p>') == 1:
         return html[3:-4]
     return html

@@ -29,7 +29,7 @@ def main() -> None:
     except SoPError as e:
         traceback.print_exc()
         sys.exit(f'error: {e}')
-    problems = find_problems(sop)
+    problems = find_problems(sop, args.content)
     if problems:
         print(f'{len(problems)} problem(s):', file=sys.stderr)
         for p in problems:
@@ -39,7 +39,7 @@ def main() -> None:
     if args.command == 'check':
         print(f'OK: {len(sop.roles)} roles, {len(sop.sessions)} sessions.')
         return
-    build_site(sop, args.out)
+    build_site(sop, args.out, args.content)
     print(f'Built {len(sop.sessions)} sessions into {args.out}/')
     if args.command == 'serve':
         handler = functools.partial(http.server.SimpleHTTPRequestHandler, directory=args.out)

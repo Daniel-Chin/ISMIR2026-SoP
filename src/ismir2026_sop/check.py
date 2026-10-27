@@ -4,14 +4,14 @@ from collections import defaultdict
 from pathlib import Path
 
 from .datatype import SoP
-from .md import find_mentions
+from .md import find_images, find_mentions
 from .slug import slugify
 
 # Top-level output paths that a session address must not take.
-RESERVED_SLUGS = {'static'}
+RESERVED_SLUGS = {'static', 'images'}
 
 
-def find_problems(sop: SoP) -> list[str]:
+def find_problems(sop: SoP, content: Path) -> list[str]:
     problems: list[str] = []
     role_names = {r.name for r in sop.roles}
 
@@ -25,6 +25,9 @@ def find_problems(sop: SoP) -> list[str]:
         for name in find_mentions(text):
             if name not in role_names:
                 problems.append(f'{where}: unknown role mention [[{name}]]')
+        for src in find_images(text):
+            if not (content / src).is_file():
+                problems.append(f'{where}: image {src} not found in {content / "images"}')
 
     for r in sop.roles:
         check_mentions(r.job_description, f'role {r.name!r} job_description')

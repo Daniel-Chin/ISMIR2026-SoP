@@ -18,6 +18,7 @@ content/
 - **Add a session type**: add a `.json` + `.md` pair in `content/sessions/`. The menu lists sessions in file-name order (hence the number prefixes); the page address comes from the session's `name`, not the file name.
 - **Roles** are defined once in `roles.json`. Sessions refer to them by exact name in `staffing` and in each job's `roles`. Every role in a runsheet must also be in that session's staffing.
 - **Mention a role** in any markdown text (The Idea, job descriptions, short and long descriptions) by writing `[[Role Name]]`.
+- **Images**: compress and put the file in `content/images/` and write `![description](images/stage-layout.png)` in any markdown text. The path is always `images/...`, whichever page the text ends up on.
 - `time_info` is free text, e.g. `"T−15 min"`. `more_info` may be `""`.
 
 ## Testing and building

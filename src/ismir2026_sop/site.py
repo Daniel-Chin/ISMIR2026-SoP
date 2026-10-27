@@ -4,6 +4,7 @@
     <session>/index.html            The Idea
     <session>/runsheet/index.html   Runsheet (?mode=...&roles=a,b)
     static/                         CSS and JS
+    images/                         copied from content/images/
 """
 
 import shutil
@@ -19,10 +20,12 @@ SITE_TITLE = 'ISMIR 2026 Session SoP'
 STATIC_DIR = Path(__file__).parent / 'static'
 
 
-def build_site(sop: SoP, out: Path) -> None:
+def build_site(sop: SoP, out: Path, content: Path) -> None:
     if out.exists():
         shutil.rmtree(out)
     shutil.copytree(STATIC_DIR, out / 'static')
+    if (content / 'images').is_dir():
+        shutil.copytree(content / 'images', out / 'images')
     (out / '.nojekyll').touch()
     roles = {r.name: r for r in sop.roles}
 
@@ -120,13 +123,13 @@ def _idea_page(session: Session, roles: dict[str, Role]) -> str:
     staff = '\n'.join(
         f'''<section class="role" id="{slugify(s.role)}">
   <h3>{s.count}× <a href="{filtered_runsheet_href(root, session, s.role)}">{escape(s.role)}</a>{' <span class="volunteer-chip">Volunteer</span>' if roles[s.role].is_volunteer else ''}</h3>
-  <div class="prose">{md.render(roles[s.role].job_description, link_for)}</div>
+  <div class="prose">{md.render(roles[s.role].job_description, link_for, root)}</div>
 </section>'''
         for s in session.staffing
     )
     body = f'''{_session_header(session, root, 'idea')}
 <article class="prose idea">
-{md.render(idea, link_for)}
+{md.render(idea, link_for, root)}
 </article>
 <h2>Staffing</h2>
 {staff}'''
@@ -143,7 +146,7 @@ def _runsheet_page(session: Session, roles: dict[str, Role]) -> str:
     role_descs = '\n'.join(
         f'''<section class="role role-desc" data-role="{slugify(s.role)}" hidden>
   <h3>{escape(s.role)}</h3>
-  <div class="prose">{md.render(roles[s.role].job_description, link_for)}</div>
+  <div class="prose">{md.render(roles[s.role].job_description, link_for, root)}</div>
 </section>'''
         for s in session.staffing
     )
@@ -157,12 +160,12 @@ def _runsheet_page(session: Session, roles: dict[str, Role]) -> str:
         if job.more_info.strip():
             details = (
                 '<details><summary>More</summary>'
-                f'<div class="prose">{md.render(job.more_info, link_for)}</div></details>'
+                f'<div class="prose">{md.render(job.more_info, link_for, root)}</div></details>'
             )
         rows.append(f'''<tr class="job" data-roles="{' '.join(slugify(r) for r in job.roles)}">
   <td class="time">{escape(job.time_info)}</td>
   <td class="who">{chips}</td>
-  <td class="what"><div class="short">{md.render_inline(job.short_description, link_for)}</div>{details}</td>
+  <td class="what"><div class="short">{md.render_inline(job.short_description, link_for, root)}</div>{details}</td>
 </tr>''')
     body = f'''{_session_header(session, root, 'runsheet')}
 <form class="controls" id="controls" hidden>
