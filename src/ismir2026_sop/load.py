@@ -64,6 +64,7 @@ def _role(data: Any, where: str) -> Role:
     return Role(
         name=_expect(d['name'], str, f'{where}.name'),
         is_volunteer=_expect(d['is_volunteer'], bool, f'{where}.is_volunteer'),
+        is_onsite=_expect(d['is_onsite'], bool, f'{where}.is_onsite'),
         job_description=_expect(d['job_description'], str, f'{where}.job_description'),
     )
 

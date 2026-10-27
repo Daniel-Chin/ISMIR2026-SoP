@@ -2,6 +2,7 @@ import argparse
 import functools
 import http.server
 import sys
+import traceback
 from pathlib import Path
 
 from .check import find_problems
@@ -26,6 +27,7 @@ def main() -> None:
     try:
         sop = load_sop(args.content)
     except SoPError as e:
+        traceback.print_exc()
         sys.exit(f'error: {e}')
     problems = find_problems(sop)
     if problems:
