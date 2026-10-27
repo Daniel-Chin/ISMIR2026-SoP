@@ -1,5 +1,7 @@
 # ISMIR 2026 Session SoP
 
+Live: https://daniel-chin.github.io/ISMIR2026-SoP/
+
 The standard procedure for each type of ISMIR 2026 session: how it runs, who staffs it, and who does what when. This then supports volunteer handbook and attendance guides.
 
 ## Editing the SoP (organizers)
