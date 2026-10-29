@@ -195,3 +195,5 @@ span.mention { color: var(--muted); }
 .schedule td.schedule-cell { background: var(--surface); }
 .schedule td.room-a6-008 { background: #dceafc; }
 .schedule td.room-a6-007 { background: #fbe6d4; }
+.schedule td.schedule-cell { border: 2px solid #8a929c; }
+.schedule td.time { vertical-align: middle; }
