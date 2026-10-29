@@ -1,0 +1,1 @@
+- Integrate [#notes-for-future-ismir](https://ismir2026-organizers.slack.com/archives/C0C7RCV8GCA) into cookbook.
