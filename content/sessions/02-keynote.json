@@ -37,19 +37,19 @@
     {
       "time_info": "T−10 min",
       "roles": ["Zoom Master"],
-      "short_description": "Promote [[Webinar Sentinel]], [[Q&A Producer]], and maybe backstage to cohost in the Zoom webinar.",
+      "short_description": "Promote the Speaker, [[Webinar Sentinel]], [[Q&A Producer]], and maybe backstage to cohost in the Zoom webinar.",
       "more_info": ""
     },
     {
       "time_info": "T−8 min",
       "roles": ["Zoom Master"],
-      "short_description": "Help the Speaker install Zoom Client (if on their own laptop), join the Zoom Webinar and disconnect audio+video (if on-site), test aduio+video input+output (if online), and test screenshare and sound share (always). Direct the Speaker to the [[Q&A Producer]] for coordination.",
+      "short_description": "Help the Speaker connect laptop to HDMI (if on their own laptop), test aduio+video input+output (if online), and test screenshare and sound share (always). Direct the Speaker to the [[Q&A Producer]] for coordination.",
       "more_info": "Zoom Client: https://zoom.us/download"
     },
     {
       "time_info": "T−5 min",
       "roles": ["Q&A Producer"],
-      "short_description": "Agree on the Q&A signal with the Speaker.",
+      "short_description": "Ask whether the Speaker will take questions during the talk. Agree on the Q&A signal with the Speaker.",
       "more_info": ""
     },
     {
@@ -67,8 +67,8 @@
     {
       "time_info": "T−2 min",
       "roles": ["Q&A Producer"],
-      "short_description": "Sit in the corner of the stage. Join Zoom on laptop and disconnect audio+video. Keep both the Q&A panel and the participants view (for raised hands) open at all times. Balance online VS on-site questions.",
-      "more_info": ""
+      "short_description": "Sit in the corner of the stage. Join Zoom on the provided laptop and disconnect audio+video. Keep both the Q&A panel and the participants view (for raised hands) open at all times. Balance online VS on-site questions.",
+      "more_info": "If the on-site Speaker does not notice your signal and keeps taking on-site questions, politely barge in."
     },
     {
       "time_info": "T",

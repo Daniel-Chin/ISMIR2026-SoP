@@ -33,11 +33,6 @@ This is how online participants hop around posters.
 - “Original sound for musicians” can be turned on to stop the noise filter from dropping sounds.
 - Crosstalk between posters can be mitigated by lowering mic gain on the audio interface.
 
-### Day-start room preparation
-- Set up 10 poster kiosks. Each laptop: has Zoom client, log into a unique Zoom account, keep a URL to / window of miniconf, and log into Slack using a non-Admin account.
-- Set up a material desk. Provide pushpins, tapes, and markers.
-- Set up a helpdesk with a checked-out laptop. Install Zoom client, log into the Zoom Meeting host account, and keep a URL to / window of miniconf.
-
 ### Discussions for future references
 - Challenges: Power cables, mic cables.
 - Crosstalk is mitigated by directional mics. 

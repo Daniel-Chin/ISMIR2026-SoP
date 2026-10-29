@@ -1,0 +1,9 @@
+{
+  "name": "Start of Day",
+  "the_idea_markdown_path": "00-day-start.md",
+  "staffing": [
+    {"role": "Zoom Master", "count": 1}
+  ],
+  "runsheet": [
+  ]
+}

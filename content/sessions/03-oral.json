@@ -39,9 +39,15 @@
       "more_info": ""
     },
     {
+      "time_info": "T−8 min",
+      "roles": ["On-site Session Chair"],
+      "short_description": "Go to the stage laptop. Download slides / video from [Sheet for Session Chair](https://docs.google.com/spreadsheets/d/1JPkY1TY8BfC07ZicIe6FDiZt94PALu3r6AFXhavpwlY/edit?gid=1217880391#gid=1217880391) and order them in a local folder.",
+      "more_info": ""
+    },
+    {
       "time_info": "T−7 min",
       "roles": ["Zoom Master", "Webinar Sentinel"],
-      "short_description": "[[Webinar Sentinel]] confirm where [[Zoom Master]] will sit.",
+      "short_description": "[[Webinar Sentinel]] confirm where [[Zoom Master]] will sit. [[Zoom Master]] says hi to and assist [[On-site Session Chair]] on the stage.",
       "more_info": ""
     },
     {
@@ -75,19 +81,19 @@
       "more_info": "Cards: maybe simply write with pen and paper?"
     },
     {
-      "time_info": "$T_y$",
+      "time_info": "T<sub>y</sub>",
       "roles": ["On-site Session Chair"],
-      "short_description": "where $T_y$ is the start of each presentation. Introduce the paper title and the presenter. Be brief, nice, and non-distracting.",
-      "more_info": "Tip. Extra words easily distract the audience. The presentations are fast. If a person spends 15 seconds thinking about what you just said, they've missed the first slide."
+      "short_description": "where T<sub>y</sub> is the start of each presentation. Make sure the presenter is ready and by the stage. Open the right slides. Introduce the paper title and the presenter. Be brief, nice, and non-distracting.",
+      "more_info": "Tip. Extra words easily distract the audience. The presentations are fast. If a person spends 15 seconds thinking about what you just said, they've missed the first slide.\nIf the presenter is not ready in 30 seconds, fallback to playing the pre-recorded video."
     },
     {
-      "time_info": "$T_y$+2 min",
+      "time_info": "T<sub>y</sub>+2 min",
       "roles": ["On-site Session Chair"],
       "short_description": "Signal the presenter.",
       "more_info": ""
     },
     {
-      "time_info": "$T_y$+3 min",
+      "time_info": "T<sub>y</sub>+3 min",
       "roles": ["On-site Session Chair"],
       "short_description": "Signal the presenter again. From this point on, use your judgement whether to barge in and stop the presentation. Consider remaining time.",
       "more_info": "If you have to stop a presentation, you can then warmly welcome the audience to the poster of that paper. Remember to be non-distracting."

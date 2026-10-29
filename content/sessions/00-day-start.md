@@ -1,0 +1,11 @@
+Jobs for [[Zoom Master]].
+
+- Deploy 1 laptop in the Auditorium backstage for the Webinar Sentinel, 2 laptops on the Auditorium stage for Speaker and Q&A Tracker/Producer.
+  - Add to the desktop of all three laptops: 
+    - Link to Zoom Webinar.
+    - [Sheet for Session Chair](https://docs.google.com/spreadsheets/d/1JPkY1TY8BfC07ZicIe6FDiZt94PALu3r6AFXhavpwlY/edit?gid=1217880391#gid=1217880391)
+  - Rename Zoom display name for each.
+- Poster Hall:
+  - Set up 10 poster kiosks. Each laptop: has Zoom client, log into a unique Zoom account, keep a URL to / window of miniconf, and log into Slack using a non-Admin account.
+  - Set up a material desk. Provide pushpins, tapes, and markers.
+  - Set up a helpdesk with a checked-out laptop. Install Zoom client, log into the Zoom Meeting host account, and keep a URL to / window of miniconf.

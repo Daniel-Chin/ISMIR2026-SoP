@@ -62,6 +62,19 @@
     "is_volunteer": false,
     "is_onsite": true,
     "job_for_who": "Great visibility + networking for junior researchers.",
-    "job_description": "Assigned to one paper session. Introduce every talk during the Oral Session. Check name pronunciations beforehand. Keeps time during presentations. Before the conference, get to know the 10 presenters. Confirm the session's presentaion schedule and modality with them. Arrange timing and seating for the Oral Session."
+    "job_description": "Assigned to one paper session. Introduce every talk during the Oral Session. Check name pronunciations beforehand. Keeps time during presentations. Before the conference, get to know the 10 presenters. Confirm the session's presentaion schedule and modality with them. Arrange timing and seating within the Oral Session."
+  },
+  {
+    "name": "Award Session Chair",
+    "is_volunteer": false,
+    "is_onsite": true,
+    "job_description": "Host one Award Nominee Oral Session. Introduce every talk during the Award Nominee Oral Session. Check name pronunciations beforehand. Keeps time during presentations. Before the conference, get to know the presenters. Confirm the session's presentaion schedule and modality with them. Arrange timing and seating within the Award Nominee Oral Session."
+  },
+  {
+    "name": "Prep Room Assistant",
+    "is_volunteer": true,
+    "is_onsite": false,
+    "job_for_who": "Familiar with Zoom. Has to miss the Award Nominee Oral Session, so better be a different volunteer for each session.",
+    "job_description": "Host one Award Nominee Oral Session. Introduce every talk during the Award Nominee Oral Session. Check name pronunciations beforehand. Keeps time during presentations. Before the conference, get to know the presenters. Confirm the session's presentaion schedule and modality with them. Arrange timing and seating within the Award Nominee Oral Session."
   }
 ]

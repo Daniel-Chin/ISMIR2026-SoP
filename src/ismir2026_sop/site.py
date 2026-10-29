@@ -180,7 +180,7 @@ def _runsheet_page(session: Session, roles: dict[str, Role]) -> str:
                 f'<div class="prose">{md.render(job.more_info, link_for, root)}</div></details>'
             )
         rows.append(f'''<tr class="job" data-roles="{' '.join(slugify(r) for r in job.roles)}">
-  <td class="time">{escape(job.time_info).replace(chr(10), '<br>')}</td>
+  <td class="time">{md.render_inline(job.time_info, link_for, root).replace(chr(10), '<br>')}</td>
   <td class="who">{chips}</td>
   <td class="what"><div class="short">{md.render_inline(job.short_description, link_for, root)}</div>{details}</td>
 </tr>''')
