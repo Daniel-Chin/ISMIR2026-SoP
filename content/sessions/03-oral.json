@@ -41,8 +41,8 @@
     {
       "time_info": "T−8 min",
       "roles": ["On-site Session Chair"],
-      "short_description": "Go to the stage laptop. Download slides / video from [Sheet for Session Chair](https://docs.google.com/spreadsheets/d/1JPkY1TY8BfC07ZicIe6FDiZt94PALu3r6AFXhavpwlY/edit?gid=1217880391#gid=1217880391) and order them in a local folder.",
-      "more_info": ""
+      "short_description": "Go to the stage laptop. Download all 10 videos from [Sheet for Session Chair](https://docs.google.com/spreadsheets/d/1JPkY1TY8BfC07ZicIe6FDiZt94PALu3r6AFXhavpwlY/edit?gid=1217880391#gid=1217880391) and order them in a local folder (e.g. 'pos-03-weird-video-filename.mp4'). Keep the Sheet for Session Chair and the video folder open.",
+      "more_info": "Do not download slides. During presentation, for Google slides, use the web view; for slides files, downloading is fast. This ensures up-to-date slides.\nIf the previous event before your session uses the auditorium, make sure to download the videos before that previous event, and open the two windows at T-1 min."
     },
     {
       "time_info": "T−7 min",
@@ -83,7 +83,7 @@
     {
       "time_info": "T<sub>y</sub>",
       "roles": ["On-site Session Chair"],
-      "short_description": "where T<sub>y</sub> is the start of each presentation. Make sure the presenter is ready and by the stage. Open the right slides. Introduce the paper title and the presenter. Be brief, nice, and non-distracting.",
+      "short_description": "where T<sub>y</sub> is the start of each presentation. Make sure the presenter is ready and by the stage. Open / Download the right slides from the Sheet for Session Chair. Introduce the paper title and the presenter. Be brief, nice, and non-distracting.",
       "more_info": "Tip. Extra words easily distract the audience. The presentations are fast. If a person spends 15 seconds thinking about what you just said, they've missed the first slide.\nIf the presenter is not ready in 30 seconds, fallback to playing the pre-recorded video."
     },
     {
