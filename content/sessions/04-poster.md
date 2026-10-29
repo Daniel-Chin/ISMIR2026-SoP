@@ -1,5 +1,6 @@
 ![Poster hall preview photo. Zoom sessions are available at each poster booth.](images/poster_hall_preview.jpg)
 
+- Runs 60 minutes.
 - Hybrid. By each poster is a TV that serves as a window to the online participants.
 - One Zoom breakout room per paper. Not streamed on YouTube or Webinar.
 - Onsite location: Upper Atrium, A6. 

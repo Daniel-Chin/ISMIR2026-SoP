@@ -1,3 +1,4 @@
+- Runs 60 minutes.
 - Onsite location: 300-capacity auditorium A6-008.
 - Streamed via Zoom Webinar 500. 
 

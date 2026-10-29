@@ -5,12 +5,13 @@
     {"role": "Q&A Tracker", "count": 1},
     {"role": "Mic Runner", "count": 2},
     {"role": "Webinar Sentinel", "count": 1},
+    {"role": "Venue AV/IT", "count": 1},
     {"role": "Zoom Master", "count": 1}
   ],
   "runsheet": [
     {
       "time_info": "T−11 min",
-      "roles": ["Zoom Master"],
+      "roles": ["Venue AV/IT", "Zoom Master"],
       "short_description": "Disconnect webinar audio+video from the auditorium.",
       "more_info": ""
     },
@@ -40,7 +41,7 @@
     },
     {
       "time_info": "T−2 min",
-      "roles": ["Zoom Master"],
+      "roles": ["Venue AV/IT", "Zoom Master"],
       "short_description": "Connect webinar audio+video to the auditorium.",
       "more_info": ""
     },
@@ -53,7 +54,7 @@
     {
       "time_info": "Throughout",
       "roles": ["Webinar Sentinel"],
-      "short_description": "Sit on-site in the backstage but view only the Zoom Webinar. Not only listen, but try to understand the presentations --- you catch more issues this way. Keep the on-site screen visible so any mismatch is catched, but pay main attention to the webinar. Use headphones. Upon issues, use judgement: Either unmute to raise the issue, or contact the [[Zoom Master]] immediately by walking to them.",
+      "short_description": "Sit on-site in the backstage but view only the Zoom Webinar on the provided laptop. Not only listen, but try to understand the presentations --- you catch more issues this way. Keep the on-site screen visible so any mismatch is catched, but pay main attention to the webinar. Use the provided headphones. Upon issues, use judgement: Either unmute to raise the issue, or contact the [[Zoom Master]] immediately by walking to them.",
       "more_info": ""
     },
     {

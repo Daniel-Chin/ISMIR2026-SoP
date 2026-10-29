@@ -3,7 +3,7 @@
   "the_idea_markdown_path": "04-poster.md",
   "staffing": [
     {"role": "Poster Session Helpdesk On-site", "count": 1},
-    {"role": "Poster Session Helpdesk Online", "count": 1},
+    {"role": "Poster Session Helpdesk Online", "count": 4},
     {"role": "Zoom Master", "count": 2}
   ],
   "runsheet": [
@@ -59,7 +59,7 @@
     {
       "time_info": "From T+1 \nto T+10 min",
       "roles": ["Poster Session Helpdesk Online"],
-      "short_description": "Stay in the Hub. Verify that the shared screen shows an instruction notice. Listen for questions in the Hub. Monitor [#help](https://ismir2026.slack.com/archives/C0C45QQMU6A) and the current #poster-session-x on Slack. Handle requests.",
+      "short_description": "One stays in the Hub. Verify that the shared screen shows an instruction notice. Listen for questions in the Hub. The other three roam the breakout rooms. All four monitor [#help](https://ismir2026.slack.com/archives/C0C45QQMU6A) and the current #poster-session-x on Slack. Handle requests.",
       "more_info": "If need assistance, forward the request message to [#internal-helpdesk-for-volunteer-and-organizers](https://ismir2026.slack.com/archives/C0CAA9DBFJ6). If overwhelmed, say so in [#internal-helpdesk-for-volunteer-and-organizers](https://ismir2026.slack.com/archives/C0CAA9DBFJ6) and start forwarding requests. Tip: when handling a request, quickly reply to it (e.g. “Let me help you with this”) so others know you are already on it."
     },
     {
@@ -69,7 +69,7 @@
       "more_info": "Refer to the last item for tips."
     },
     {
-      "time_info": "end",
+      "time_info": "End",
       "roles": ["Zoom Master"],
       "short_description": "From the helpdesk laptop: End meeting for all. For each kiosk laptop: upload recording files directly to [#yesterday-on-videotape](https://ismir2026.slack.com/archives/C0C7ME3JWAH).",
       "more_info": ""
