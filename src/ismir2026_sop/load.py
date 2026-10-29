@@ -48,7 +48,8 @@ def _expect(value: Any, type_: type, where: str) -> Any:
 def _fields(cls: type, data: Any, where: str) -> dict[str, Any]:
     data = _expect(data, dict, where)
     keys = [f.name for f in dataclasses.fields(cls) if not f.metadata.get('derived')]
-    missing = [k for k in keys if k not in data]
+    optional = {f.name for f in dataclasses.fields(cls) if f.default is not dataclasses.MISSING}
+    missing = [k for k in keys if k not in data and k not in optional]
     # `dev_comment` is a free-form note for organizers, allowed on any object and ignored.
     unexpected = [k for k in data if k not in keys and k != 'dev_comment']
     if missing or unexpected:
@@ -67,6 +68,7 @@ def _role(data: Any, where: str) -> Role:
         is_volunteer=_expect(d['is_volunteer'], bool, f'{where}.is_volunteer'),
         is_onsite=_expect(d['is_onsite'], bool, f'{where}.is_onsite'),
         job_description=_expect(d['job_description'], str, f'{where}.job_description'),
+        job_for_who=_expect(d.get('job_for_who', ''), str, f'{where}.job_for_who'),
     )
 
 

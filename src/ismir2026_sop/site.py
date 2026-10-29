@@ -127,6 +127,12 @@ def _menu_page(sop: SoP) -> str:
     return _page(SITE_TITLE, '', body)
 
 
+def _job_for_who(role: Role) -> str:
+    if not role.job_for_who:
+        return ''
+    return f'\n  <p class="job-for-who"><strong>Job for who:</strong> {escape(role.job_for_who)}</p>'
+
+
 def _idea_page(session: Session, roles: dict[str, Role]) -> str:
     root = '../'
     link_for = _mention_linker(session, roles, root)
@@ -134,7 +140,7 @@ def _idea_page(session: Session, roles: dict[str, Role]) -> str:
     staff = '\n'.join(
         f'''<section class="role" id="{slugify(s.role)}">
   <h3>{s.count}× <a href="{filtered_runsheet_href(root, session, s.role)}">{escape(s.role)}</a>{' <span class="volunteer-chip">Volunteer</span>' if roles[s.role].is_volunteer else ''}</h3>
-  <div class="prose">{md.render(roles[s.role].job_description, link_for, root)}</div>
+  <div class="prose">{md.render(roles[s.role].job_description, link_for, root)}</div>{_job_for_who(roles[s.role])}
 </section>'''
         for s in session.staffing
     )
@@ -157,7 +163,7 @@ def _runsheet_page(session: Session, roles: dict[str, Role]) -> str:
     role_descs = '\n'.join(
         f'''<section class="role role-desc" data-role="{slugify(s.role)}" hidden>
   <h3>{escape(s.role)}</h3>
-  <div class="prose">{md.render(roles[s.role].job_description, link_for, root)}</div>
+  <div class="prose">{md.render(roles[s.role].job_description, link_for, root)}</div>{_job_for_who(roles[s.role])}
 </section>'''
         for s in session.staffing
     )

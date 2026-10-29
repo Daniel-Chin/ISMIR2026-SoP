@@ -8,6 +8,7 @@ class Role:
     is_volunteer: bool
     is_onsite: bool
     job_description: str
+    job_for_who: str = ''
 
 @dataclass(frozen=True)
 class Staffing:
