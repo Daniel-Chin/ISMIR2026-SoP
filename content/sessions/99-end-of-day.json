@@ -1,6 +1,6 @@
 {
-  "name": "Start of Day",
-  "the_idea_markdown_path": "00-day-start.md",
+  "name": "End of Day",
+  "the_idea_markdown_path": "99-end-of-day.md",
   "staffing": [
     {"role": "Zoom Master", "count": 1}
   ],

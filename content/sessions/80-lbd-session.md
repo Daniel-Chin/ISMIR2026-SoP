@@ -1,0 +1,6 @@
+- Late Breaking Demos.
+- Onsite location: Upper Atrium, A6. 
+- The setup is analogous to [Poster Session](../poster-session/), except:  
+  - There is no hybrid component. Each kiosk is just a board. No electronics. The on-site posters are presented by on-site authors. 
+  - There are 25 on-site posters, including MIREX. Using front and back of each of the 13 poster boards.
+  - TVs, away from the posters, play the videos and online posters in a loop.
