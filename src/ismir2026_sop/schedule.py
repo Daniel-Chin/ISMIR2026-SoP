@@ -57,12 +57,26 @@ class Event:
         return CATEGORY_TO_SESSION_TYPE[self.category]
 
 
+# Events not in events.csv. This should be removed past 2026.
+EXTRA_EVENTS = [
+    Event(
+        uid='music-program-rehearsal',
+        title='Music Program Rehearsal',
+        start_date='2026-11-08',
+        start_time='20:00',
+        end_time='22:00',
+        category='Music',
+        onsite_location='A6-008',
+    ),
+]
+
+
 def load_events(path: Path = EVENTS_CSV) -> list[Event]:
     with path.open(encoding='utf-8', newline='') as f:
         return [
             Event(**{k: row[k].strip() for k in Event.__dataclass_fields__})
             for row in csv.DictReader(f)
-        ]
+        ] + EXTRA_EVENTS
 
 
 def time_key(t: str) -> tuple[int, int]:
