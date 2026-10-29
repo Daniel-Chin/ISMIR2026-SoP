@@ -1,0 +1,187 @@
+{
+  "name": "Award Nominee Oral Session",
+  "the_idea_markdown_path": "05-award-nominee-oral-session.md",
+  "staffing": [
+    {"role": "On-site Session Chair", "count": 1},
+    {"role": "Q&A Producer", "count": 1},
+    {"role": "Mic Runner", "count": 2},
+    {"role": "Webinar Sentinel", "count": 1},
+    {"role": "Zoom Master", "count": 1}
+  ],
+  "runsheet": [
+    {
+      "time_info": "T−11 min",
+      "roles": ["Zoom Master"],
+      "short_description": "Disconnect webinar audio+video from the auditorium.",
+      "more_info": ""
+    },
+    {
+      "time_info": "T−11 min",
+      "roles": ["Zoom Master", "Webinar Sentinel"],
+      "short_description": "[[Webinar Sentinel]] confirm where [[Zoom Master]] will sit.",
+      "more_info": ""
+    },
+    {
+      "time_info": "T−10 min",
+      "roles": ["On-site Session Chair"],
+      "short_description": "Make sure all on-site Speakers have arrived. Greet them, mention time cue signals and the order of talks, and direct them to the [[Zoom Master]] for setup.",
+      "more_info": ""
+    },
+    {
+      "time_info": "T−10 min",
+      "roles": ["Zoom Master"],
+      "short_description": "Make sure all remote Speakers have joined the Zoom Webinar. Greet them, and mention time cue signals (via Zoom private chat) and the order of talks.",
+      "more_info": ""
+    },
+    {
+      "time_info": "T−10 min",
+      "roles": ["Zoom Master"],
+      "short_description": "Disable Zoom Chat for attendees.",
+      "more_info": "Chat > menu > attendees can chat with: nobody."
+    },
+    {
+      "time_info": "T−10 min",
+      "roles": ["Zoom Master"],
+      "short_description": "Promote [[Webinar Sentinel]], [[Q&A Producer]], and maybe backstage to cohost in the Zoom webinar.",
+      "more_info": ""
+    },
+    {
+      "time_info": "T−8 min",
+      "roles": ["Zoom Master"],
+      "short_description": "For each on-site Speaker: help them install Zoom Client (if needed), join the Zoom Webinar and disconnect audio+video, and test screenshare and sound share. Then direct them to wait in the front row with their laptop, staying in the Zoom Webinar.",
+      "more_info": "Zoom Client: https://zoom.us/download"
+    },
+    {
+      "time_info": "T−8 min",
+      "roles": ["Zoom Master"],
+      "short_description": "For each remote Speaker: test audio+video input+output, screenshare, and sound share. Then ask them to stay in the Zoom Webinar, muted and with camera off, until their turn.",
+      "more_info": ""
+    },
+    {
+      "time_info": "T−5 min",
+      "roles": ["Q&A Producer", "On-site Session Chair"],
+      "short_description": "[[Q&A Producer]] and [[On-site Session Chair]] agree on the Q&A signal.",
+      "more_info": ""
+    },
+    {
+      "time_info": "T−3 min",
+      "roles": ["On-site Session Chair", "Q&A Producer", "Mic Runner"],
+      "short_description": "Grab a mic and keep it for the whole session.",
+      "more_info": ""
+    },
+    {
+      "time_info": "T−2 min",
+      "roles": ["Zoom Master"],
+      "short_description": "Connect webinar audio+video to the auditorium.",
+      "more_info": ""
+    },
+    {
+      "time_info": "T−2 min",
+      "roles": ["Q&A Producer"],
+      "short_description": "Sit in the corner of the stage. Join Zoom on laptop and disconnect audio+video. Keep both the Q&A panel and the participants view (for raised hands) open at all times.",
+      "more_info": ""
+    },
+    {
+      "time_info": "T",
+      "roles": ["On-site Session Chair"],
+      "short_description": "Start the session. Introduce the first Speaker. Speaker starts. Sit in the corner of the stage with the [[Q&A Producer]].",
+      "more_info": ""
+    },
+    {
+      "time_info": "During each talk",
+      "roles": ["On-site Session Chair"],
+      "short_description": "If the Speaker is on-site, remind them of time elapsed.",
+      "more_info": ""
+    },
+    {
+      "time_info": "During each talk",
+      "roles": ["Zoom Master"],
+      "short_description": "If the Speaker is remote, remind them of time elapsed via Zoom private chat.",
+      "more_info": ""
+    },
+    {
+      "time_info": "During each talk",
+      "roles": ["Q&A Producer"],
+      "short_description": "Organize and clarify the text questions arriving in the Q&A tool without interrupting the talk.",
+      "more_info": ""
+    },
+    {
+      "time_info": "During each talk",
+      "roles": ["On-site Session Chair"],
+      "short_description": "If the next Speaker is on-site, confirm they are in the front row, with their laptop still in the Zoom Webinar.",
+      "more_info": ""
+    },
+    {
+      "time_info": "During each talk",
+      "roles": ["Zoom Master"],
+      "short_description": "If the next Speaker is remote, confirm they are still in the Zoom Webinar.",
+      "more_info": ""
+    },
+    {
+      "time_info": "Q&A after each talk",
+      "roles": ["On-site Session Chair"],
+      "short_description": "When the talk finishes, start the Q&A. Pick the questions, balancing online VS on-site questions. Keep track of time; when time is up, end the Q&A.",
+      "more_info": ""
+    },
+    {
+      "time_info": "Q&A after each talk",
+      "roles": ["Q&A Producer"],
+      "short_description": "When there is a clarified online question, signal the [[On-site Session Chair]]. If the Speaker is remote, also say it out loud, e.g. \"We have an online question.\" When the [[On-site Session Chair]] takes it, read it / unmute the attendee and call him/her to speak up.",
+      "more_info": ""
+    },
+    {
+      "time_info": "Q&A after each talk",
+      "roles": ["Mic Runner"],
+      "short_description": "Whenever a question from the on-site audience is taken, give your mic to them.",
+      "more_info": ""
+    },
+    {
+      "time_info": "Between talks",
+      "roles": ["On-site Session Chair"],
+      "short_description": "When the Q&A ends, thank the Speaker. They stop screenshare; if on-site, they take their laptop back to the front row.",
+      "more_info": ""
+    },
+    {
+      "time_info": "Between talks",
+      "roles": ["On-site Session Chair"],
+      "short_description": "Introduce the next Speaker. If on-site, they bring their laptop to the stage and start screenshare. If remote, they unmute, start video, and start screenshare. Speaker starts.",
+      "more_info": ""
+    },
+    {
+      "time_info": "Between talks",
+      "roles": ["Zoom Master"],
+      "short_description": "If the next Speaker is remote, make sure they unmute, start video, and start screenshare after the introduction.",
+      "more_info": ""
+    },
+    {
+      "time_info": "If the next Speaker is not ready",
+      "roles": ["Zoom Master"],
+      "short_description": "If the next Speaker is remote and not ready, walk to the side of the stage and tell the [[On-site Session Chair]]. Then help the Speaker get ready.",
+      "more_info": ""
+    },
+    {
+      "time_info": "If the next Speaker is not ready",
+      "roles": ["On-site Session Chair"],
+      "short_description": "Move on to the following talk. Decide when the skipped talk is given later in the session.",
+      "more_info": ""
+    },
+    {
+      "time_info": "Throughout",
+      "roles": ["Webinar Sentinel"],
+      "short_description": "Sit on-site in the backstage but view only the Zoom Webinar. Not only listen, but try to understand and enjoy the talks --- you catch more issues this way. Keep the on-site screen visible so any mismatch is caught, but pay main attention to the webinar. Use headphones. Upon issues, use judgement: Either unmute to raise the issue, or contact the [[Zoom Master]] immediately by walking to them.",
+      "more_info": ""
+    },
+    {
+      "time_info": "Throughout",
+      "roles": ["Webinar Sentinel"],
+      "short_description": "If a panelist account is making noises, mute it.",
+      "more_info": ""
+    },
+    {
+      "time_info": "Throughout",
+      "roles": ["Zoom Master"],
+      "short_description": "Sit in the corner of the audience to enjoy the talks.",
+      "more_info": ""
+    }
+  ]
+}
