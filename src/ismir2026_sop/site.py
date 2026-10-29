@@ -273,7 +273,7 @@ def _runsheet_page(session: Session, roles: dict[str, Role]) -> str:
 def _venue_av_it_schedule_page(sop: SoP, events: list[schedule.Event]) -> str:
     """Grid of the events whose Session Type staffs Venue AV/IT: dates across, time down; each cell spans its event."""
     root = '../'
-    staffed_types = {sess.name for sess in sop.sessions if any(s.role == VENUE_AV_IT for s in sess.staffing)}
+    staffed_types = {sess.name: sess for sess in sop.sessions if any(s.role == VENUE_AV_IT for s in sess.staffing)}
     events = [e for e in events if e.session_type in staffed_types]
     dates = sorted({e.start_date for e in events})
     # Rows are the intervals between consecutive start/end times; an event's cell spans its rows.
@@ -296,7 +296,7 @@ def _venue_av_it_schedule_page(sop: SoP, events: list[schedule.Event]) -> str:
     def cell(group: list[schedule.Event]) -> str:
         return ''.join(
             f'''<div class="schedule-event">
-  <strong>{escape(e.title)}</strong><br>
+  <strong><a href="{filtered_runsheet_href(root, staffed_types[e.session_type], VENUE_AV_IT)}">{escape(e.title)}</a></strong><br>
   {escape(e.onsite_location)}<br>
   <em>{escape(schedule.auditorium_display_mode(e.session_type))}</em>
 </div>'''
