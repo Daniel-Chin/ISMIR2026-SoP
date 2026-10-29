@@ -190,3 +190,8 @@ span.mention { color: var(--muted); }
 .anchor { margin-left: 0.4em; color: var(--muted, #888); text-decoration: none; opacity: 0.35; font-weight: normal; }
 :is(h1, h2, h3, h4, h5, h6, tr):hover .anchor, .anchor:focus { opacity: 1; }
 @media print { .anchor { display: none; } }
+
+/* Schedule: cell background by room. */
+.schedule td.schedule-cell { background: var(--surface); }
+.schedule td.room-a6-008 { background: #dceafc; }
+.schedule td.room-a6-007 { background: #fbe6d4; }

@@ -4,6 +4,7 @@
     roles/index.html                All roles and the session types they appear in
     <session>/index.html            The Idea
     <session>/runsheet/index.html   Runsheet (?mode=...&roles=a,b)
+    schedule-for-venue-av-it/       Date x time grid of events staffed by Venue AV/IT
     static/                         CSS and JS
     images/                         copied from content/images/
 """
@@ -13,7 +14,7 @@ import shutil
 from html import escape
 from pathlib import Path
 
-from . import md
+from . import md, schedule
 from .datatype import Role, Session, SoP
 from .slug import slugify
 
@@ -25,6 +26,7 @@ REPO_URL = (
 )
 SITE_TITLE = 'ISMIR 2026 Session SoP'
 STATIC_DIR = Path(__file__).parent / 'static'
+VENUE_AV_IT = 'Venue AV/IT'
 
 
 def build_site(sop: SoP, out: Path, content: Path) -> None:
@@ -42,6 +44,13 @@ def build_site(sop: SoP, out: Path, content: Path) -> None:
         slug = slugify(session.name)
         _write(out / slug / 'index.html', _idea_page(session, roles))
         _write(out / slug / 'runsheet' / 'index.html', _runsheet_page(session, roles))
+    if schedule.EVENTS_CSV.exists():
+        _write(
+            out / 'schedule-for-venue-av-it' / 'index.html',
+            _venue_av_it_schedule_page(sop, schedule.load_events()),
+        )
+    else:
+        print(f'warning: {schedule.EVENTS_CSV} not found; skipping schedule pages')
 
 
 def _write(path: Path, text: str) -> None:
@@ -118,7 +127,8 @@ def _staffing_summary(session: Session) -> str:
 
 
 def _top_tabs(root: str, current: str) -> str:
-    tabs = [('sessions', 'All session types', root or './'), ('roles', 'All roles', f'{root}roles/')]
+    tabs = [('sessions', 'All session types', root or './'), ('roles', 'All roles', f'{root}roles/'),
+            ('schedule-for-venue-av-it', 'Schedule for Venue AV/IT', f'{root}schedule-for-venue-av-it/')]
     links = ''.join(
         f'<a href="{href}" aria-current="page">{label}</a>' if key == current
         else f'<a href="{href}">{label}</a>'
@@ -258,3 +268,60 @@ def _runsheet_page(session: Session, roles: dict[str, Role]) -> str:
         scripts=f'<script src="{root}static/runsheet.js"></script>',
         source=session.source_path,
     )
+
+
+def _venue_av_it_schedule_page(sop: SoP, events: list[schedule.Event]) -> str:
+    """Grid of the events whose Session Type staffs Venue AV/IT: dates across, time down; each cell spans its event."""
+    root = '../'
+    staffed_types = {sess.name for sess in sop.sessions if any(s.role == VENUE_AV_IT for s in sess.staffing)}
+    events = [e for e in events if e.session_type in staffed_types]
+    dates = sorted({e.start_date for e in events})
+    # Rows are the intervals between consecutive start/end times; an event's cell spans its rows.
+    times = sorted({t for e in events for t in (e.start_time, e.end_time)}, key=schedule.time_key)
+    row_of = {t: i for i, t in enumerate(times)}
+    blocks: dict[tuple[str, int], tuple[int, list[schedule.Event]]] = {}  # (date, first row) -> (rowspan, events)
+    for e in events:
+        first, last = row_of[e.start_time], row_of[e.end_time]
+        span, group = blocks.setdefault((e.start_date, first), (last - first, []))
+        if span != last - first:
+            raise ValueError(f'event {e.uid} shares its start with an event of different length; cannot merge cells')
+        group.append(e)
+    covered: dict[str, set[int]] = {d: set() for d in dates}
+    for (date, first), (span, group) in blocks.items():
+        rows_ = set(range(first, first + span))
+        if rows_ & covered[date]:
+            raise ValueError(f'overlapping events on {date}: {[e.uid for e in group]}')
+        covered[date] |= rows_
+
+    def cell(group: list[schedule.Event]) -> str:
+        return ''.join(
+            f'''<div class="schedule-event">
+  <strong>{escape(e.title)}</strong><br>
+  {escape(e.onsite_location)}<br>
+  <em>{escape(schedule.auditorium_display_mode(e.session_type))}</em>
+</div>'''
+            for e in group
+        )
+
+    def row(i: int) -> str:
+        tds = []
+        for d in dates:
+            if (d, i) in blocks:
+                span, group = blocks[(d, i)]
+                room = slugify(group[0].onsite_location)
+                tds.append(f'<td class="schedule-cell room-{room}" rowspan="{span}">{cell(group)}</td>')
+            elif i not in covered[d]:
+                tds.append('<td></td>')
+        return f'<tr><td class="time">{escape(times[i])}–{escape(times[i + 1])}</td>{"".join(tds)}</tr>'
+
+    head = ''.join(f'<th>{escape(d)}</th>' for d in dates)
+    rows = '\n'.join(row(i) for i in range(len(times) - 1))
+    body = f'''{_top_tabs(root, 'schedule-for-venue-av-it')}
+<p>In UTC+4 (Dubai).</p>
+<table class="runsheet schedule">
+<thead><tr><th>Time</th>{head}</tr></thead>
+<tbody>
+{rows}
+</tbody>
+</table>'''
+    return _page(f'Schedule for {VENUE_AV_IT}', root, body)

@@ -21,6 +21,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v6
+      - run: uv run pull_from_google_sheet.py
+        env:
+          EVENTS_SHEET_URL: ${{ secrets.EVENTS_SHEET_URL }}
       # `build` runs the checks (incl. the [[Role]] spellcheck) first and fails on any problem.
       - run: uv run ismir2026-sop build --out _site
       - if: github.event_name != 'pull_request'
