@@ -6,6 +6,8 @@ from collections.abc import Callable
 
 import markdown
 from markdown.extensions import Extension
+from markdown.extensions.toc import TocExtension
+from markdown.extensions.toc import slugify as toc_slugify
 from markdown.inlinepatterns import InlineProcessor
 from markdown.treeprocessors import Treeprocessor
 from markdown.util import AtomicString
@@ -78,10 +80,17 @@ def find_images(text: str) -> list[str]:
     return re.findall(r'!\[[^\]]*\]\(\s*<?(' + IMAGE_PREFIX + r'[^\s)>]+)', text)
 
 
-def render(text: str, link_for: MentionLinker, root: str = '') -> str:
+def render(text: str, link_for: MentionLinker, root: str = '', anchor_prefix: str | None = None) -> str:
+    """With `anchor_prefix`, headings get ids (`<prefix><slug>`) so `#<prefix><slug>` links to them."""
+    extensions: list = ['extra', 'sane_lists', _MentionExtension(link_for), _ImageRootExtension(root)]
+    if anchor_prefix is not None:
+        extensions.append(TocExtension(
+            slugify=lambda value, sep: anchor_prefix + toc_slugify(value, sep),
+            permalink='#', permalink_class='anchor', permalink_title='Link to this section',
+        ))
     return markdown.markdown(
         text, tab_length=2,  # nested lists indented by 2 spaces
-        extensions=['extra', 'sane_lists', _MentionExtension(link_for), _ImageRootExtension(root)],
+        extensions=extensions,
     )
 
 

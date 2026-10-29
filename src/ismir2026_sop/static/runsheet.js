@@ -72,4 +72,6 @@
   boxes.forEach((b) => b.addEventListener('change', apply));
   controls.hidden = false;
   apply();
+  // Showing the controls and filtering rows shifts the layout after the browser's own jump to #row-N.
+  document.getElementById(decodeURIComponent(location.hash.slice(1)))?.scrollIntoView();
 })();

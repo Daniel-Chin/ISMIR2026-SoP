@@ -132,6 +132,7 @@ span.mention { color: var(--muted); }
 .runsheet td.time { white-space: nowrap; font-variant-numeric: tabular-nums; }
 .runsheet td.who { width: 14rem; }
 .runsheet tr.job[hidden] { display: none; }
+.runsheet tr.job:target { outline: 2px solid var(--hit-edge); outline-offset: -2px; }
 .runsheet details { margin-top: 0.25rem; }
 .runsheet summary { cursor: pointer; color: var(--accent); font-size: 0.9rem; }
 .runsheet details .prose { margin-top: 0.25rem; }
@@ -184,3 +185,8 @@ span.mention { color: var(--muted); }
   a { text-decoration: none; }
   * { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
 }
+
+/* Section/row permalinks: faint until hovered. */
+.anchor { margin-left: 0.4em; color: var(--muted, #888); text-decoration: none; opacity: 0.35; font-weight: normal; }
+:is(h1, h2, h3, h4, h5, h6, tr):hover .anchor, .anchor:focus { opacity: 1; }
+@media print { .anchor { display: none; } }

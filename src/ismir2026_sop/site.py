@@ -159,13 +159,18 @@ def _roles_page(sop: SoP, roles: dict[str, Role]) -> str:
             for session, count in appears
         ) or '<em>none</em>'
         sections.append(f'''<section class="role" id="{slugify(role.name)}">
-  <h3>{escape(role.name)}{' <span class="volunteer-chip">Volunteer</span>' if role.is_volunteer else ''}</h3>
+  <h3>{escape(role.name)}{' <span class="volunteer-chip">Volunteer</span>' if role.is_volunteer else ''}{_anchor(slugify(role.name))}</h3>
   <p class="role-attrs">{'On-Site (In-Person)' if role.is_onsite else 'Online (Remote)'}</p>
-  <div class="prose">{md.render(role.job_description, link_for, root)}</div>{_job_for_who(role)}
+  <div class="prose">{md.render(role.job_description, link_for, root, anchor_prefix=f'{slugify(role.name)}-')}</div>{_job_for_who(role)}
   <p class="role-sessions"><strong>Session types:</strong> {session_links}</p>
 </section>''')
     body = f'{_top_tabs(root, "roles")}\n' + '\n'.join(sections)
     return _page('Roles', root, body, source='content/roles.json')
+
+
+def _anchor(id: str) -> str:
+    """Clickable `#` that links to element `id`; matches the markdown headings' permalinks."""
+    return f'<a class="anchor" href="#{id}" title="Link to this section">#</a>'
 
 
 def _job_for_who(role: Role) -> str:
@@ -180,16 +185,16 @@ def _idea_page(session: Session, roles: dict[str, Role]) -> str:
     idea = Path(session.the_idea_markdown_path).read_text(encoding='utf-8')
     staff = '\n'.join(
         f'''<section class="role" id="{slugify(s.role)}">
-  <h3>{s.count}× <a href="{filtered_runsheet_href(root, session, s.role)}">{escape(s.role)}</a>{' <span class="volunteer-chip">Volunteer</span>' if roles[s.role].is_volunteer else ''}</h3>
+  <h3>{s.count}× <a href="{filtered_runsheet_href(root, session, s.role)}">{escape(s.role)}</a>{' <span class="volunteer-chip">Volunteer</span>' if roles[s.role].is_volunteer else ''}{_anchor(slugify(s.role))}</h3>
   <div class="prose">{md.render(roles[s.role].job_description, link_for, root)}</div>{_job_for_who(roles[s.role])}
 </section>'''
         for s in session.staffing
     )
     body = f'''{_session_header(session, root, 'idea')}
 <article class="prose idea">
-{md.render(idea, link_for, root)}
+{md.render(idea, link_for, root, anchor_prefix='')}
 </article>
-<h2>Staffing</h2>
+<h2 id="staffing">Staffing{_anchor("staffing")}</h2>
 {staff}'''
     return _page(session.name, root, body, source=session.source_path)
 
@@ -209,7 +214,7 @@ def _runsheet_page(session: Session, roles: dict[str, Role]) -> str:
         for s in session.staffing
     )
     rows = []
-    for job in session.runsheet:
+    for i, job in enumerate(session.runsheet, 1):
         chips = ' '.join(
             f'<a class="role-chip" data-role="{slugify(r)}" href="../#{slugify(r)}">{escape(r)}</a>'
             for r in job.roles
@@ -220,8 +225,8 @@ def _runsheet_page(session: Session, roles: dict[str, Role]) -> str:
                 '<details open><summary>More</summary>'
                 f'<div class="prose">{md.render(job.more_info, link_for, root)}</div></details>'
             )
-        rows.append(f'''<tr class="job" data-roles="{' '.join(slugify(r) for r in job.roles)}">
-  <td class="time">{md.render_inline(job.time_info, link_for, root).replace(chr(10), '<br>')}</td>
+        rows.append(f'''<tr class="job" id="row-{i}" data-roles="{' '.join(slugify(r) for r in job.roles)}">
+  <td class="time">{md.render_inline(job.time_info, link_for, root).replace(chr(10), '<br>')}{_anchor(f'row-{i}')}</td>
   <td class="who">{chips}</td>
   <td class="what"><div class="short">{md.render_inline(job.short_description, link_for, root)}</div>{details}</td>
 </tr>''')
