@@ -76,5 +76,12 @@
     "is_onsite": false,
     "job_for_who": "Familiar with Zoom. Has to miss the Award Nominee Oral Session, so better be a different volunteer for each session.",
     "job_description": "Host one Award Nominee Oral Session. Introduce every talk during the Award Nominee Oral Session. Check name pronunciations beforehand. Keeps time during presentations. Before the conference, get to know the presenters. Confirm the session's presentaion schedule and modality with them. Arrange timing and seating within the Award Nominee Oral Session."
+  },
+  {
+    "name": "Special Session Assistant",
+    "is_volunteer": true,
+    "is_onsite": true,
+    "job_for_who": "Familiar with Zoom. Interested in the Special Session.",
+    "job_description": "The on-site host of the session. Sit on stage, introduced. Relay online and local questions to the panelists. Keeps time."
   }
 ]

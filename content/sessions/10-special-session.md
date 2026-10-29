@@ -1,0 +1,8 @@
+- On-site location: A6-008.
+- Hybrid. Using Zoom Webinar. All panelists are online for 2026.
+- Typical process:  
+  - 15 min convener opening,
+  - 30 min panelists talks,
+  - 15 min discussion + Q&A.
+- Webinar Q&A uses the same design as [Keynote Session](../keynote/) except the [[Special Session Assistant]] tracks questions but doesn't need to clarify questions like a Q&A producer does.
+- The audience may bring lunch into the auditorium.

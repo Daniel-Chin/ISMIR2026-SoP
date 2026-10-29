@@ -1,7 +1,7 @@
 - Oral presentations of the award-nominated papers. 
 - Each paper gets 10-min presentation and 5-min Q&A. 
 - Some presenters are on-site; some are remote and present live via Zoom Webinar. 
-- Onsite location: 300-capacity auditorium A6-008.
+- Onsite location: 300-capacity auditorium A6-008. (But A6-007 on Wednesday afternoon.)
 - Streamed via Zoom Webinar 500.
 
 ### Presenter Preparation

@@ -1,0 +1,53 @@
+{
+  "name": "Special Session",
+  "the_idea_markdown_path": "10-special-session.md",
+  "staffing": [
+    {"role": "Special Session Assistant", "count": 1},
+    {"role": "Mic Runner", "count": 1},
+    {"role": "Zoom Master", "count": 1}
+  ],
+  "runsheet": [
+    {
+      "time_info": "T-2 min",
+      "roles": ["Special Session Assistant", "Mic Runner", "Zoom Master"],
+      "short_description": "Meet to know one another.",
+      "more_info": ""
+    },
+    {
+      "time_info": "T-1 min",
+      "roles": ["Zoom Master"],
+      "short_description": "Promote the convener and panelists from attendees to panelists and say hi. Finding 5 people among 500 people is not easy. Periodically search names. Also monitor the Special Session channel on Slack for messages from panelists.",
+      "more_info": "Find invitee info on the event page: [Health](https://ismir2026program.ismir.net/event_lunch-special-session-music-and-health.html); [Social Responsibility](https://ismir2026program.ismir.net/event_lunch-special-session-mir-and-social-responsibility.html); [Synesthesia](https://ismir2026program.ismir.net/event_lunch-special-session-mir-and-synesthesia.html); [Humanities](https://ismir2026program.ismir.net/event_lunch-special-session-mir-and-the-humanities.html)"
+    },
+    {
+      "time_info": "T",
+      "roles": ["Special Session Assistant"],
+      "short_description": "Announce session starts. Introduce yourself as the volunteer who assists the session. Introduce the convener (online). Let the convener take over. Take notes when the convener introduces the timeline.",
+      "more_info": ""
+    },
+    {
+      "time_info": "Throughout",
+      "roles": ["Special Session Assistant"],
+      "short_description": "Speak up when a phase is >3 minutes behind schedule. If a panelist account is making noises, mute it.",
+      "more_info": ""
+    },
+    {
+      "time_info": "During\nQ&A",
+      "roles": ["Mic Runner"],
+      "short_description": "Whenever a question from the on-site audience is taken, give your mic to them.",
+      "more_info": ""
+    },
+    {
+      "time_info": "During\nQ&A",
+      "roles": ["Special Session Assistant"],
+      "short_description": "Always check questions on the Zoom Q&A tool and in the room, and interrupt the online panelists if there's a question. Also speaks up when any activity is >3 minutes behind schedule.",
+      "more_info": ""
+    },
+    {
+      "time_info": "End",
+      "roles": ["Zoom Master"],
+      "short_description": "Demote the convener and panelists from panelists to attendees.",
+      "more_info": ""
+    }
+  ]
+}

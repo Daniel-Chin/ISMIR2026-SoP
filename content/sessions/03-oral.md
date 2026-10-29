@@ -1,5 +1,5 @@
 - Runs 30 minutes. 
-- Onsite location: 300-capacity auditorium A6-008.
+- Onsite location: 300-capacity auditorium A6-008. (But A6-007 on Wednesday afternoon.)
 - 10 presentations, each 3 minutes. Back to back, no Q&A.
 - If the presenter is on-site, present on stage.
 - Otherwise, play the pre-recorded video already on Miniconf.
