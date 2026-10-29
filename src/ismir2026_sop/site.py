@@ -1,6 +1,7 @@
 """Write the static site.
 
     index.html                      Menu
+    roles/index.html                All roles and the session types they appear in
     <session>/index.html            The Idea
     <session>/runsheet/index.html   Runsheet (?mode=...&roles=a,b)
     static/                         CSS and JS
@@ -36,6 +37,7 @@ def build_site(sop: SoP, out: Path, content: Path) -> None:
     roles = {r.name: r for r in sop.roles}
 
     _write(out / 'index.html', _menu_page(sop))
+    _write(out / 'roles' / 'index.html', _roles_page(sop, roles))
     for session in sop.sessions:
         slug = slugify(session.name)
         _write(out / slug / 'index.html', _idea_page(session, roles))
@@ -115,6 +117,16 @@ def _staffing_summary(session: Session) -> str:
     return ', '.join(f'{s.count}× {escape(s.role)}' for s in session.staffing)
 
 
+def _top_tabs(root: str, current: str) -> str:
+    tabs = [('sessions', 'All session types', root or './'), ('roles', 'All roles', f'{root}roles/')]
+    links = ''.join(
+        f'<a href="{href}" aria-current="page">{label}</a>' if key == current
+        else f'<a href="{href}">{label}</a>'
+        for key, label, href in tabs
+    )
+    return f'<nav class="tabs">{links}</nav>'
+
+
 def _menu_page(sop: SoP) -> str:
     items = '\n'.join(
         f'''<li>
@@ -123,8 +135,37 @@ def _menu_page(sop: SoP) -> str:
 </li>'''
         for s in sop.sessions
     )
-    body = f'<h1>Session types</h1>\n<ul class="menu">\n{items}\n</ul>'
+    body = f'{_top_tabs("", "sessions")}\n<ul class="menu">\n{items}\n</ul>'
     return _page(SITE_TITLE, '', body)
+
+
+def _roles_page(sop: SoP, roles: dict[str, Role]) -> str:
+    root = '../'
+
+    def link_for(name: str) -> str | None:
+        if name not in roles:
+            raise KeyError(f'unknown role mention [[{name}]] (roles.json)')
+        return f'#{slugify(name)}'
+
+    sections = []
+    for role in sop.roles:
+        appears = [
+            (session, s.count) for session in sop.sessions for s in session.staffing if s.role == role.name
+        ]
+        # Counts are only worth showing when they vary from the default of one.
+        show_counts = any(count > 1 for _, count in appears)
+        session_links = ', '.join(
+            f'<a href="{filtered_runsheet_href(root, session, role.name)}">{escape(session.name)}</a>{f" ({count} per session)" if show_counts else ""}'
+            for session, count in appears
+        ) or '<em>none</em>'
+        sections.append(f'''<section class="role" id="{slugify(role.name)}">
+  <h3>{escape(role.name)}{' <span class="volunteer-chip">Volunteer</span>' if role.is_volunteer else ''}</h3>
+  <p class="role-attrs">{'On-Site (In-Person)' if role.is_onsite else 'Online (Remote)'}</p>
+  <div class="prose">{md.render(role.job_description, link_for, root)}</div>{_job_for_who(role)}
+  <p class="role-sessions"><strong>Session types:</strong> {session_links}</p>
+</section>''')
+    body = f'{_top_tabs(root, "roles")}\n' + '\n'.join(sections)
+    return _page('Roles', root, body, source='content/roles.json')
 
 
 def _job_for_who(role: Role) -> str:

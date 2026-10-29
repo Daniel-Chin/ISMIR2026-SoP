@@ -85,7 +85,13 @@ span.mention { color: var(--muted); }
 
 /* The Idea: staffing */
 .role { border-left: 3px solid var(--line); padding: 0.25rem 0 0.25rem 1rem; margin: 1rem 0; }
-.job-for-who { margin: 0.5rem 0 0; color: var(--muted); font-size: 0.9em; }
+.job-for-who {
+  margin: 0.5rem 0 0;
+  padding: 0.25rem 0.5rem;
+  border-left: 3px solid var(--hit-edge);
+  background: var(--hit-bg);
+  font-size: 0.9em;
+}
 .role:target { border-left-color: var(--hit-edge); }
 .volunteer-chip {
   display: inline-block;
