@@ -1,0 +1,15 @@
+{
+  "name": "Tutorial",
+  "the_idea_markdown_path": "05-tutorial.md",
+  "staffing": [
+    {"role": "TODO", "count": 1}
+  ],
+  "runsheet": [
+    {
+      "time_info": "T",
+      "roles": ["TODO"],
+      "short_description": "TODO",
+      "more_info": ""
+    }
+  ]
+}

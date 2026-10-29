@@ -15,17 +15,17 @@ CATEGORY_TO_SESSION_TYPE: dict[str, str | None] = {
     'Poster session': 'Poster Session',
     'Special': 'Special Session',
     'LBD': 'LBD Session',
-    'Awards': None,
+    'Awards': 'Awards and Closing Session',
     'Registration': None,
-    'Tutorials': None,
-    'Majlis': None,
+    'Tutorials': 'Tutorial',
+    'Majlis': 'Majlis',
     'Social': None,
     'Lunch': None,
-    'Music': None,
-    'Industry': None,
-    'WiMIR Meetup': None,
-    'Meetup': None,
-    'Unconference': None,
+    'Music': 'Music Program',
+    'Industry': 'Industry Panel',
+    'WiMIR Meetup': 'WIMIR Session',
+    'Meetup': 'ISMIR Society Meeting',
+    'Unconference': 'Unconference',
 }
 
 
@@ -37,7 +37,7 @@ def auditorium_display_mode(session_type: str) -> str:
         'Oral Session': 'Projector shows: Stage laptop',
         'Award Nominee Oral Session': 'Projector shows: Mixed, needs switching',
         'Special Session': 'Projector shows: Webinar',
-    }.get(session_type, 'TBD')
+    }.get(session_type, 'Projector shows: TBD')
 
 
 @dataclass(frozen=True)

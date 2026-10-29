@@ -83,5 +83,11 @@
     "is_onsite": true,
     "job_for_who": "Familiar with Zoom. Interested in the Special Session.",
     "job_description": "The on-site host of the session. Sit on stage, introduced. Relay online and local questions to the panelists. Keeps time."
+  },
+  {
+    "name": "TODO",
+    "is_volunteer": false,
+    "is_onsite": false,
+    "job_description": "Placeholder."
   }
 ]

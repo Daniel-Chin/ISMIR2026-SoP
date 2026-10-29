@@ -1,0 +1,16 @@
+{
+  "name": "WIMIR Session",
+  "the_idea_markdown_path": "45-wimir-session.md",
+  "staffing": [
+    {"role": "Venue AV/IT", "count": 1},
+    {"role": "TODO", "count": 1}
+  ],
+  "runsheet": [
+    {
+      "time_info": "T",
+      "roles": ["TODO"],
+      "short_description": "TODO",
+      "more_info": ""
+    }
+  ]
+}

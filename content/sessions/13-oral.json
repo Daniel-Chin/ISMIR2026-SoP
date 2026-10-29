@@ -1,6 +1,6 @@
 {
   "name": "Oral Session",
-  "the_idea_markdown_path": "03-oral.md",
+  "the_idea_markdown_path": "13-oral.md",
   "staffing": [
     {"role": "On-site Session Chair", "count": 1},
     {"role": "Webinar Sentinel", "count": 1},

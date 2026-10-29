@@ -1,6 +1,6 @@
 {
   "name": "Keynote",
-  "the_idea_markdown_path": "02-keynote.md",
+  "the_idea_markdown_path": "12-keynote.md",
   "staffing": [
     {"role": "Keynote Inviter", "count": 1},
     {"role": "Q&A Producer", "count": 1},

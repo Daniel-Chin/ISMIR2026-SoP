@@ -1,0 +1,16 @@
+{
+  "name": "ISMIR Society Meeting",
+  "the_idea_markdown_path": "46-ismir-society-meeting.md",
+  "staffing": [
+    {"role": "Venue AV/IT", "count": 1},
+    {"role": "TODO", "count": 1}
+  ],
+  "runsheet": [
+    {
+      "time_info": "T",
+      "roles": ["TODO"],
+      "short_description": "TODO",
+      "more_info": ""
+    }
+  ]
+}

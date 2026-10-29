@@ -12,9 +12,9 @@ Everything lives in [content/](content/):
 content/
   roles.json                     every role and its job description
   sessions/
-    01-opening-session.json         name, staffing, runsheet
-    01-opening-session.md           The Idea
-    02-...
+    11-opening-session.json         name, staffing, runsheet
+    11-opening-session.md           The Idea
+    12-...
 ```
 
 - **Add a session type**: add a `.json` + `.md` pair in `content/sessions/`. The menu lists sessions in file-name order (hence the number prefixes); the page address comes from the session's `name`, not the file name.
