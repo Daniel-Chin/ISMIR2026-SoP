@@ -35,20 +35,20 @@
     "is_volunteer": true,
     "is_onsite": true,
     "job_for_who": "High commitment. Has to miss parts of the conference.",
-    "job_description": "Configure Zoom Meetings / Webinars under time constraints."
+    "job_description": "Configure Zoom Meetings / Webinars under time constraints. Follow the Virtual Chair around on the first day to observe jobs."
   },
   {
     "name": "Poster Session Helpdesk On-site",
     "is_volunteer": true,
     "is_onsite": true,
-    "job_for_who": "Familiar with Zoom.",
+    "job_for_who": "Best familiar with Zoom.",
     "job_description": "Assist with technical issues at the Poster Session on-site."
   },
   {
     "name": "Poster Session Helpdesk Online",
     "is_volunteer": true,
     "is_onsite": false,
-    "job_for_who": "Familiar with Zoom.",
+    "job_for_who": "Best familiar with Zoom.",
     "job_description": "Assist with technical issues at the Poster Session online."
   },
   {
@@ -81,8 +81,15 @@
     "name": "Special Session Assistant",
     "is_volunteer": true,
     "is_onsite": true,
-    "job_for_who": "Familiar with Zoom. Interested in the Special Session.",
+    "job_for_who": "Best familiar with Zoom. Interested in the Special Session.",
     "job_description": "The on-site host of the session. Sit on stage, introduced. Relay online and local questions to the panelists. Keeps time."
+  },
+  {
+    "name": "Zoom Support",
+    "is_volunteer": true,
+    "is_onsite": true,
+    "job_for_who": "Best familiar with Zoom.",
+    "job_description": "Helps with Zoom-related issues."
   },
   {
     "name": "TODO",
