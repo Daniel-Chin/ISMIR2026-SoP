@@ -2,13 +2,14 @@
   "name": "Music Program",
   "the_idea_markdown_path": "40-music-program.md",
   "staffing": [
+    {"role": "Webinar Sentinel", "count": 1},
     {"role": "Venue AV/IT", "count": 1},
-    {"role": "TODO", "count": 1}
+    {"role": "Zoom Master", "count": 1}
   ],
   "runsheet": [
     {
       "time_info": "T",
-      "roles": ["TODO"],
+      "roles": ["Zoom Master"],
       "short_description": "TODO",
       "more_info": ""
     }

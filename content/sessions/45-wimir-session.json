@@ -2,13 +2,16 @@
   "name": "WIMIR Session",
   "the_idea_markdown_path": "45-wimir-session.md",
   "staffing": [
+    {"role": "Q&A Tracker", "count": 1},
+    {"role": "Mic Runner", "count": 2},
+    {"role": "Webinar Sentinel", "count": 1},
     {"role": "Venue AV/IT", "count": 1},
-    {"role": "TODO", "count": 1}
+    {"role": "Zoom Master", "count": 1}
   ],
   "runsheet": [
     {
       "time_info": "T",
-      "roles": ["TODO"],
+      "roles": ["Zoom Master"],
       "short_description": "TODO",
       "more_info": ""
     }
