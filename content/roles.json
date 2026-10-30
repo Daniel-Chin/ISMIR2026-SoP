@@ -1,11 +1,5 @@
 [
   {
-    "name": "TODO",
-    "is_volunteer": false,
-    "is_onsite": false,
-    "job_description": "Placeholder."
-  },
-  {
     "name": "Keynote Inviter",
     "is_volunteer": false,
     "is_onsite": true,
