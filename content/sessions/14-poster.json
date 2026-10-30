@@ -2,7 +2,7 @@
   "name": "Poster Session",
   "the_idea_markdown_path": "14-poster.md",
   "staffing": [
-    {"role": "Poster Session Helpdesk On-site", "count": 1},
+    {"role": "Poster Session Helpdesk On-site", "count": 2},
     {"role": "Poster Session Helpdesk Online", "count": 4},
     {"role": "Zoom Master", "count": 2}
   ],
