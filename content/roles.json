@@ -1,5 +1,11 @@
 [
   {
+    "name": "TODO",
+    "is_volunteer": false,
+    "is_onsite": false,
+    "job_description": "Placeholder."
+  },
+  {
     "name": "Keynote Inviter",
     "is_volunteer": false,
     "is_onsite": true,
@@ -28,6 +34,7 @@
     "name": "Webinar Sentinel",
     "is_volunteer": true,
     "is_onsite": true,
+    "job_for_who": "Best with sensitive hearing: must distinguish headphone audio from room audio.",
     "job_description": "Sit on-site in the backstage but view only the Zoom Webinar on the provided laptop. Not only listen, but try to understand and enjoy the content --- you catch more issues this way. Keep the on-site screen visible so any mismatch is catched, but pay main attention to the webinar. Use the provided laptop and headphones. If a panelist account is making noises, mute it."
   },
   {
@@ -97,11 +104,5 @@
     "is_onsite": true,
     "job_for_who": "Reasonable muscles required.",
     "job_description": "Transform the Poster Hall into the LBD setup."
-  },
-  {
-    "name": "TODO",
-    "is_volunteer": false,
-    "is_onsite": false,
-    "job_description": "Placeholder."
   }
 ]
