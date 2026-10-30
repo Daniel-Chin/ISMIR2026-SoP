@@ -6,7 +6,7 @@
 
 ### Presenter Preparation
 - Use a separate Zoom Meeting as the prep room for online joiners.
-- An online presenter joins the prep room 5 minutes before the scheduled presentation.
+- An online presenter joins the prep room 10 minutes before the scheduled presentation.
 - A [[Prep Room Assistant]] helps the online presenter figure out audio+video input+output, as well as screenshare with sound. 
 - When it’s time, let the presenter quit the prep room and join the main Webinar. 
 - to json: The [[Zoom Master]] manually promotes the presenter to panelist.

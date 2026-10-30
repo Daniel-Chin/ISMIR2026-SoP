@@ -30,13 +30,13 @@
       "more_info": ""
     },
     {
-      "time_info": "T−10 min",
+      "time_info": "T−12 min",
       "roles": ["Award Session Chair"],
-      "short_description": "Review name pronunciations. In #award-nominees-?-presenters, re-send the presentation order, re-send the link to the prep room Zoom Meeting, remind on-site presenters to sit in the front row, and remind online presenters to join the prep room 5 minutes before their turn.",
+      "short_description": "Review name pronunciations. In #award-nominees-?-presenters, re-send the presentation order, re-send the link to the prep room Zoom Meeting, remind on-site presenters to sit in the front row, and remind online presenters to join the prep room 10 minutes before their turn.",
       "more_info": "Find all info in channel description or pinned message."
     },
     {
-      "time_info": "T−10 min",
+      "time_info": "T−12 min",
       "roles": ["Prep Room Assistant", "Zoom Master"],
       "short_description": "[[Prep Room Assistant]] enters the prep room. Then, join Slack channel #award-nominees-?-presenters. Then, report being ready to [[Zoom Master]] on Slack channel [#internal-helpdesk-for-volunteer-and-organizers](https://ismir2026.slack.com/archives/C0CAA9DBFJ6). Stay in the prep room for the entire session.",
       "more_info": ""
@@ -102,7 +102,7 @@
       "more_info": "Cards: maybe simply write with pen and paper?"
     },
     {
-      "time_info": "T<sub>y</sub>-5 min",
+      "time_info": "T<sub>y</sub>-10 min",
       "roles": ["Prep Room Assistant"],
       "short_description": "where T<sub>y</sub> is the start of each presentation. If the next presenter has not joined the prep room, send a reminder in #award-nominees-?-presenters. If they have, go through these checks: they can hear you, you can hear them, they can see you, you can see them, they can share screen (ticking 'Share Sound', you can see the screen, and you can hear shared sounds. Then, stop their screenshare and remind them to tick 'Share Sound' when in the real Webinar. Paste the link to the Webinar in the Zoom Chat and let them click it. After they are gone, report in [#internal-helpdesk-for-volunteer-and-organizers](https://ismir2026.slack.com/archives/C0CAA9DBFJ6). If that was the last presenter, feel free to hop to the Webinar.",
       "more_info": "Convenient sound source: Any video on YouTube / Miniconf."
