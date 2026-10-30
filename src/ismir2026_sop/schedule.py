@@ -90,6 +90,15 @@ def total_hours_by_session_type(events: list[Event]) -> dict[str, float]:
     return totals
 
 
+def count_by_session_type(events: list[Event]) -> dict[str, int]:
+    """Number of events of each Session Type."""
+    counts: dict[str, int] = {}
+    for e in events:
+        if e.session_type is not None:
+            counts[e.session_type] = counts.get(e.session_type, 0) + 1
+    return counts
+
+
 def time_key(t: str) -> tuple[int, int]:
     h, m = t.split(':')
     return int(h), int(m)
