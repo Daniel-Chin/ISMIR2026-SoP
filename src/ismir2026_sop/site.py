@@ -158,7 +158,7 @@ def _person_hours(role: str, session: str, count: int, hours: dict[str, float], 
     """Person-hours of `role` (staffed `count` per session) across all events of the session type."""
     if role == 'Mic Runner':  # only works during Q&A
         return count * hours.get(session, 0) * MIC_RUNNER_QA_FRACTION
-    if role == 'Setter of LBD Scene':  # a short stint per session, not the whole session
+    if role == 'LBD Support':  # a short stint per session, not the whole session
         return count * counts.get(session, 0) * SETTER_OF_LBD_SCENE_HOURS_PER_SESSION
     return count * hours.get(session, 0)
 

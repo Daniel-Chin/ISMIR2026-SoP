@@ -2,12 +2,12 @@
   "name": "LBD Session",
   "the_idea_markdown_path": "80-lbd-session.md",
   "staffing": [
-    {"role": "Setter of LBD Scene", "count": 3}
+    {"role": "LBD Support", "count": 3}
   ],
   "runsheet": [
     {
       "time_info": "T−1 hour",
-      "roles": ["Setter of LBD Scene"],
+      "roles": ["LBD Support"],
       "short_description": "Transform the Poster Hall into the LBD setup.",
       "more_info": "Set up 6-9 TVs against some walls, spaced out for audio. All other electronics should be stashed away into the War Room. Move 13 Poster Boards towards the center of the space, supporting posters on both sides. "
     }
