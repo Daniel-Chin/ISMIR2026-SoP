@@ -63,7 +63,7 @@
     {
       "time_info": "T−4 min",
       "roles": ["Zoom Master"],
-      "short_description": "Promote [[Webinar Sentinel On-Site]], [[Q&A Tracker]], and maybe backstage to cohost in the Zoom webinar.",
+      "short_description": "In the Zoom webinar, promote [[Q&A Tracker]] to panelist; promote [[Webinar Sentinel On-Site]] and backstage to cohost.",
       "more_info": ""
     },
     {
@@ -88,6 +88,12 @@
       "time_info": "Throughout",
       "roles": ["Webinar Sentinel On-Site"],
       "short_description": "Sit on-site in the backstage but view only the Zoom Webinar on the provided laptop. Not only listen, but try to understand and enjoy the presentaions --- you catch more issues this way. Keep the on-site screen visible so any mismatch is catched, but pay main attention to the webinar. Use the provided headphones. Upon issues, use judgement: Either unmute to raise the issue, or contact the [[Zoom Master]] immediately by walking to them.",
+      "more_info": ""
+    },
+    {
+      "time_info": "Throughout",
+      "roles": ["Webinar Sentinel On-Site"],
+      "short_description": "If a panelist account is making noises, mute it.",
       "more_info": ""
     },
     {
