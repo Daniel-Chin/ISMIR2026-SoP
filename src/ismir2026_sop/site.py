@@ -39,7 +39,8 @@ def build_site(sop: SoP, out: Path, content: Path) -> None:
     roles = {r.name: r for r in sop.roles}
 
     _write(out / 'index.html', _menu_page(sop))
-    _write(out / 'roles' / 'index.html', _roles_page(sop, roles))
+    hours = schedule.total_hours_by_session_type(schedule.load_events()) if schedule.EVENTS_CSV.exists() else None
+    _write(out / 'roles' / 'index.html', _roles_page(sop, roles, hours))
     for session in sop.sessions:
         slug = slugify(session.name)
         _write(out / slug / 'index.html', _idea_page(session, roles))
@@ -149,7 +150,7 @@ def _menu_page(sop: SoP) -> str:
     return _page(SITE_TITLE, '', body)
 
 
-def _roles_page(sop: SoP, roles: dict[str, Role]) -> str:
+def _roles_page(sop: SoP, roles: dict[str, Role], hours: dict[str, float] | None) -> str:
     root = '../'
 
     def link_for(name: str) -> str | None:
@@ -168,9 +169,13 @@ def _roles_page(sop: SoP, roles: dict[str, Role]) -> str:
             f'<a href="{filtered_runsheet_href(root, session, role.name)}">{escape(session.name)}</a>{f" ({count} per session)" if show_counts else ""}'
             for session, count in appears
         ) or '<em>none</em>'
+        person_hours = (
+            f' · {sum(count * hours.get(session.name, 0) for session, count in appears):g} (person ྾ hour)s in total'
+            if hours is not None else ''
+        )
         sections.append(f'''<section class="role" id="{slugify(role.name)}">
   <h3>{escape(role.name)}{' <span class="volunteer-chip">Volunteer</span>' if role.is_volunteer else ''}{_anchor(slugify(role.name))}</h3>
-  <p class="role-attrs">{'On-Site (In-Person)' if role.is_onsite else 'Online (Remote)'}</p>
+  <p class="role-attrs">{'On-Site (In-Person)' if role.is_onsite else 'Online (Remote)'}{person_hours}</p>
   <div class="prose">{md.render(role.job_description, link_for, root, anchor_prefix=f'{slugify(role.name)}-')}</div>{_job_for_who(role)}
   <p class="role-sessions"><strong>Session types:</strong> {session_links}</p>
 </section>''')

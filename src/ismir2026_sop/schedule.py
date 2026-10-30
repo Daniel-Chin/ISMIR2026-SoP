@@ -79,6 +79,17 @@ def load_events(path: Path = EVENTS_CSV) -> list[Event]:
         ] + EXTRA_EVENTS
 
 
+def total_hours_by_session_type(events: list[Event]) -> dict[str, float]:
+    """Sum of (end - start) in hours over all events of each Session Type."""
+    totals: dict[str, float] = {}
+    for e in events:
+        if e.session_type is None:
+            continue
+        (sh, sm), (eh, em) = time_key(e.start_time), time_key(e.end_time)
+        totals[e.session_type] = totals.get(e.session_type, 0) + (eh * 60 + em - sh * 60 - sm) / 60
+    return totals
+
+
 def time_key(t: str) -> tuple[int, int]:
     h, m = t.split(':')
     return int(h), int(m)
