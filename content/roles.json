@@ -92,6 +92,12 @@
     "job_description": "The on-site host of the session. Sit on stage, introduced. Relay online and local questions to the panelists. Keeps time."
   },
   {
+    "name": "Tutorial Moderator",
+    "is_volunteer": true,
+    "is_onsite": true,
+    "job_description": "Serve as the in-room anchor for tutorial sessions on behalf of the remote tutorial chairs by introducing the tutorial and presenters, keeping the session on schedule, and coordinating with the room. Training will be provided separately by the tutorial chairs."
+  },
+  {
     "name": "Zoom Support",
     "is_volunteer": true,
     "is_onsite": true,

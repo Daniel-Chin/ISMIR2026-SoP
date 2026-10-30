@@ -2,13 +2,14 @@
   "name": "Tutorial",
   "the_idea_markdown_path": "05-tutorial.md",
   "staffing": [
-    {"role": "Zoom Support", "count": 2},
+    {"role": "Tutorial Moderator", "count": 1},
+    {"role": "Zoom Support", "count": 1},
     {"role": "Zoom Master", "count": 1}
   ],
   "runsheet": [
     {
       "time_info": "T",
-      "roles": ["Zoom Support"],
+      "roles": ["Tutorial Moderator"],
       "short_description": "TODO",
       "more_info": ""
     }
