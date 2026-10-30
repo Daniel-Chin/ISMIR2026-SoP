@@ -11,6 +11,7 @@ Everything lives in [content/](content/):
 ```
 content/
   roles.json                     every role and its job description
+  guides.json                    guides (title, url); roles list extra ones in `guides`; online volunteers get "For Online Volunteers" automatically
   sessions/
     11-opening-session.json         name, staffing, runsheet
     11-opening-session.md           The Idea

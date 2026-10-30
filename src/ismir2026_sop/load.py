@@ -2,6 +2,7 @@
 
 Layout:
     content/roles.json              list of roles
+    content/guides.json             list of guides (title, url) that roles refer to
     content/sessions/<any>.json     one session each; menu order = file name order
     content/sessions/<any>.md       The Idea, referenced from the session JSON
                                     by a path relative to that JSON file
@@ -12,7 +13,7 @@ import json
 from pathlib import Path
 from typing import Any
 
-from .datatype import Job, Role, Session, SoP, Staffing
+from .datatype import Guide, Job, Role, Session, SoP, Staffing
 
 
 class SoPError(Exception):
@@ -23,11 +24,14 @@ def load_sop(content_dir: Path) -> SoP:
     roles_path = content_dir / 'roles.json'
     roles_data = _expect(_read_json(roles_path), list, str(roles_path))
     roles = [_role(d, f'{roles_path}[{i}]') for i, d in enumerate(roles_data)]
+    guides_path = content_dir / 'guides.json'
+    guides_data = _expect(_read_json(guides_path), list, str(guides_path))
+    guides = [_guide(d, f'{guides_path}[{i}]') for i, d in enumerate(guides_data)]
     session_paths = sorted((content_dir / 'sessions').glob('*.json'))
     if not session_paths:
         raise SoPError(f'no session files found in {content_dir / "sessions"}')
     sessions = [_session(p) for p in session_paths]
-    return SoP(sessions=sessions, roles=roles)
+    return SoP(sessions=sessions, roles=roles, guides=guides)
 
 
 def _read_json(path: Path) -> Any:
@@ -48,7 +52,7 @@ def _expect(value: Any, type_: type, where: str) -> Any:
 def _fields(cls: type, data: Any, where: str) -> dict[str, Any]:
     data = _expect(data, dict, where)
     keys = [f.name for f in dataclasses.fields(cls) if not f.metadata.get('derived')]
-    optional = {f.name for f in dataclasses.fields(cls) if f.default is not dataclasses.MISSING}
+    optional = {f.name for f in dataclasses.fields(cls) if f.default is not dataclasses.MISSING or f.default_factory is not dataclasses.MISSING}
     missing = [k for k in keys if k not in data and k not in optional]
     # `dev_comment` is a free-form note for organizers, allowed on any object and ignored.
     unexpected = [k for k in data if k not in keys and k != 'dev_comment']
@@ -69,6 +73,15 @@ def _role(data: Any, where: str) -> Role:
         is_onsite=_expect(d['is_onsite'], bool, f'{where}.is_onsite'),
         job_description=_expect(d['job_description'], str, f'{where}.job_description'),
         job_for_who=_expect(d.get('job_for_who', ''), str, f'{where}.job_for_who'),
+        guides=_str_list(d.get('guides', []), f'{where}.guides'),
+    )
+
+
+def _guide(data: Any, where: str) -> Guide:
+    d = _fields(Guide, data, where)
+    return Guide(
+        title=_expect(d['title'], str, f'{where}.title'),
+        url=_expect(d['url'], str, f'{where}.url'),
     )
 
 

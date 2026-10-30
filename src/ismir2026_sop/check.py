@@ -3,7 +3,7 @@
 from collections import defaultdict
 from pathlib import Path
 
-from .datatype import SoP
+from .datatype import ONLINE_VOLUNTEER_GUIDE, SoP
 from .md import find_images, find_mentions
 from .slug import slugify
 
@@ -29,7 +29,14 @@ def find_problems(sop: SoP, content: Path) -> list[str]:
             if not (content / src).is_file():
                 problems.append(f'{where}: image {src} not found in {content / "images"}')
 
+    guide_titles = {g.title for g in sop.guides}
+    problems += [f'guide {t!r} listed twice' for t in guide_titles if sum(g.title == t for g in sop.guides) > 1]
+    if ONLINE_VOLUNTEER_GUIDE not in guide_titles:
+        problems.append(f'guides.json: missing guide {ONLINE_VOLUNTEER_GUIDE!r}')
     for r in sop.roles:
+        for t in r.guides:
+            if t not in guide_titles:
+                problems.append(f'role {r.name!r} guides: unknown guide {t!r}')
         check_mentions(r.job_description, f'role {r.name!r} job_description')
 
     for s in sop.sessions:

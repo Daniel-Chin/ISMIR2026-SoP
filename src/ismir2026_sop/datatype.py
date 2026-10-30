@@ -1,6 +1,12 @@
 from dataclasses import dataclass, field
 
 RoleName = str
+ONLINE_VOLUNTEER_GUIDE = 'For Online Volunteers'
+
+@dataclass(frozen=True)
+class Guide:
+    title: str
+    url: str
 
 @dataclass(frozen=True)
 class Role:
@@ -9,6 +15,12 @@ class Role:
     is_onsite: bool
     job_description: str
     job_for_who: str = ''
+    # Extra guides, by title; online volunteers also get ONLINE_VOLUNTEER_GUIDE automatically.
+    guides: list[str] = field(default_factory=list)
+
+    @property
+    def is_online(self) -> bool:
+        return not self.is_onsite
 
 @dataclass(frozen=True)
 class Staffing:
@@ -35,3 +47,4 @@ class Session:
 class SoP:
     sessions: list[Session]
     roles: list[Role]
+    guides: list[Guide] = field(default_factory=list)

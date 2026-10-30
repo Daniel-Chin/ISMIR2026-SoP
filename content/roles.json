@@ -9,6 +9,7 @@
     "name": "Q&A Producer",
     "is_volunteer": true,
     "is_onsite": true,
+    "guides": ["For All Volunteers", "About Webinar Q&A"],
     "job_for_who": "Somewhat familiar with the topic of the talk.",
     "job_description": "Sit on stage, not introduced. Clarify and relay online questions to the Speaker."
   },
@@ -16,6 +17,7 @@
     "name": "Q&A Tracker",
     "is_volunteer": true,
     "is_onsite": true,
+    "guides": ["For All Volunteers", "About Webinar Q&A"],
     "job_description": "Sit on stage, not introduced. Relay online questions to the Speaker."
   },
   {
@@ -28,6 +30,7 @@
     "name": "Webinar Sentinel On-Site",
     "is_volunteer": true,
     "is_onsite": true,
+    "guides": ["For All Volunteers", "For Zoom Co-Hosts"],
     "job_for_who": "Best with sensitive hearing: must distinguish headphone audio from room audio.",
     "job_description": "Sit on-site in the backstage but view only the Zoom Webinar on the provided laptop. Not only listen, but try to understand and enjoy the content --- you catch more issues this way. Keep the on-site screen visible so any mismatch is catched, but pay main attention to the webinar. Use the provided laptop and headphones. If a panelist account is making noises, mute it."
   },
@@ -35,12 +38,14 @@
     "name": "Webinar Sentinel Online",
     "is_volunteer": true,
     "is_onsite": false,
+    "guides": ["For All Volunteers"],
     "job_description": "View the Zoom Webinar remotely and report any issue on Slack."
   },
   {
     "name": "Zoom Master",
     "is_volunteer": true,
     "is_onsite": true,
+    "guides": ["For All Volunteers", "For Zoom Co-Hosts", "Assisting Online Attendees", "Assisting with Zoom", "Assisting with Slack", "About Webinar Q&A"],
     "job_for_who": "High commitment. Has to miss parts of the conference.",
     "job_description": "Configure Zoom Meetings / Webinars under time constraints. Follow the Virtual Chair around on the first day to observe jobs."
   },
@@ -48,6 +53,7 @@
     "name": "Poster Session Helpdesk On-site",
     "is_volunteer": true,
     "is_onsite": true,
+    "guides": ["For All Volunteers", "Assisting with Zoom"],
     "job_for_who": "Best familiar with Zoom.",
     "job_description": "Assist with technical issues at the Poster Session on-site."
   },
@@ -55,6 +61,7 @@
     "name": "Poster Session Helpdesk Online",
     "is_volunteer": true,
     "is_onsite": false,
+    "guides": ["For All Volunteers", "Assisting Online Attendees", "Assisting with Zoom"],
     "job_for_who": "Best familiar with Zoom.",
     "job_description": "Assist with technical issues at the Poster Session online."
   },
@@ -81,6 +88,7 @@
     "name": "Prep Room Assistant",
     "is_volunteer": true,
     "is_onsite": false,
+    "guides": ["For All Volunteers", "Assisting Online Attendees", "Assisting with Zoom"],
     "job_for_who": "Familiar with Zoom. Has to miss the Award Nominee Oral Session, so better be a different volunteer for each session.",
     "job_description": "Host one Award Nominee Oral Session. Introduce every talk during the Award Nominee Oral Session. Check name pronunciations beforehand. Keeps time during presentations. Before the conference, get to know the presenters. Confirm the session's presentaion schedule and modality with them. Arrange timing and seating within the Award Nominee Oral Session."
   },
@@ -88,6 +96,7 @@
     "name": "Special Session Assistant",
     "is_volunteer": true,
     "is_onsite": true,
+    "guides": ["For All Volunteers", "Assisting Online Attendees", "Assisting with Zoom", "About Webinar Q&A"],
     "job_for_who": "Best familiar with Zoom. Interested in the Special Session.",
     "job_description": "The on-site host of the session. Sit on stage, introduced. Relay online and local questions to the panelists. Keeps time."
   },
@@ -95,12 +104,14 @@
     "name": "Tutorial Moderator",
     "is_volunteer": true,
     "is_onsite": true,
+    "guides": ["For All Volunteers", "Assisting Online Attendees", "About Webinar Q&A"],
     "job_description": "Serve as the in-room anchor for tutorial sessions on behalf of the remote tutorial chairs by introducing the tutorial and presenters, keeping the session on schedule, and coordinating with the room. Training will be provided separately by the tutorial chairs."
   },
   {
     "name": "Zoom Support",
     "is_volunteer": true,
     "is_onsite": true,
+    "guides": ["For All Volunteers", "Assisting Online Attendees", "Assisting with Zoom"],
     "job_for_who": "Best familiar with Zoom.",
     "job_description": "Helps with Zoom-related issues."
   },
