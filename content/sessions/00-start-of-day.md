@@ -1,6 +1,6 @@
 Jobs for [[Zoom Master]].
 
-- Deploy 1 laptop in the Auditorium backstage for the Webinar Sentinel, 2 laptops on the Auditorium stage for Speaker and Q&A Tracker/Producer. For each laptop:
+- Deploy 1 laptop in the Auditorium backstage for the Webinar Sentinel On-Site, 2 laptops on the Auditorium stage for Speaker and Q&A Tracker/Producer. For each laptop:
   - Connect to the event-critical wifi.
   - Add to the desktop: 
     - Link to Zoom Webinar.

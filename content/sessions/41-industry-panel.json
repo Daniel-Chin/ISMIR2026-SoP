@@ -4,7 +4,8 @@
   "staffing": [
     {"role": "Q&A Tracker", "count": 1},
     {"role": "Mic Runner", "count": 2},
-    {"role": "Webinar Sentinel", "count": 1},
+    {"role": "Webinar Sentinel On-Site", "count": 1},
+    {"role": "Webinar Sentinel Online", "count": 1},
     {"role": "Venue AV/IT", "count": 1},
     {"role": "Zoom Master", "count": 1}
   ],
@@ -13,6 +14,12 @@
       "time_info": "T",
       "roles": ["Zoom Master"],
       "short_description": "TODO",
+      "more_info": ""
+    },
+    {
+      "time_info": "Throughout",
+      "roles": ["Webinar Sentinel Online"],
+      "short_description": "Monitor the Webinar and report issues immediately to [#vol-alerts](https://ismir2026.slack.com/archives/C0CDNPPNJ0Z).",
       "more_info": ""
     }
   ]

@@ -5,7 +5,8 @@
     {"role": "Keynote Inviter", "count": 1},
     {"role": "Q&A Producer", "count": 1},
     {"role": "Mic Runner", "count": 2},
-    {"role": "Webinar Sentinel", "count": 1},
+    {"role": "Webinar Sentinel On-Site", "count": 1},
+    {"role": "Webinar Sentinel Online", "count": 1},
     {"role": "Venue AV/IT", "count": 1},
     {"role": "Zoom Master", "count": 1}
   ],
@@ -18,8 +19,8 @@
     },
     {
       "time_info": "T−11 min",
-      "roles": ["Zoom Master", "Webinar Sentinel"],
-      "short_description": "[[Webinar Sentinel]] confirm where [[Zoom Master]] will sit.",
+      "roles": ["Zoom Master", "Webinar Sentinel On-Site"],
+      "short_description": "[[Webinar Sentinel On-Site]] confirm where [[Zoom Master]] will sit.",
       "more_info": ""
     },
     {
@@ -37,7 +38,7 @@
     {
       "time_info": "T−10 min",
       "roles": ["Zoom Master"],
-      "short_description": "Promote the Speaker, [[Webinar Sentinel]], [[Q&A Producer]], and maybe backstage to cohost in the Zoom webinar.",
+      "short_description": "Promote the Speaker, [[Webinar Sentinel On-Site]], [[Q&A Producer]], and maybe backstage to cohost in the Zoom webinar.",
       "more_info": ""
     },
     {
@@ -78,13 +79,13 @@
     },
     {
       "time_info": "Throughout",
-      "roles": ["Webinar Sentinel"],
+      "roles": ["Webinar Sentinel On-Site"],
       "short_description": "Sit on-site in the backstage but view only the Zoom Webinar on the provided laptop. Not only listen, but try to understand and enjoy the talk --- you catch more issues this way. Keep the on-site screen visible so any mismatch is catched, but pay main attention to the webinar. Use the provided headphones. Upon issues, use judgement: Either unmute to raise the issue, or contact the [[Zoom Master]] immediately by walking to them.",
       "more_info": ""
     },
     {
       "time_info": "Throughout",
-      "roles": ["Webinar Sentinel"],
+      "roles": ["Webinar Sentinel On-Site"],
       "short_description": "If a panelist account is making noises, mute it.",
       "more_info": ""
     },
@@ -110,6 +111,12 @@
       "time_info": "End",
       "roles": ["Zoom Master"],
       "short_description": "Demote panelists to attendees, especially when there is a subsequent session.",
+      "more_info": ""
+    },
+    {
+      "time_info": "Throughout",
+      "roles": ["Webinar Sentinel Online"],
+      "short_description": "Monitor the Webinar and report issues immediately to [#vol-alerts](https://ismir2026.slack.com/archives/C0CDNPPNJ0Z).",
       "more_info": ""
     }
   ]

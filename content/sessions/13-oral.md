@@ -6,7 +6,7 @@
 - The [[On-site Session Chair]] introduces every talk. Check name pronunciations beforehand. Be brief, nice, and non-distracting.
 - On-site presenters sit in the front row. Presentation uses the stage laptop by default.
 - Streamed over Zoom Webinar. 
-  - A [[Webinar Sentinel]] sits on site but views only the stream.
+  - A [[Webinar Sentinel On-Site]] sits on site but views only the stream.
   - [[On-site Session Chair]] mic & presenter mic route through PA system into Zoom sound input. Laptop audio goes through Auditorium system into Webinar.
 
 ### Google Sheet "For Session Chair"
