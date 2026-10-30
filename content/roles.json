@@ -92,6 +92,13 @@
     "job_description": "Helps with Zoom-related issues."
   },
   {
+    "name": "Setter of LBD Scene",
+    "is_volunteer": true,
+    "is_onsite": true,
+    "job_for_who": "Reasonable muscles required.",
+    "job_description": "Transform the Poster Hall into the LBD setup."
+  },
+  {
     "name": "TODO",
     "is_volunteer": false,
     "is_onsite": false,
