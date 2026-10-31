@@ -194,7 +194,7 @@ def _roles_page(sop: SOP, roles: dict[str, Role], events: list[schedule.Event] |
   <h3>{escape(role.name)}{' <span class="volunteer-chip">Volunteer</span>' if role.is_volunteer else ''}{_anchor(slugify(role.name))}</h3>
   <p class="role-attrs">{'On-Site (In-Person)' if role.is_onsite else 'Online (Remote)'}{person_hours}</p>
   <div class="prose">{md.render(role.job_description, link_for, root, anchor_prefix=f'{slugify(role.name)}-')}</div>{_job_for_who(role)}{_guides(role, guide_urls)}
-  <p class="role-sessions"><strong>Session types:</strong> {session_links}</p>
+  <p class="role-sessions"><strong>Appears in:</strong> {session_links}</p>
 </section>''')
     body = f'{_top_tabs(root, "roles")}\n' + '\n'.join(sections)
     return _page('Roles', root, body, source='content/roles.json')
