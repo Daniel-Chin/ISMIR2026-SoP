@@ -323,15 +323,13 @@ def _venue_av_it_schedule_page(sop: SOP, events: list[schedule.Event]) -> str:
             raise ValueError(f'overlapping events on {date}: {[e.uid for e in group]}')
         covered[date] |= rows_
 
-    def cell(group: list[schedule.Event]) -> str:
-        return ''.join(
-            f'''<div class="schedule-event">
-  <strong><a href="{filtered_runsheet_href(root, staffed_types[e.session_type], VENUE_AV_IT)}">{escape(e.title)}</a></strong><br>
+    def event_html(e: schedule.Event) -> str:
+        return f'''<strong><a href="{filtered_runsheet_href(root, staffed_types[e.session_type], VENUE_AV_IT)}">{escape(e.title)}</a></strong><br>
   {escape(e.onsite_location)}<br>
-  <em>{escape(schedule.auditorium_display_mode(e.session_type))}</em>
-</div>'''
-            for e in group
-        )
+  <em>{escape(schedule.auditorium_display_mode(e.session_type))}</em>'''
+
+    def cell(group: list[schedule.Event]) -> str:
+        return ''.join(f'<div class="schedule-event">\n  {event_html(e)}\n</div>' for e in group)
 
     def row(i: int) -> str:
         tds = []
@@ -344,6 +342,17 @@ def _venue_av_it_schedule_page(sop: SOP, events: list[schedule.Event]) -> str:
                 tds.append('<td></td>')
         return f'<tr><td class="time">{escape(times[i])}–{escape(times[i + 1])}</td>{"".join(tds)}</tr>'
 
+    def day_list(d: str) -> str:
+        """Phone view of one date; the table is too wide for a phone."""
+        items = '\n'.join(
+            f'''<li class="room-{slugify(e.onsite_location)}">
+  <span class="time">{escape(e.start_time)}–{escape(e.end_time)}</span><br>
+  {event_html(e)}
+</li>'''
+            for e in sorted((e for e in events if e.start_date == d), key=lambda e: schedule.time_key(e.start_time))
+        )
+        return f'<h2>{escape(d)}</h2>\n<ul>\n{items}\n</ul>'
+
     head = ''.join(f'<th>{escape(d)}</th>' for d in dates)
     rows = '\n'.join(row(i) for i in range(len(times) - 1))
     body = f'''{_top_tabs(root, 'schedule-for-venue-av-it')}
@@ -353,5 +362,8 @@ def _venue_av_it_schedule_page(sop: SOP, events: list[schedule.Event]) -> str:
 <tbody>
 {rows}
 </tbody>
-</table>'''
+</table>
+<div class="schedule-list">
+{chr(10).join(day_list(d) for d in dates)}
+</div>'''
     return _page(f'Schedule for {VENUE_AV_IT}', root, body)

@@ -193,7 +193,17 @@ span.mention { color: var(--muted); }
 
 /* Schedule: cell background by room. */
 .schedule td.schedule-cell { background: var(--surface); }
-.schedule td.room-a6-008 { background: #dceafc; }
-.schedule td.room-a6-007 { background: #fbe6d4; }
+.schedule td.room-a6-008, .schedule-list li.room-a6-008 { background: #dceafc; }
+.schedule td.room-a6-007, .schedule-list li.room-a6-007 { background: #fbe6d4; }
 .schedule td.schedule-cell { border: 2px solid #8a929c; }
 .schedule td.time { vertical-align: middle; }
+
+/* Schedule, phone: list instead of table. */
+.schedule-list { display: none; }
+.schedule-list ul { list-style: none; margin: 0; padding: 0; }
+.schedule-list li { margin-bottom: 0.5rem; padding: 0.5rem; border: 2px solid #8a929c; background: var(--surface); }
+.schedule-list .time { font-variant-numeric: tabular-nums; }
+@media (max-width: 640px) {
+  table.schedule { display: none; }
+  .schedule-list { display: block; }
+}
