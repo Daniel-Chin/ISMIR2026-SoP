@@ -6,13 +6,13 @@ import traceback
 from pathlib import Path
 
 from .check import find_problems
-from .load import SoPError, load_sop
+from .load import SOPError, load_sop
 from .site import build_site
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        prog='ismir2026-sop', description='Check the SoP content and build the static site.',
+        prog='ismir2026-sop', description='Check the SOP content and build the static site.',
     )
     parser.add_argument('--content', type=Path, default=Path('content'), help='content directory (default: content)')
     sub = parser.add_subparsers(dest='command', required=True)
@@ -26,7 +26,7 @@ def main() -> None:
 
     try:
         sop = load_sop(args.content)
-    except SoPError as e:
+    except SOPError as e:
         traceback.print_exc()
         sys.exit(f'error: {e}')
     problems = find_problems(sop, args.content)

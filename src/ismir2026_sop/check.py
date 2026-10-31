@@ -3,7 +3,7 @@
 from collections import defaultdict
 from pathlib import Path
 
-from .datatype import ONLINE_VOLUNTEER_GUIDE, SoP
+from .datatype import ONLINE_VOLUNTEER_GUIDE, SOP
 from .md import find_images, find_mentions
 from .slug import slugify
 
@@ -11,7 +11,7 @@ from .slug import slugify
 RESERVED_SLUGS = {'static', 'images'}
 
 
-def find_problems(sop: SoP, content: Path) -> list[str]:
+def find_problems(sop: SOP, content: Path) -> list[str]:
     problems: list[str] = []
     role_names = {r.name for r in sop.roles}
 

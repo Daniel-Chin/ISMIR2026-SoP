@@ -44,7 +44,7 @@ class Session:
     source_path: str = field(default='', metadata={'derived': True})
 
 @dataclass(frozen=True)
-class SoP:
+class SOP:
     sessions: list[Session]
     roles: list[Role]
     guides: list[Guide] = field(default_factory=list)

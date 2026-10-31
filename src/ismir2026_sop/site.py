@@ -15,7 +15,7 @@ from html import escape
 from pathlib import Path
 
 from . import md, schedule
-from .datatype import ONLINE_VOLUNTEER_GUIDE, Role, Session, SoP
+from .datatype import ONLINE_VOLUNTEER_GUIDE, Role, Session, SOP
 from .slug import slugify
 
 # Set automatically by GitHub Actions; absent in local builds, where the repo links are omitted.
@@ -24,12 +24,12 @@ REPO_URL = (
     if 'GITHUB_REPOSITORY' in os.environ
     else None
 )
-SITE_TITLE = 'ISMIR 2026 Session SoP'
+SITE_TITLE = 'ISMIR 2026 Session SOP'
 STATIC_DIR = Path(__file__).parent / 'static'
 VENUE_AV_IT = 'Venue AV/IT'
 
 
-def build_site(sop: SoP, out: Path, content: Path) -> None:
+def build_site(sop: SOP, out: Path, content: Path) -> None:
     if out.exists():
         shutil.rmtree(out)
     shutil.copytree(STATIC_DIR, out / 'static')
@@ -86,7 +86,7 @@ def _page(title: str, root: str, body: str, *, scripts: str = '', source: str = 
     )
     footer = (
         f'''<footer class="site-footer">
-  Edit this SoP via <a href="{REPO_URL}">this repo</a>{source_link}
+  Edit this SOP via <a href="{REPO_URL}">this repo</a>{source_link}
 </footer>
 '''
         if REPO_URL
@@ -139,7 +139,7 @@ def _top_tabs(root: str, current: str) -> str:
     return f'<nav class="tabs">{links}</nav>'
 
 
-def _menu_page(sop: SoP) -> str:
+def _menu_page(sop: SOP) -> str:
     items = '\n'.join(
         f'''<li>
   <h2><a href="{slugify(s.name)}/">{escape(s.name)}</a></h2>
@@ -164,7 +164,7 @@ def _person_hours(role: str, session: str, count: int, hours: dict[str, float], 
     return count * hours.get(session, 0)
 
 
-def _roles_page(sop: SoP, roles: dict[str, Role], events: list[schedule.Event] | None, guide_urls: dict[str, str]) -> str:
+def _roles_page(sop: SOP, roles: dict[str, Role], events: list[schedule.Event] | None, guide_urls: dict[str, str]) -> str:
     root = '../'
 
     def link_for(name: str) -> str | None:
@@ -300,7 +300,7 @@ def _runsheet_page(session: Session, roles: dict[str, Role], guide_urls: dict[st
     )
 
 
-def _venue_av_it_schedule_page(sop: SoP, events: list[schedule.Event]) -> str:
+def _venue_av_it_schedule_page(sop: SOP, events: list[schedule.Event]) -> str:
     """Grid of the events whose Session Type staffs Venue AV/IT: dates across, time down; each cell spans its event."""
     root = '../'
     staffed_types = {sess.name: sess for sess in sop.sessions if any(s.role == VENUE_AV_IT for s in sess.staffing)}

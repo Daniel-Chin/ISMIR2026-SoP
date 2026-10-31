@@ -1,7 +1,7 @@
 [project]
 name = "ismir2026-sop"
 version = "0.1.0"
-description = "Static site for the ISMIR 2026 session standard procedures (SoP)"
+description = "Static site for the ISMIR 2026 session standard procedures (SOP)"
 readme = "README.md"
 authors = [
     { name = "Daniel Chin", email = "daniel.chin@nyu.edu" }

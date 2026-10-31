@@ -1,4 +1,4 @@
-"""Read the organizer-edited content directory into a `SoP`.
+"""Read the organizer-edited content directory into a `SOP`.
 
 Layout:
     content/roles.json              list of roles
@@ -13,14 +13,14 @@ import json
 from pathlib import Path
 from typing import Any
 
-from .datatype import Guide, Job, Role, Session, SoP, Staffing
+from .datatype import Guide, Job, Role, Session, SOP, Staffing
 
 
-class SoPError(Exception):
+class SOPError(Exception):
     pass
 
 
-def load_sop(content_dir: Path) -> SoP:
+def load_sop(content_dir: Path) -> SOP:
     roles_path = content_dir / 'roles.json'
     roles_data = _expect(_read_json(roles_path), list, str(roles_path))
     roles = [_role(d, f'{roles_path}[{i}]') for i, d in enumerate(roles_data)]
@@ -29,23 +29,23 @@ def load_sop(content_dir: Path) -> SoP:
     guides = [_guide(d, f'{guides_path}[{i}]') for i, d in enumerate(guides_data)]
     session_paths = sorted((content_dir / 'sessions').glob('*.json'))
     if not session_paths:
-        raise SoPError(f'no session files found in {content_dir / "sessions"}')
+        raise SOPError(f'no session files found in {content_dir / "sessions"}')
     sessions = [_session(p) for p in session_paths]
-    return SoP(sessions=sessions, roles=roles, guides=guides)
+    return SOP(sessions=sessions, roles=roles, guides=guides)
 
 
 def _read_json(path: Path) -> Any:
     try:
         return json.loads(path.read_text(encoding='utf-8'))
     except FileNotFoundError:
-        raise SoPError(f'{path}: file not found')
+        raise SOPError(f'{path}: file not found')
     except json.JSONDecodeError as e:
-        raise SoPError(f'{path}: invalid JSON: {e}')
+        raise SOPError(f'{path}: invalid JSON: {e}')
 
 
 def _expect(value: Any, type_: type, where: str) -> Any:
     if type_ is int and isinstance(value, bool) or not isinstance(value, type_):
-        raise SoPError(f'{where}: expected {type_.__name__}, got {json.dumps(value)}')
+        raise SOPError(f'{where}: expected {type_.__name__}, got {json.dumps(value)}')
     return value
 
 
@@ -57,7 +57,7 @@ def _fields(cls: type, data: Any, where: str) -> dict[str, Any]:
     # `dev_comment` is a free-form note for organizers, allowed on any object and ignored.
     unexpected = [k for k in data if k not in keys and k != 'dev_comment']
     if missing or unexpected:
-        raise SoPError(f'{where}: missing keys {missing}, unexpected keys {unexpected}')
+        raise SOPError(f'{where}: missing keys {missing}, unexpected keys {unexpected}')
     return data
 
 
