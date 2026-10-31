@@ -26,7 +26,7 @@
     {
       "time_info": "T−10 min",
       "roles": ["Keynote Inviter"],
-      "short_description": "Make sure the Speaker has arrived. Greet the Speaker, mention time cue signals, and direct them to the [[Zoom Master]] for setup.",
+      "short_description": "Make sure the on-site/online Speaker has arrived. Greet the Speaker, mention time cue signals, and direct them to the [[Zoom Master]] for setup.",
       "more_info": ""
     },
     {
@@ -45,7 +45,7 @@
       "time_info": "T−8 min",
       "roles": ["Zoom Master"],
       "short_description": "Help the Speaker connect laptop to HDMI (if on their own laptop), test aduio+video input+output (if online), and test screenshare and sound share (always). Direct the Speaker to the [[Q&A Producer]] for coordination.",
-      "more_info": "Zoom Client: https://zoom.us/download"
+      "more_info": "Zoom Client: [zoom.us/download](https://zoom.us/download)"
     },
     {
       "time_info": "T−5 min",
