@@ -9,16 +9,28 @@
   ],
   "runsheet": [
     {
-      "time_info": "T-2 min",
+      "time_info": "T−5 min",
+      "roles": ["Venue AV/IT", "Zoom Master"],
+      "short_description": "Disconnect webinar audio+video from the auditorium.",
+      "more_info": ""
+    },
+    {
+      "time_info": "T-3 min",
       "roles": ["Special Session Assistant", "Mic Runner", "Zoom Master"],
       "short_description": "Meet to know one another.",
       "more_info": ""
     },
     {
-      "time_info": "T-1 min",
+      "time_info": "T-2 min",
       "roles": ["Zoom Master"],
-      "short_description": "Promote the convener and panelists from attendees to panelists and say hi. Finding 5 people among 500 people is not easy. Periodically search names. Also monitor the Special Session channel on Slack for messages from panelists.",
+      "short_description": "Screenshare 'Preparing for Special Session...' Promote the convener and panelists from attendees to panelists and say hi. Finding 5 people among 500 people is not easy. Periodically search names. Also monitor the Special Session channel on Slack for messages from panelists.",
       "more_info": "Find invitee info on the event page: [Health](https://ismir2026program.ismir.net/event_lunch-special-session-music-and-health.html); [Social Responsibility](https://ismir2026program.ismir.net/event_lunch-special-session-mir-and-social-responsibility.html); [Synesthesia](https://ismir2026program.ismir.net/event_lunch-special-session-mir-and-synesthesia.html); [Humanities](https://ismir2026program.ismir.net/event_lunch-special-session-mir-and-the-humanities.html)"
+    },
+    {
+      "time_info": "T",
+      "roles": ["Venue AV/IT", "Zoom Master"],
+      "short_description": "Stop screenshare. Connect webinar audio+video to the auditorium.",
+      "more_info": ""
     },
     {
       "time_info": "T",
