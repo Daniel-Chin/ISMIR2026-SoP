@@ -81,7 +81,7 @@
     {
       "time_info": "T−1 min",
       "roles": ["Q&A Tracker"],
-      "short_description": "Sit in the corner of the stage. Join Zoom on the provided laptop and disconnect audio+video. Keep both the Q&A panel and the participants view (for raised hands) open at all times.",
+      "short_description": "Sit in the corner of the stage. Join Zoom on the provided laptop and disconnect audio+video. Keep the Q&A panel open at all times.",
       "more_info": ""
     },
     {
@@ -153,7 +153,7 @@
     {
       "time_info": "During\nQ&A",
       "roles": ["Q&A Tracker"],
-      "short_description": "When there is an online question, signal the [[Award Session Chair]]. When the [[Award Session Chair]] takes it, read it / unmute the attendee and call him/her to speak up.",
+      "short_description": "When there is an online question, signal the [[Award Session Chair]]. When the [[Award Session Chair]] takes it, read it.",
       "more_info": ""
     },
     {

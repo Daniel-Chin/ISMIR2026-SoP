@@ -4,11 +4,9 @@
 
 ### Q&A
 - On-site & online questions are supported. We support not only a Q&A session but also live speaker-audience interaction.
-- Two channels exist for online questions: 
-  - Zoom Webinar Q&A tool. 
-  - Zoom Webinar raise hand & unmute. (No video)
+- Online questions are text only, via the Zoom Webinar Q&A tool. Raising hands is not supported.
 - For text questions in the Q&A tool, a [[Q&A Producer]] organizes and clarifies the questions before relaying them. 
-- Use cards / gestures for robust & confident flow. When there is a clarified question, no matter during the talk or during Q&A, the [[Q&A Producer]] signals (e.g. raises a hand). When the Speaker takes the question, the [[Q&A Producer]] reads it / unmutes the attendee and calls him/her to speak up.
+- Use cards / gestures for robust & confident flow. When there is a clarified question, no matter during the talk or during Q&A, the [[Q&A Producer]] signals (e.g. raises a hand). When the Speaker takes the question, the [[Q&A Producer]] reads it.
   - If the Speaker is remote, the [[Q&A Producer]] has to barge in some of the times, "We have a question. Is now a good time?".
 - When the [[On-site Session Chair]] takes an on-site question, a [[Mic Runner]] gives their mic to the person asking.
 

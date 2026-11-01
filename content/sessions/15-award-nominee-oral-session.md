@@ -15,12 +15,10 @@
 ### Q&A
 - Each presentation is followed by its Q&A. Questions do not interrupt the presentation.
 - On-site & online questions are supported.
-- Two channels exist for online questions:
-  - Zoom Webinar Q&A tool.
-  - Zoom Webinar raise hand & unmute. (No video)
+- Online questions are text only, via the Zoom Webinar Q&A tool. Raising hands is not supported.
 - For text questions in the Q&A tool, a [[Q&A Tracker]] organizes the questions before relaying them. Text questions arriving during the presentation will wait for the Q&A.
 - The [[Award Session Chair]] starts and ends each Q&A, and picks the questions, balancing online VS on-site questions.
-- Use cards / gestures for robust & confident flow. When there is a clarified online question, the [[Q&A Tracker]] signals the [[Award Session Chair]] (e.g. raises a hand). When the [[Award Session Chair]] takes the question, the [[Q&A Tracker]] reads it / unmutes the attendee and calls him/her to speak up.
+- Use cards / gestures for robust & confident flow. When there is a clarified online question, the [[Q&A Tracker]] signals the [[Award Session Chair]] (e.g. raises a hand). When the [[Award Session Chair]] takes the question, the [[Q&A Tracker]] reads it.
 - When the [[Award Session Chair]] takes an on-site question, a [[Mic Runner]] gives their mic to the person asking.
 
 ### Google Sheet "For Session Chair"
