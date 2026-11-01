@@ -54,8 +54,8 @@
     {
       "time_info": "T−5 min",
       "roles": ["Zoom Master"],
-      "short_description": "Disable Zoom Chat for attendees.",
-      "more_info": "Chat > menu > attendees can chat with: nobody."
+      "short_description": "Disable Zoom Chat and raised hand (for attendees).",
+      "more_info": "Chat > menu > attendees can chat with: nobody. Host Tools > attendees > raise hand: off."
     },
     {
       "time_info": "T−3 min",

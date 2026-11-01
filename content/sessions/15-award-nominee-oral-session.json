@@ -57,8 +57,8 @@
     {
       "time_info": "T−5 min",
       "roles": ["Zoom Master"],
-      "short_description": "Disable Zoom Chat for attendees.",
-      "more_info": "Chat > menu > attendees can chat with: nobody."
+      "short_description": "Disable Zoom Chat and raised hand (for attendees).",
+      "more_info": "Chat > menu > attendees can chat with: nobody. Host Tools > attendees > raise hand: off."
     },
     {
       "time_info": "T−4 min",
@@ -69,7 +69,7 @@
     {
       "time_info": "T−3 min",
       "roles": ["Q&A Tracker", "Award Session Chair"],
-      "short_description": "[[Q&A Tracker]] and [[Award Session Chair]] agree on the Q&A signal.",
+      "short_description": "[[Q&A Tracker]] and [[Award Session Chair]] confirm the Q&A order: on-site questions first, then the Chair turns to the Tracker for online questions.",
       "more_info": ""
     },
     {
@@ -147,13 +147,13 @@
     {
       "time_info": "T<sub>y</sub>+10 min",
       "roles": ["Award Session Chair"],
-      "short_description": "Annouce Q&A begins. Pick the questions, balancing online VS on-site questions. Keep track of time; in due time, end the Q&A.",
+      "short_description": "Annouce Q&A begins. Take on-site questions first, then turn to the [[Q&A Tracker]] for online questions. No switching back and forth. Keep track of time; in due time, end the Q&A.",
       "more_info": ""
     },
     {
       "time_info": "During\nQ&A",
       "roles": ["Q&A Tracker"],
-      "short_description": "When there is an online question, signal the [[Award Session Chair]]. When the [[Award Session Chair]] takes it, read it.",
+      "short_description": "When the [[Award Session Chair]] turns to you after on-site questions, read the online questions.",
       "more_info": ""
     },
     {
