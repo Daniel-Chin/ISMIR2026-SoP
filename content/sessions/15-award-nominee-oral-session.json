@@ -67,12 +67,6 @@
       "more_info": ""
     },
     {
-      "time_info": "T−3 min",
-      "roles": ["Q&A Tracker", "Award Session Chair"],
-      "short_description": "[[Q&A Tracker]] and [[Award Session Chair]] confirm the Q&A order: on-site questions first, then the Chair turns to the Tracker for online questions.",
-      "more_info": ""
-    },
-    {
       "time_info": "T−2 min",
       "roles": ["Award Session Chair", "Q&A Tracker", "Mic Runner"],
       "short_description": "Grab a mic and keep it for the whole session.",

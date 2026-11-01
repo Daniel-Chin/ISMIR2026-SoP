@@ -50,7 +50,7 @@
     {
       "time_info": "T−5 min",
       "roles": ["Q&A Producer"],
-      "short_description": "Ask whether the Speaker will take questions during the talk. Agree on the Q&A signal with the Speaker.",
+      "short_description": "Ask whether the Speaker will take questions during the talk. If yes, state that taking on-site questions is their responsibility, and clarify whether they will take even online questions during the talk. If yes, agree on a signal that means there's an online question during the talk..",
       "more_info": ""
     },
     {

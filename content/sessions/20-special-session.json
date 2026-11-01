@@ -53,7 +53,7 @@
     {
       "time_info": "During\nQ&A",
       "roles": ["Special Session Assistant"],
-      "short_description": "Always check questions on the Zoom Q&A tool and in the room, and interrupt the online panelists if there's a question. Also speaks up when any activity is >3 minutes behind schedule.",
+      "short_description": "Take on-site questions first, and then online questions. During online questions, check the Zoom Q&A tool. Also speaks up when any activity is >3 minutes behind schedule.",
       "more_info": ""
     },
     {

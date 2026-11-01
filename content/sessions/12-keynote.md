@@ -8,6 +8,7 @@
 - For text questions in the Q&A tool, a [[Q&A Producer]] organizes and clarifies the questions before relaying them. 
 - Use cards / gestures for robust & confident flow. When there is a clarified question, no matter during the talk or during Q&A, the [[Q&A Producer]] signals (e.g. raises a hand). When the Speaker takes the question, the [[Q&A Producer]] reads it.
   - If the Speaker is remote, the [[Q&A Producer]] has to barge in some of the times, "We have a question. Is now a good time?".
+- During the Q&A, take on-site questions first, then online questions. No switching back and forth.
 - When the [[On-site Session Chair]] takes an on-site question, a [[Mic Runner]] gives their mic to the person asking.
 
 ### Google Sheet "For Session Chair"
