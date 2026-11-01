@@ -1,5 +1,6 @@
 - Jobs for [[Zoom Master]].
 - End Webinar for all.
+- For each poster kiosk laptop: upload recording files directly to [#yesterday-on-videotape](https://ismir2026.slack.com/archives/C0C7ME3JWAH).
 - Turn off all laptops.
 - Share recordings.
   - Download recordings from Zoom.
