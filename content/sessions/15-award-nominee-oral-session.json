@@ -179,6 +179,12 @@
       "roles": ["Webinar Sentinel Online"],
       "short_description": "Monitor the Webinar and report issues immediately to [#vol-alerts](https://ismir2026.slack.com/archives/C0CDNPPNJ0Z).",
       "more_info": ""
+    },
+    {
+      "time_info": "End",
+      "roles": ["Q&A Tracker"],
+      "short_description": "Clear the Q&A queue for the next event.",
+      "more_info": "Manually dismiss every outstanding question."
     }
   ]
 }
