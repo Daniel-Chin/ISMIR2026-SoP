@@ -75,7 +75,7 @@
       "time_info": "T",
       "roles": ["Keynote Inviter"],
       "short_description": "Start the session. Introduce the Speaker. Speaker starts. Sit in the corner of the stage with the [[Q&A Producer]].",
-      "more_info": ""
+      "more_info": "Note that the livestream view contains only the podium area, not the entire stage. Stay in the camera view."
     },
     {
       "time_info": "Throughout",
