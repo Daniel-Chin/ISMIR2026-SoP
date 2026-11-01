@@ -17,6 +17,8 @@ class Role:
     job_for_who: str = ''
     # Extra guides, by title; online volunteers also get ONLINE_VOLUNTEER_GUIDE automatically.
     guides: list[str] = field(default_factory=list)
+    # Repo path of content/role_guides/<role-slug>.md, if any; set by the loader, not read from the JSON.
+    guide_markdown_path: str = field(default='', metadata={'derived': True})
 
     @property
     def is_online(self) -> bool:

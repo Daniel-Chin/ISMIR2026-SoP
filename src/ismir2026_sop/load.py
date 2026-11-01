@@ -6,6 +6,8 @@ Layout:
     content/sessions/<any>.json     one session each; menu order = file name order
     content/sessions/<any>.md       The Idea, referenced from the session JSON
                                     by a path relative to that JSON file
+    content/role_guides/<slug>.md   optional detailed SOP for the role whose
+                                    name slugifies to <slug>
 """
 
 import dataclasses
@@ -14,6 +16,9 @@ from pathlib import Path
 from typing import Any
 
 from .datatype import Guide, Job, Role, Session, SOP, Staffing
+from .slug import slugify
+
+ROLE_GUIDES_DIR = 'role_guides'
 
 
 class SOPError(Exception):
@@ -24,6 +29,7 @@ def load_sop(content_dir: Path) -> SOP:
     roles_path = content_dir / 'roles.json'
     roles_data = _expect(_read_json(roles_path), list, str(roles_path))
     roles = [_role(d, f'{roles_path}[{i}]') for i, d in enumerate(roles_data)]
+    roles = [_with_role_guide(r, content_dir / ROLE_GUIDES_DIR) for r in roles]
     guides_path = content_dir / 'guides.json'
     guides_data = _expect(_read_json(guides_path), list, str(guides_path))
     guides = [_guide(d, f'{guides_path}[{i}]') for i, d in enumerate(guides_data)]
@@ -75,6 +81,12 @@ def _role(data: Any, where: str) -> Role:
         job_for_who=_expect(d.get('job_for_who', ''), str, f'{where}.job_for_who'),
         guides=_str_list(d.get('guides', []), f'{where}.guides'),
     )
+
+
+def _with_role_guide(role: Role, role_guides_dir: Path) -> Role:
+    path = role_guides_dir / f'{slugify(role.name)}.md'
+    # Stored relative to the working directory, so it is also the repo path.
+    return dataclasses.replace(role, guide_markdown_path=path.as_posix()) if path.is_file() else role
 
 
 def _guide(data: Any, where: str) -> Guide:

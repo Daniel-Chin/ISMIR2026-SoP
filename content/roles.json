@@ -75,8 +75,13 @@
     "name": "On-site Session Chair",
     "is_volunteer": false,
     "is_onsite": true,
-    "job_for_who": "Great visibility + networking for junior researchers.",
-    "job_description": "Assigned to one paper session. Introduce every talk during the Oral Session. Check name pronunciations beforehand. Keeps time during presentations. Before the conference, get to know the 10 presenters. Confirm the session's presentaion schedule and modality with them. Arrange timing and seating within the Oral Session."
+    "job_description": "Assigned to one paper session. Attends the paper session onsite. Introduce every talk during the Oral Session. Check name pronunciations beforehand. Keeps time during presentations. Before the conference, get to know the 10 presenters. Confirm the session's presentation schedule and modality with them. Arrange timing and seating within the Oral Session."
+  },
+  {
+    "name": "Online Session Chair",
+    "is_volunteer": false,
+    "is_onsite": false,
+    "job_description": "Assigned to one paper session. Attends the paper session online and engages with the online participants on Slack during the session. Before the conference, get to know the 10 presenters on Slack."
   },
   {
     "name": "Award Session Chair",
