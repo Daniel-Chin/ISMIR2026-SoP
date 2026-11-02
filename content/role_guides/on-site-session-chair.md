@@ -25,25 +25,45 @@ session cohesive. Keep it short: the Oral part has no spare time.
 - Get to know the presenters. Check name pronunciations. Remind them to keep their mode of attendance up to date via the Google Form.
 - T−4 days: tell the presenters their presentation position. If the paper is listed as 'Px-y Title...' on Miniconf and 
 Slack, it is the y-th paper in Oral Session x.
-- T−1 day: on your own laptop, test-open all slide submissions from the Sheet for Session Chair.
+- T−1 day: on your own laptop, test-open all slide submissions from the 
+[Sheet for Session Chair](https://docs.google.com/spreadsheets/d/1JPkY1TY8BfC07ZicIe6FDiZt94PALu3r6AFXhavpwlY/edit?gid=1217880391#gid=1217880391). 
+Your laptop will not be used during the session, but this is a good sanity check.
+- If a presenter wants to update their slides after the deadline, refer them to the tech team. You do not edit the Sheet.
+- Prepare your cards or gestures for '2 minutes passed' and '3 minutes passed'. Pen and paper works.
 
 ## On the day
 
 Follow your runsheets (linked above) for the minute-by-minute steps. Suggestions for the hybrid parts:
 
+### Before the Oral part
+
+The Oral part is in auditorium A6-008.
+
+- T−10 min: review name pronunciations. In #oral-session-?-presenters, re-send the presentation order and remind 
+presenters to sit in the front row.
+- T−8 min: go to the stage laptop and meet the [[Zoom Master]], who will assist you there. The pre-recorded videos are 
+prepared for you; you do not need to download them. If the previous event uses the auditorium, go at T−1 min instead.
+
 ### Oral part (first 30 min)
 
 - When you introduce yourself, also introduce the [[Online Session Chair]] and say that online attendees can post questions 
-on Slack in #oral-session-?. Welcome attendees to the session online. 
+on Slack in #oral-session-?; these are taken to the Poster part. Welcome attendees to the session online. 
+- Announce that there is no Q&A, and show your '2 minutes passed' and '3 minutes passed' signals.
 - Introduce each paper briefly, the same way for on-site and online presenters. For an online presenter, say they are 
-joining online and the video is pre-recorded. 
-- Keep time strictly: the Poster part and its Zoom Meeting start right after the Oral part.
-- At the end, direct the audience to the posters, and mention that the online presenters are at the posters with the TVs.
+joining online and the video is pre-recorded. Extra words distract the audience from the talk.
+- Do not download slides in advance: open them from the Sheet when each talk starts, so they are up to date. 
+Use the web view for Google Slides.
+- If a presenter is not ready within 30 seconds, fall back to playing their pre-recorded video.
+- Keep time strictly: the Poster part and its Zoom Meeting start right after the Oral part. Signal at 2 and 3 minutes. 
+After 3 minutes, use your judgement on stopping the talk, given the remaining time. If you stop a talk, warmly welcome 
+the audience to that paper's poster.
+- At the end, thank the presenters, direct the audience to the posters, and mention that the online presenters are at 
+the posters with the TVs. Check the schedule: if a Majlis runs at the same time, mention its title.
 
 ### Poster part (60 min, with coffee)
 
-- In the first 10 minutes, walk past every poster of your session and check that each presenter is there. Report 
-issues to the [[Poster Session Helpdesk On-site]].
+- In the first 10 minutes, walk past every poster of your session. Check that each on-site presenter is at their poster 
+and each online presenter shows on the TV. Report issues to the [[Poster Session Helpdesk On-site]].
 - On-site attendees tend to skip posters with an online presenter. Spend extra time there and bring people along.
 - Ask on-site discussions to use the handheld mics, so online visitors in the breakout room can hear.
 - If the [[Online Session Chair]] tells you that online visitors are waiting at a poster, let the on-site presenter know.

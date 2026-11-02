@@ -28,4 +28,4 @@
   - A PDF file is required for failsafe. 
   - The presenter may additionally upload a Powerpoint file, a Keynote file, or a link to Google Slides (make sure to set the sharing settings to "Anyone with the link can view").
   - File size: <= 50 MB each.
-- After the deadline, when authors request to update slides, the [[On-site Session Chair]] may manually overwrite the URL in the "slides_*" column of Google Sheet without needing help from the Virtual Team.
+- After the deadline, when authors request to update slides, the tech team handles the update. Session chairs do not edit the Sheet.
