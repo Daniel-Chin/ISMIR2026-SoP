@@ -15,11 +15,10 @@
   - CMT ID, title, session_index, position_in_session, chair_onsite, chair_remote, pre-recorded_video, slides_pdf, slides_google, slides_ppt, slides_key.  
 
 ### Stage setup
-- One stage laptop, preferably MacBook (for maximum compatibility). 
+- Two stage laptops, preferably MacBook (for maximum compatibility). 
   - Keep open the [Sheet for Session Chair](https://docs.google.com/spreadsheets/d/1JPkY1TY8BfC07ZicIe6FDiZt94PALu3r6AFXhavpwlY/edit?gid=1217880391#gid=1217880391). 
   - Keep open the local folder containing all downloaded files.
   - One window at a time. Open slides, close slides. Open video, close video.
-  - Issue: One laptop = single point of failure?
 
 ### Slides collection
 - The on-site presenters submit their slides directly to the Virtual Team. The Virtual Team prepares the [Sheet for Session Chair](https://docs.google.com/spreadsheets/d/1JPkY1TY8BfC07ZicIe6FDiZt94PALu3r6AFXhavpwlY/edit?gid=1217880391#gid=1217880391). The Virtual Team is responsible for reminding authors about overdue slides.

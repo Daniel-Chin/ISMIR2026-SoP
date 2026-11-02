@@ -28,11 +28,10 @@
   - CMT ID, title, session_index, position_in_session, chair_onsite, chair_remote, pre-recorded_video, slides_pdf, slides_google, slides_ppt, slides_key.  
 
 ### Stage setup
-- One stage laptop, preferably MacBook (for maximum compatibility). 
+- Two stage laptops, preferably MacBook (for maximum compatibility). 
   - Keep open the [Sheet for Award Session Chair](https://docs.google.com/spreadsheets/d/1JPkY1TY8BfC07ZicIe6FDiZt94PALu3r6AFXhavpwlY/edit?gid=332004949#gid=332004949). 
   - Keep open the local folder containing all downloaded slides.
   - One window at a time. Open slides, close slides.
-  - Issue: One laptop = single point of failure?
 
 ### Slides collection
 - These 10-minute slides are distinct from the 3-min slides for [Oral Session](../oral-session/).
