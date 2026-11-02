@@ -117,7 +117,7 @@
     {
       "time_info": "T<sub>y</sub>",
       "roles": ["Award Session Chair"],
-      "short_description": "where T<sub>y</sub> is the start of each presentation. If the presenter is on-site, make sure they are ready and by the stage, and open the right slides. If the presenter is online, instruct them to unmute, open video camera, and share screen (reminding them to tick 'Share Sound'), and wait until you see the shared screen. Introduce the paper title and the presenter.",
+      "short_description": "where T<sub>y</sub> is the start of each presentation. If the presenter is on-site, make sure they are ready and by the stage, and open the right slides. If the presenter is online, instruct them to unmute, open video camera, and share screen (reminding them to tick 'Share Sound'), and wait until you see the shared screen. Otherwise, prepare the pre-recorded 10-min video. Introduce the paper title and the presenter.",
       "more_info": "If an online presenter does not show, tweak the order. If an online presenter joins but has technical issues, let them join the prep room again and tweak presentation order. If the last presenter has issues, consider live troubleshooting with [[Zoom Master]]."
     },
     {

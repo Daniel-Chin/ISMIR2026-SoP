@@ -10,7 +10,7 @@
 - An online presenter joins the prep room 10 minutes before the scheduled presentation.
 - A [[Prep Room Assistant]] helps the online presenter figure out audio+video input+output, as well as screenshare with sound. 
 - When it’s time, let the presenter quit the prep room and join the main Webinar. 
-- If the presenter has shared a 10 minute video, the [[Prep Room Assistant]] schedules it for playing instead of a live presenter. 
+- If the presenter has shared a 10 minute video, the [[Award Session Chair]] plays it instead of a live presenter. 
 - to json: The [[Zoom Master]] manually promotes the presenter to panelist.
 - to json: exchange zoom display name
 
