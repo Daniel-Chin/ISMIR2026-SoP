@@ -2,7 +2,7 @@
 - Each paper gets 10-min presentation and 5-min Q&A. 
 - Some presenters are on-site; some are remote and present live via Zoom Webinar. 
 - If they cannot attend live, they share a 10 minute video to be played for the session. 
-- Onsite location: 300-capacity auditorium A6-008. (But A6-007 on Wednesday afternoon.)
+- Onsite location: 300-capacity auditorium A6-008. 
 - Streamed via Zoom Webinar 500.
 
 ### Presenter Preparation
