@@ -3,7 +3,6 @@
   "the_idea_markdown_path": "05-tutorial.md",
   "staffing": [
     {"role": "Tutorial Moderator", "count": 1},
-    {"role": "Zoom Support", "count": 1},
     {"role": "Zoom Master", "count": 1}
   ],
   "runsheet": [
