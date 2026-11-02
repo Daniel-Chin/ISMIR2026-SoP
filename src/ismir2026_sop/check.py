@@ -4,6 +4,7 @@ from collections import defaultdict
 from pathlib import Path
 
 from .datatype import ONLINE_VOLUNTEER_GUIDE, SOP
+from .load import ROLE_GUIDES_DIR
 from .md import find_images, find_mentions
 from .slug import slugify
 
@@ -38,6 +39,12 @@ def find_problems(sop: SOP, content: Path) -> list[str]:
             if t not in guide_titles:
                 problems.append(f'role {r.name!r} guides: unknown guide {t!r}')
         check_mentions(r.job_description, f'role {r.name!r} job_description')
+        if r.guide_markdown_path:
+            check_mentions(Path(r.guide_markdown_path).read_text(encoding='utf-8'), r.guide_markdown_path)
+    role_slugs = {slugify(r.name) for r in sop.roles}
+    for path in sorted((content / ROLE_GUIDES_DIR).glob('*.md')):
+        if path.stem not in role_slugs:
+            problems.append(f'{path}: no role named like {path.stem!r}; the file name must be the role\'s address')
 
     for s in sop.sessions:
         where = f'session {s.name!r}'

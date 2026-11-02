@@ -1,6 +1,7 @@
 - Oral presentations of the award-nominated papers. 
 - Each paper gets 10-min presentation and 5-min Q&A. 
 - Some presenters are on-site; some are remote and present live via Zoom Webinar. 
+- If they cannot attend live, they share a 10 minute video to be played for the session. 
 - Onsite location: 300-capacity auditorium A6-008. (But A6-007 on Wednesday afternoon.)
 - Streamed via Zoom Webinar 500.
 
@@ -9,12 +10,13 @@
 - An online presenter joins the prep room 10 minutes before the scheduled presentation.
 - A [[Prep Room Assistant]] helps the online presenter figure out audio+video input+output, as well as screenshare with sound. 
 - When it’s time, let the presenter quit the prep room and join the main Webinar. 
+- If the presenter has shared a 10 minute video, the [[Prep Room Assistant]] schedules it for playing instead of a live presenter. 
 - to json: The [[Zoom Master]] manually promotes the presenter to panelist.
 - to json: exchange zoom display name
 
 ### Q&A
 - Each presentation is followed by its Q&A. Questions do not interrupt the presentation.
-- On-site & online questions are supported.
+- On-site & online questions are supported. 
 - Online questions are text only, via the Zoom Webinar Q&A tool. Raising hands is not supported.
 - For text questions in the Q&A tool, a [[Q&A Tracker]] organizes the questions before relaying them. Text questions arriving during the presentation will wait for the Q&A.
 - The [[Award Session Chair]] starts and ends each Q&A, and takes on-site questions first, then online questions. No switching back and forth.
@@ -46,8 +48,8 @@
 ### Tech things
 - The presenter uses the stage laptop for slides. That laptop is connected to Auditorium HDMI.
 - Audio mix that goes into the Zoom Webinar sound input:
-  - Presenter mic
+  - Presenter mic 
   - [[Award Session Chair]] mic
   - [[Q&A Tracker]] mic
   - [[Mic Runner]]s mic
-- On-site slides audio goes through Auditorium system into Webinar. Online slides audio goes via screenshare.
+- On-site slides audio goes through Auditorium system into Webinar. Online slides audio goes via screenshare. Online video playback to be supported as backup. 

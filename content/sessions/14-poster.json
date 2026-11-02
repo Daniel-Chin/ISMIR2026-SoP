@@ -4,7 +4,9 @@
   "staffing": [
     {"role": "Poster Session Helpdesk On-site", "count": 2},
     {"role": "Poster Session Helpdesk Online", "count": 4},
-    {"role": "Zoom Master", "count": 2}
+    {"role": "Zoom Master", "count": 2},
+    {"role": "On-site Session Chair", "count": 1},
+    {"role": "Online Session Chair", "count": 1}
   ],
   "runsheet": [
     {
@@ -69,9 +71,39 @@
       "more_info": "Refer to the last item for tips."
     },
     {
+      "time_info": "From T \nto T+10 min",
+      "roles": ["On-site Session Chair"],
+      "short_description": "Walk past every poster of your session. Check that each on-site presenter is at their poster and each online presenter shows on the TV. Report issues to the [[Poster Session Helpdesk On-site]].",
+      "more_info": ""
+    },
+    {
+      "time_info": "From T \nto T+10 min",
+      "roles": ["Online Session Chair"],
+      "short_description": "Join the Poster Session Zoom Meeting. Check that each online presenter of your session is in their breakout room. If one is missing, ping them on Slack and tell the [[Poster Session Helpdesk Online]].",
+      "more_info": ""
+    },
+    {
+      "time_info": "Throughout",
+      "roles": ["On-site Session Chair"],
+      "short_description": "Circulate among the posters of your session. Bring on-site attendees to the online presenters' posters, and ask on-site discussions to use the mics so online visitors can hear.",
+      "more_info": ""
+    },
+    {
+      "time_info": "Throughout",
+      "roles": ["Online Session Chair"],
+      "short_description": "Hop between the breakout rooms of your session, starting with quiet ones. Relay the questions from the #oral-session-? threads to the presenters.",
+      "more_info": ""
+    },
+    {
       "time_info": "End",
       "roles": ["Zoom Master"],
       "short_description": "From the helpdesk laptop: End meeting for all.",
+      "more_info": ""
+    },
+    {
+      "time_info": "End",
+      "roles": ["On-site Session Chair", "Online Session Chair"],
+      "short_description": "Thank the presenters of your session, on-site and in #poster-session-?.",
       "more_info": ""
     }
   ]
