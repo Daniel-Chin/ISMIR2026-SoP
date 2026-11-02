@@ -56,6 +56,8 @@ def find_problems(sop: SOP, content: Path) -> list[str]:
                 problems.append(f'{where} staffing: role {st.role!r} listed twice')
             if st.count < 1:
                 problems.append(f'{where} staffing: role {st.role!r} has count {st.count}')
+            if not 0 < st.uptime <= 1:
+                problems.append(f'{where} staffing: role {st.role!r} has uptime {st.uptime}, expected in (0, 1]')
             staffed.add(st.role)
         for i, job in enumerate(s.runsheet):
             job_where = f'{where} runsheet[{i}] ({job.time_info})'

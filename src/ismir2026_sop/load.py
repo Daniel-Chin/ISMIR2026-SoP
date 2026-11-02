@@ -71,6 +71,10 @@ def _str_list(value: Any, where: str) -> list[str]:
     return [_expect(v, str, f'{where}[{i}]') for i, v in enumerate(_expect(value, list, where))]
 
 
+def _float(value: Any, where: str) -> float:
+    return float(value) if type(value) is int else _expect(value, float, where)
+
+
 def _role(data: Any, where: str) -> Role:
     d = _fields(Role, data, where)
     return Role(
@@ -102,6 +106,7 @@ def _staffing(data: Any, where: str) -> Staffing:
     return Staffing(
         role=_expect(d['role'], str, f'{where}.role'),
         count=_expect(d['count'], int, f'{where}.count'),
+        uptime=_float(d.get('uptime', 1.0), f'{where}.uptime'),
     )
 
 

@@ -25,6 +25,7 @@ content/
 - **Detailed SOP of a role**: add `content/role_guides/<role-address>.md`, where the address is the role name lowercased with non-alphanumerics replaced by `-` (e.g. "On-site Session Chair" → `on-site-session-chair.md`). It becomes one shareable page with the role's description, links to its runsheets, and the markdown.
 - **Mention a role** in any markdown text (The Idea, job descriptions, short and long descriptions) by writing `[[Role Name]]`.
 - **Images**: compress and put the file in `content/images/` and write `![description](images/stage-layout.png)` in any markdown text. The path is always `images/...`, whichever page the text ends up on.
+- `uptime` (optional, default 1) on a `staffing` entry is the fraction of the session the role actually works, in (0, 1]. It scales the person-hours on the Roles page.
 - `time_info` is free text, e.g. `"T−15 min"`. `more_info` may be `""`.
 
 ## Testing and building

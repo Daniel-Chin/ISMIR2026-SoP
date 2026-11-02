@@ -2,7 +2,7 @@
   "name": "LBD Session",
   "the_idea_markdown_path": "80-lbd-session.md",
   "staffing": [
-    {"role": "LBD Support", "count": 3}
+    {"role": "LBD Support", "count": 3, "uptime": 0.16666667}
   ],
   "runsheet": [
     {

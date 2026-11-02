@@ -28,6 +28,8 @@ class Role:
 class Staffing:
     role: RoleName
     count: int
+    # Fraction of the session's duration that the role is actually working.
+    uptime: float = 1.0
 
 @dataclass(frozen=True)
 class Job:

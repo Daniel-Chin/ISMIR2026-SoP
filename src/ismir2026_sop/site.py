@@ -155,19 +155,6 @@ def _menu_page(sop: SOP) -> str:
     return _page(SITE_TITLE, '', body)
 
 
-MIC_RUNNER_QA_FRACTION = 0.3
-SETTER_OF_LBD_SCENE_HOURS_PER_SESSION = 20 / 60
-
-
-def _person_hours(role: str, session: str, count: int, hours: dict[str, float], counts: dict[str, int]) -> float:
-    """Person-hours of `role` (staffed `count` per session) across all events of the session type."""
-    if role == 'Mic Runner':  # only works during Q&A
-        return count * hours.get(session, 0) * MIC_RUNNER_QA_FRACTION
-    if role == 'LBD Support':  # a short stint per session, not the whole session
-        return count * counts.get(session, 0) * SETTER_OF_LBD_SCENE_HOURS_PER_SESSION
-    return count * hours.get(session, 0)
-
-
 def _roles_page(sop: SOP, roles: dict[str, Role], events: list[schedule.Event] | None, guide_urls: dict[str, str]) -> str:
     root = '../'
 
@@ -178,20 +165,19 @@ def _roles_page(sop: SOP, roles: dict[str, Role], events: list[schedule.Event] |
 
     if events is not None:
         hours = schedule.total_hours_by_session_type(events)
-        counts = schedule.count_by_session_type(events)
     sections = []
     for role in sop.roles:
         appears = [
-            (session, s.count) for session in sop.sessions for s in session.staffing if s.role == role.name
+            (session, s) for session in sop.sessions for s in session.staffing if s.role == role.name
         ]
         # Counts are only worth showing when they vary from the default of one.
-        show_counts = any(count > 1 for _, count in appears)
+        show_counts = any(s.count > 1 for _, s in appears)
         session_links = ', '.join(
-            f'<a href="{filtered_runsheet_href(root, session, role.name)}">{escape(session.name)}</a>{f" ({count} per session)" if show_counts else ""}'
-            for session, count in appears
+            f'<a href="{filtered_runsheet_href(root, session, role.name)}">{escape(session.name)}</a>{f" ({s.count} per session)" if show_counts else ""}'
+            for session, s in appears
         ) or '<em>none</em>'
         person_hours = (
-            f' · {sum(_person_hours(role.name, session.name, count, hours, counts) for session, count in appears):g} (person ྾ hour)s in total'
+            f' · {sum(s.count * s.uptime * hours.get(session.name, 0) for session, s in appears):g} (person ྾ hour)s in total'
             if events is not None else ''
         )
         sections.append(f'''<section class="role" id="{slugify(role.name)}">
