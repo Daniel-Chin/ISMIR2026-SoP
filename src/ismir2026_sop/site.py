@@ -66,7 +66,7 @@ def _write(path: Path, text: str) -> None:
 
 def filtered_runsheet_href(root: str, session: Session, role: str) -> str:
     """The role's cheatsheet; uses the same URL parameters as the session page's controls."""
-    return f'{root}{slugify(session.name)}/?mode=filter&roles={slugify(role)}#runsheet'
+    return f'{root}{slugify(session.name)}/?mode=filter&roles={slugify(role)}'
 
 
 def _mention_linker(session: Session, roles: dict[str, Role], root: str) -> md.MentionLinker:
