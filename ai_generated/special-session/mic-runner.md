@@ -1,5 +1,6 @@
 <!-- generated from content/sessions/20-special-session.md sha256:244e24b817d6 -->
-- On-site location: A6-008. Hybrid, using Zoom Webinar. All panelists are online for 2026.
+The Special Session takes place on-site in A6-008 and is hybrid, using Zoom Webinar. All panelists are online for 2026.
+
 - Typical process:
   - 15 min convener opening,
   - 30 min panelists talks,

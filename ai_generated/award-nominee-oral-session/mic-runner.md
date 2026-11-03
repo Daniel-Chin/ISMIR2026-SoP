@@ -1,5 +1,5 @@
-<!-- generated from content/sessions/15-award-nominee-oral-session.md sha256:ad8f4f8ac9e4 -->
-Oral presentations of the award-nominated papers. Each paper gets a 10-min presentation and a 5-min Q&A. Onsite location: 300-capacity auditorium A6-008. Streamed via Zoom Webinar 500.
+<!-- generated from content/sessions/15-award-nominee-oral-session.md sha256:5a9711c08263 -->
+The Award Nominee Oral Session presents the award-nominated papers: each paper gets a 10-minute presentation and a 5-minute Q&A. It takes place in the 300-capacity auditorium A6-008 and is streamed via Zoom Webinar 500.
 
 ### Your job
 - Distribute your mic to people asking questions in the audience. Your mic is mixed into the Zoom Webinar sound input, so this is how online attendees hear them.

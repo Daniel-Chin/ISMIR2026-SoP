@@ -1,5 +1,5 @@
-<!-- generated from content/sessions/12-keynote.md sha256:50b17bca76e3 -->
-A 60-minute talk by an invited Speaker, who may be on-site or remote, followed by Q&A. Onsite location: 300-capacity auditorium A6-008. Streamed via Zoom Webinar 500.
+<!-- generated from content/sessions/12-keynote.md sha256:51a5b63a8177 -->
+The Keynote is a 60-minute talk by an invited Speaker, who may be on-site or remote, followed by Q&A. It takes place in the 300-capacity auditorium A6-008 and is streamed via Zoom Webinar 500.
 
 ### Your job
 - Configure the Zoom Webinar under time constraints.

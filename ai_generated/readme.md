@@ -22,7 +22,10 @@ cards as before.
 
 ## How to write a view
 
-- Open with one or two lines on what the session is: format, length, place, how it is streamed.
+- Open with one or two full sentences, in prose rather than bullets, that introduce the session by name
+  as their subject: what it is, its length, place, and how it is streamed. E.g. "The Oral Session runs
+  30 minutes in the 300-capacity auditorium A6-008 and is streamed over Zoom Webinar." Not "Runs 30
+  minutes, …" or a bare noun phrase.
 - Then `### Your job`: the `job_description` applied to this session. Name the session's own people,
   questions and tools rather than repeating the generic text, and drop parts that do not apply here.
 - Then only the designs, formats and technical details of The Idea that the role acts on.

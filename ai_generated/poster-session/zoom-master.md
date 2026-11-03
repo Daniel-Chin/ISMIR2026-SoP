@@ -1,7 +1,8 @@
 <!-- generated from content/sessions/14-poster.md sha256:d65b80a1b1ea -->
 ![Poster hall preview photo. Zoom sessions are available at each poster booth.](images/poster_hall_preview.jpg)
 
-- Runs 60 minutes. Onsite location: Upper Atrium, A6.
+The Poster Session runs 60 minutes in the Upper Atrium, A6.
+
 - Hybrid: by each poster is a TV that serves as a window to the online participants. One Zoom breakout room per paper. Not streamed on YouTube or Webinar.
 
 ### Your job

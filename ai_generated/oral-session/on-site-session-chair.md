@@ -1,6 +1,6 @@
-<!-- generated from content/sessions/13-oral.md sha256:f7551f2eb198 -->
-- Runs 30 minutes, in the 300-capacity auditorium A6-008, streamed over Zoom Webinar.
-- 10 presentations, each 3 minutes. Back to back, no Q&A.
+<!-- generated from content/sessions/13-oral.md sha256:61bb62f45014 -->
+The Oral Session runs 30 minutes in the 300-capacity auditorium A6-008 and is streamed over Zoom Webinar. It holds 10 presentations of 3 minutes each, back to back, with no Q&A.
+
 - If the presenter is on-site, they present on stage. Otherwise, the pre-recorded video already on Miniconf is played.
 
 ### Your job

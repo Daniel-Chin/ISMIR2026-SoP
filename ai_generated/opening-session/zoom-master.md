@@ -1,5 +1,5 @@
 <!-- generated from content/sessions/11-opening-session.md sha256:94a438dce170 -->
-The opening welcome of the conference: each chair or team presents the information that matters to everyone. On-site in the auditorium, streamed over Zoom Webinar.
+The Opening Session is the conference's opening welcome: each chair or team presents the information that matters to everyone. It takes place on-site in the auditorium and is streamed over Zoom Webinar.
 
 ### Your job
 - Configure the Zoom Webinar under time constraints.
