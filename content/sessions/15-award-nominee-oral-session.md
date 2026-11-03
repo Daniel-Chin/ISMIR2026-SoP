@@ -25,7 +25,7 @@
 ### Google Sheet "For Session Chair"
 - [docs.google.com/spreadsheets/d/1JPkY1TY8BfC07ZicIe6FDiZt94PALu3r6AFXhavpwlY/edit?gid=332004949#gid=332004949](https://docs.google.com/spreadsheets/d/1JPkY1TY8BfC07ZicIe6FDiZt94PALu3r6AFXhavpwlY/edit?gid=332004949#gid=332004949)
 - Grouped by session, sorted by presentation order. Each paper shows:
-  - CMT ID, title, session_index, position_in_session, chair_onsite, chair_remote, pre-recorded_video, slides_pdf, slides_google, slides_ppt, slides_key.  
+  - CMT ID, title, session_index, position_in_session, chair_onsite, chair_remote, pre-recorded_video, slides_pdf, slides_preferred.  
 
 ### Stage setup
 - Two stage laptops, preferably MacBook (for maximum compatibility). 
