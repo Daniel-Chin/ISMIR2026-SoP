@@ -22,11 +22,11 @@ from .datatype import ONLINE_VOLUNTEER_GUIDE, Guide, Role, Session, SOP
 from .idea_views import strip_stamp
 from .slug import slugify
 
-# Set automatically by GitHub Actions; absent in local builds, where the repo links are omitted.
+# Set automatically by GitHub Actions (e.g. in a fork); local builds link to the main repo.
 REPO_URL = (
     f"{os.environ['GITHUB_SERVER_URL']}/{os.environ['GITHUB_REPOSITORY']}"
     if 'GITHUB_REPOSITORY' in os.environ
-    else None
+    else 'https://github.com/Daniel-Chin/ISMIR2026-SoP'
 )
 SITE_TITLE = 'ISMIR 2026 Session SOP'
 STATIC_DIR = Path(__file__).parent / 'static'
@@ -87,11 +87,11 @@ def _mention_linker(session: Session, roles: dict[str, Role], root: str) -> md.M
     return link_for
 
 
-def _source(path: str) -> str:
-    """Link from a rendered section to the repo file it comes from; omitted in local builds."""
+def _source(path: str, attrs: str = '') -> str:
+    """Link from a section to the repo file it comes from; goes right after the section's heading text."""
     if not REPO_URL:
         return ''
-    return f' <a class="source" href="{REPO_URL}/blob/main/{escape(path)}" title="Edit {escape(path)} on GitHub">source</a>'
+    return f' <a class="source" href="{REPO_URL}/blob/main/{escape(path)}" title="Edit {escape(path)} on GitHub"{attrs}>edit on GitHub</a>'
 
 
 def _page(title: str, root: str, body: str, *, scripts: str = '') -> str:
@@ -302,7 +302,6 @@ def _session_page(session: Session, roles: dict[str, Role]) -> str:
     # The full Idea; runsheet.js swaps in a role's view when exactly that one role is ticked.
     ideas = [f'''<article class="prose idea" data-idea="">
 {md.render(idea, link_for, root, anchor_prefix='')}
-<p class="idea-source">{_source(session.the_idea_markdown_path)}</p>
 </article>''']
     for role_name, path in session.idea_views.items():
         view = strip_stamp(Path(path).read_text(encoding='utf-8'))
@@ -311,8 +310,11 @@ def _session_page(session: Session, roles: dict[str, Role]) -> str:
 <p class="ai-note">Written by an AI for the {escape(role_name)}, from The Idea and the job description. Tick more roles to see the full versions.</p>
 {md.render(view, link_for, root, anchor_prefix=f'{rslug}-')}{_guides(roles[role_name], root)}
   <p class="role-page"><a href="{_role_href(root, role_name)}">All about the {escape(role_name)}</a></p>
-<p class="idea-source">{_source(path)}</p>
 </article>''')
+    # One source link per version of The Idea; runsheet.js shows the one of the version shown.
+    idea_sources = _source(session.the_idea_markdown_path, ' data-idea-source=""') + ''.join(
+        _source(path, f' data-idea-source="{slugify(role_name)}" hidden') for role_name, path in session.idea_views.items()
+    )
     checkboxes = '\n'.join(
         f'<label><input type="checkbox" value="{slugify(s.role)}"> {escape(s.role)}</label>'
         for s in session.staffing
@@ -356,9 +358,9 @@ def _session_page(session: Session, roles: dict[str, Role]) -> str:
     {checkboxes}
   </fieldset>
 </form>
-<h2 id="the-idea"><span id="idea-title">The Idea</span>{_anchor("the-idea")}</h2>
+<h2 id="the-idea"><span id="idea-title">The Idea</span>{_anchor("the-idea")}{idea_sources}</h2>
 {chr(10).join(ideas)}
-<h2 id="staffing" class="staffing-section"><span id="staffing-title">Staffing</span>{_anchor("staffing")}{_source(ROLES_JSON)}</h2>
+<h2 id="staffing" class="staffing-section"><span id="staffing-title">Staffing</span>{_anchor("staffing")}{_source(session.source_path)}</h2>
 <p class="status" id="staffing-status" aria-live="polite" hidden></p>
 {staff}
 <h2 id="runsheet">Runsheet{_anchor("runsheet")}{_source(session.source_path)}</h2>
