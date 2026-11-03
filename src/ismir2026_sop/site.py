@@ -2,8 +2,10 @@
 
     index.html                      Menu
     roles/index.html                All roles and the session types they appear in
-    roles/<role>/index.html         Detailed SOP of a role, from content/role_guides/<role>.md
-    <session>/index.html            The Idea, Staffing, Runsheet (?mode=...&roles=a,b)
+    roles/<role>/index.html         A role's description and guides (content/guides/)
+    guides/index.html               All guides, and the roles that need each
+    <session>/index.html            The Idea (or its AI-generated view for the one ticked role),
+                                    Staffing, Runsheet (?mode=...&roles=a,b)
     <session>/runsheet/index.html   Redirects to <session>/#runsheet
     schedule-for-venue-av-it/       Date x time grid of events staffed by Venue AV/IT
     static/                         CSS and JS
@@ -16,7 +18,8 @@ from html import escape
 from pathlib import Path
 
 from . import md, schedule
-from .datatype import ONLINE_VOLUNTEER_GUIDE, Role, Session, SOP
+from .datatype import ONLINE_VOLUNTEER_GUIDE, Guide, Role, Session, SOP
+from .idea_views import strip_stamp
 from .slug import slugify
 
 # Set automatically by GitHub Actions; absent in local builds, where the repo links are omitted.
@@ -28,6 +31,7 @@ REPO_URL = (
 SITE_TITLE = 'ISMIR 2026 Session SOP'
 STATIC_DIR = Path(__file__).parent / 'static'
 VENUE_AV_IT = 'Venue AV/IT'
+ROLES_JSON = 'content/roles.json'
 
 
 def build_site(sop: SOP, out: Path, content: Path) -> None:
@@ -38,14 +42,14 @@ def build_site(sop: SOP, out: Path, content: Path) -> None:
         shutil.copytree(content / 'images', out / 'images')
     (out / '.nojekyll').touch()
     roles = {r.name: r for r in sop.roles}
-    guide_urls = {g.title: g.url for g in sop.guides}
+    guides = {g.title: g for g in sop.guides}
 
     _write(out / 'index.html', _menu_page(sop))
     events = schedule.load_events() if schedule.EVENTS_CSV.exists() else None
-    _write(out / 'roles' / 'index.html', _roles_page(sop, roles, events, guide_urls))
+    _write(out / 'roles' / 'index.html', _roles_page(sop, roles, events))
     for role in sop.roles:
-        if role.guide_markdown_path:
-            _write(out / 'roles' / slugify(role.name) / 'index.html', _role_guide_page(sop, role, roles, guide_urls))
+        _write(out / 'roles' / slugify(role.name) / 'index.html', _role_page(sop, role, roles, guides))
+    _write(out / 'guides' / 'index.html', _guides_page(sop, roles))
     for session in sop.sessions:
         slug = slugify(session.name)
         _write(out / slug / 'index.html', _session_page(session, roles))
@@ -83,14 +87,18 @@ def _mention_linker(session: Session, roles: dict[str, Role], root: str) -> md.M
     return link_for
 
 
-def _page(title: str, root: str, body: str, *, scripts: str = '', source: str = '') -> str:
+def _source(path: str) -> str:
+    """Link from a rendered section to the repo file it comes from; omitted in local builds."""
+    if not REPO_URL:
+        return ''
+    return f' <a class="source" href="{REPO_URL}/blob/main/{escape(path)}" title="Edit {escape(path)} on GitHub">source</a>'
+
+
+def _page(title: str, root: str, body: str, *, scripts: str = '') -> str:
     head_title = f'{title} · {SITE_TITLE}' if title != SITE_TITLE else SITE_TITLE
-    source_link = (
-        f' · <a href="{REPO_URL}/blob/main/{escape(source)}">source of this page</a>' if source else ''
-    )
     footer = (
         f'''<footer class="site-footer">
-  Edit this SOP via <a href="{REPO_URL}">this repo</a>{source_link}
+  Edit this SOP via <a href="{REPO_URL}">this repo</a>
 </footer>
 '''
         if REPO_URL
@@ -123,6 +131,7 @@ def _staffing_summary(session: Session) -> str:
 
 def _top_tabs(root: str, current: str) -> str:
     tabs = [('sessions', 'All session types', root or './'), ('roles', 'All roles', f'{root}roles/'),
+            ('guides', 'All guides', f'{root}guides/'),
             ('schedule-for-venue-av-it', 'Schedule for Venue AV/IT', f'{root}schedule-for-venue-av-it/')]
     links = ''.join(
         f'<a href="{href}" aria-current="page">{label}</a>' if key == current
@@ -144,7 +153,21 @@ def _menu_page(sop: SOP) -> str:
     return _page(SITE_TITLE, '', body)
 
 
-def _roles_page(sop: SOP, roles: dict[str, Role], events: list[schedule.Event] | None, guide_urls: dict[str, str]) -> str:
+def _role_href(root: str, role: str) -> str:
+    return f'{root}roles/{slugify(role)}/'
+
+
+def _guide_id(title: str) -> str:
+    return f'guide-{slugify(title)}'
+
+
+def _role_title(role: Role, root: str, *, link: bool) -> str:
+    name = f'<a href="{_role_href(root, role.name)}">{escape(role.name)}</a>' if link else escape(role.name)
+    chip = ' <span class="volunteer-chip">Volunteer</span>' if role.is_volunteer else ''
+    return name + chip
+
+
+def _roles_page(sop: SOP, roles: dict[str, Role], events: list[schedule.Event] | None) -> str:
     root = '../'
 
     def link_for(name: str) -> str | None:
@@ -170,13 +193,13 @@ def _roles_page(sop: SOP, roles: dict[str, Role], events: list[schedule.Event] |
             if events is not None else ''
         )
         sections.append(f'''<section class="role" id="{slugify(role.name)}">
-  <h3>{escape(role.name)}{' <span class="volunteer-chip">Volunteer</span>' if role.is_volunteer else ''}{_anchor(slugify(role.name))}</h3>
+  <h3>{_role_title(role, root, link=True)}{_anchor(slugify(role.name))}{_source(ROLES_JSON)}</h3>
   <p class="role-attrs">{'On-Site (In-Person)' if role.is_onsite else 'Online (Remote)'}{person_hours}</p>
-  <div class="prose">{md.render(role.job_description, link_for, root, anchor_prefix=f'{slugify(role.name)}-')}</div>{_job_for_who(role)}{_guides(role, guide_urls)}{_role_guide_link(role, root)}
+  <div class="prose">{md.render(role.job_description, link_for, root, anchor_prefix=f'{slugify(role.name)}-')}</div>{_job_for_who(role)}{_guides(role, root)}
   <p class="role-sessions"><strong>Appears in:</strong> {session_links}</p>
 </section>''')
     body = f'{_top_tabs(root, "roles")}\n' + '\n'.join(sections)
-    return _page('Roles', root, body, source='content/roles.json')
+    return _page('Roles', root, body)
 
 
 def _anchor(id: str) -> str:
@@ -190,47 +213,85 @@ def _job_for_who(role: Role) -> str:
     return f'\n  <p class="job-for-who"><strong>Job for who:</strong> {escape(role.job_for_who)}</p>'
 
 
-def _guides(role: Role, guide_urls: dict[str, str]) -> str:
-    titles = ([ONLINE_VOLUNTEER_GUIDE] if role.is_volunteer and role.is_online else []) + role.guides
+def guide_titles(role: Role) -> list[str]:
+    return ([ONLINE_VOLUNTEER_GUIDE] if role.is_volunteer and role.is_online else []) + role.guides
+
+
+def _guides(role: Role, root: str) -> str:
+    """Links to the guides, which are rendered on the role's page."""
+    titles = guide_titles(role)
     if not titles:
         return ''
-    links = ', '.join(f'<a href="{escape(guide_urls[t])}">{escape(t)}</a>' for t in titles)
-    return f'\n  <p class="role-guides"><strong>Mandatory reading:</strong> {links}</p>'
+    href = _role_href(root, role.name)
+    links = ', '.join(f'<a href="{href}#{_guide_id(t)}">{escape(t)}</a>' for t in titles)
+    return f'\n  <p class="role-guides"><strong>Guides:</strong> {links}</p>'
 
 
-def _role_guide_link(role: Role, root: str) -> str:
-    if not role.guide_markdown_path:
-        return ''
-    return f'\n  <p class="role-guide"><strong>Detailed SOP:</strong> <a href="{root}roles/{slugify(role.name)}/">For {escape(role.name)}</a></p>'
-
-
-def _role_guide_page(sop: SOP, role: Role, roles: dict[str, Role], guide_urls: dict[str, str]) -> str:
-    """One shareable page per role: its description, its runsheets, and the detailed SOP markdown."""
+def _role_page(sop: SOP, role: Role, roles: dict[str, Role], guides: dict[str, Guide]) -> str:
+    """One shareable page per role: its description and its guides in full."""
     root = '../../'
 
     def link_for(name: str) -> str | None:
         if name not in roles:
-            raise KeyError(f'unknown role mention [[{name}]] ({role.guide_markdown_path})')
-        if name == role.name:
-            return None
-        if roles[name].guide_markdown_path:
-            return f'{root}roles/{slugify(name)}/'
-        return f'{root}roles/#{slugify(name)}'
+            raise KeyError(f'unknown role mention [[{name}]] (role page of {role.name!r})')
+        return None if name == role.name else _role_href(root, name)
 
-    appears = [session for session in sop.sessions if any(s.role == role.name for s in session.staffing)]
-    runsheets = ', '.join(
-        f'<a href="{filtered_runsheet_href(root, session, role.name)}">{escape(session.name)}</a>' for session in appears
-    ) or '<em>none</em>'
-    guide = Path(role.guide_markdown_path).read_text(encoding='utf-8')
-    body = f'''{_top_tabs(root, 'roles')}
-<h1>{escape(role.name)}{' <span class="volunteer-chip">Volunteer</span>' if role.is_volunteer else ''}</h1>
-<p class="role-attrs">{'On-Site (In-Person)' if role.is_onsite else 'Online (Remote)'}</p>
-<div class="prose">{md.render(role.job_description, link_for, root)}</div>{_job_for_who(role)}{_guides(role, guide_urls)}
-<p class="role-sessions"><strong>Your runsheets:</strong> {runsheets}</p>
+    sections = []
+    for title in guide_titles(role):
+        guide = guides[title]
+        gid = _guide_id(title)
+        text = guide.body
+        sections.append(f'''<section class="guide" id="{gid}">
+<h2>{escape(title)}{_anchor(gid)}{_source(guide.markdown_path)}</h2>
 <article class="prose idea">
-{md.render(guide, link_for, root, anchor_prefix='')}
-</article>'''
-    return _page(f'SOP for {role.name}', root, body, source=role.guide_markdown_path)
+{md.render(text, link_for, root, anchor_prefix=f'{gid}-', baselevel=2)}
+</article>
+</section>''')
+    toc = ''
+    if sections:
+        items = ''.join(f'<li><a href="#{_guide_id(t)}">{escape(t)}</a></li>' for t in guide_titles(role))
+        toc = f'\n<p class="role-guides"><strong>Table of Contents</strong></p>\n<ol class="guide-toc">{items}</ol>'
+    body = f'''{_top_tabs(root, 'roles')}
+<h1>{_role_title(role, root, link=False)}{_source(ROLES_JSON)}</h1>
+<p class="role-attrs">{'On-Site (In-Person)' if role.is_onsite else 'Online (Remote)'}</p>
+<div class="prose">{md.render(role.job_description, link_for, root)}</div>{_job_for_who(role)}{toc}
+{chr(10).join(sections)}'''
+    return _page(role.name, root, body)
+
+
+def _guides_page(sop: SOP, roles: dict[str, Role]) -> str:
+    """Every guide in full, in order of first use by the roles, each with the roles that need it."""
+    root = '../'
+
+    def link_for(name: str) -> str | None:
+        if name not in roles:
+            raise KeyError(f'unknown role mention [[{name}]] (guides page)')
+        return _role_href(root, name)
+
+    users: dict[str, list[Role]] = {g.title: [] for g in sop.guides}
+    for role in sop.roles:
+        for title in guide_titles(role):
+            users[title].append(role)
+    by_title = {g.title: g for g in sop.guides}
+    first_use = dict.fromkeys(title for role in sop.roles for title in guide_titles(role))
+    order = [by_title[t] for t in first_use] + [g for g in sop.guides if g.title not in first_use]
+    sections = []
+    for guide in order:
+        gid = slugify(guide.title)
+        who = ', '.join(f'<a href="{_role_href(root, r.name)}#{_guide_id(guide.title)}">{escape(r.name)}</a>'
+                        for r in users[guide.title]) or '<em>no role</em>'
+        sections.append(f'''<section class="guide" id="{gid}">
+<h2>{escape(guide.title)}{_anchor(gid)}{_source(guide.markdown_path)}</h2>
+<p class="role-sessions"><strong>For:</strong> {who}</p>
+<article class="prose idea">
+{md.render(guide.body, link_for, root, anchor_prefix=f'{gid}-', baselevel=2)}
+</article>
+</section>''')
+    items = ''.join(f'<li><a href="#{slugify(g.title)}">{escape(g.title)}</a></li>' for g in order)
+    body = f'''{_top_tabs(root, 'guides')}
+<ol class="guide-toc">{items}</ol>
+{chr(10).join(sections)}'''
+    return _page('Guides', root, body)
 
 
 def _session_page(session: Session, roles: dict[str, Role]) -> str:
@@ -238,6 +299,20 @@ def _session_page(session: Session, roles: dict[str, Role]) -> str:
     root = '../'
     link_for = _mention_linker(session, roles, root)
     idea = Path(session.the_idea_markdown_path).read_text(encoding='utf-8')
+    # The full Idea; runsheet.js swaps in a role's view when exactly that one role is ticked.
+    ideas = [f'''<article class="prose idea" data-idea="">
+{md.render(idea, link_for, root, anchor_prefix='')}
+<p class="idea-source">{_source(session.the_idea_markdown_path)}</p>
+</article>''']
+    for role_name, path in session.idea_views.items():
+        view = strip_stamp(Path(path).read_text(encoding='utf-8'))
+        rslug = slugify(role_name)
+        ideas.append(f'''<article class="prose idea" data-idea="{rslug}" hidden>
+<p class="ai-note">Written by an AI for the {escape(role_name)}, from The Idea and the job description. Tick more roles to see the full versions.</p>
+{md.render(view, link_for, root, anchor_prefix=f'{rslug}-')}{_guides(roles[role_name], root)}
+  <p class="role-page"><a href="{_role_href(root, role_name)}">All about the {escape(role_name)}</a></p>
+<p class="idea-source">{_source(path)}</p>
+</article>''')
     checkboxes = '\n'.join(
         f'<label><input type="checkbox" value="{slugify(s.role)}"> {escape(s.role)}</label>'
         for s in session.staffing
@@ -245,7 +320,8 @@ def _session_page(session: Session, roles: dict[str, Role]) -> str:
     staff = '\n'.join(
         f'''<section class="role staff" id="{slugify(s.role)}" data-role="{slugify(s.role)}">
   <h3>{s.count}× <a href="{filtered_runsheet_href(root, session, s.role)}">{escape(s.role)}</a>{' <span class="volunteer-chip">Volunteer</span>' if roles[s.role].is_volunteer else ''}{_anchor(slugify(s.role))}</h3>
-  <div class="prose">{md.render(roles[s.role].job_description, link_for, root)}</div>{_job_for_who(roles[s.role])}{_role_guide_link(roles[s.role], root)}
+  <div class="prose">{md.render(roles[s.role].job_description, link_for, root)}</div>{_job_for_who(roles[s.role])}{_guides(roles[s.role], root)}
+  <p class="role-page"><a href="{_role_href(root, s.role)}">All about the {escape(s.role)}</a></p>
 </section>'''
         for s in session.staffing
     )
@@ -280,14 +356,12 @@ def _session_page(session: Session, roles: dict[str, Role]) -> str:
     {checkboxes}
   </fieldset>
 </form>
-<h2 id="the-idea">The Idea{_anchor("the-idea")}</h2>
-<article class="prose idea">
-{md.render(idea, link_for, root, anchor_prefix='')}
-</article>
-<h2 id="staffing"><span id="staffing-title">Staffing</span>{_anchor("staffing")}</h2>
+<h2 id="the-idea"><span id="idea-title">The Idea</span>{_anchor("the-idea")}</h2>
+{chr(10).join(ideas)}
+<h2 id="staffing" class="staffing-section"><span id="staffing-title">Staffing</span>{_anchor("staffing")}{_source(ROLES_JSON)}</h2>
 <p class="status" id="staffing-status" aria-live="polite" hidden></p>
 {staff}
-<h2 id="runsheet">Runsheet{_anchor("runsheet")}</h2>
+<h2 id="runsheet">Runsheet{_anchor("runsheet")}{_source(session.source_path)}</h2>
 <div class="controls runsheet-controls" id="runsheet-controls" hidden>
   <span class="status" id="status" aria-live="polite"></span>
 </div>
@@ -300,7 +374,6 @@ def _session_page(session: Session, roles: dict[str, Role]) -> str:
     return _page(
         session.name, root, body,
         scripts=f'<script src="{root}static/runsheet.js"></script>',
-        source=session.source_path,
     )
 
 

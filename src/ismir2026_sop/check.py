@@ -4,12 +4,13 @@ from collections import defaultdict
 from pathlib import Path
 
 from .datatype import ONLINE_VOLUNTEER_GUIDE, SOP
-from .load import ROLE_GUIDES_DIR
+from .idea_views import view_statuses
+from .load import AI_GENERATED_DIR, GUIDES_DIR
 from .md import find_images, find_mentions
 from .slug import slugify
 
 # Top-level output paths that a session address must not take.
-RESERVED_SLUGS = {'static', 'images'}
+RESERVED_SLUGS = {'static', 'images', 'roles', 'guides', 'schedule-for-venue-av-it'}
 
 
 def find_problems(sop: SOP, content: Path) -> list[str]:
@@ -31,20 +32,18 @@ def find_problems(sop: SOP, content: Path) -> list[str]:
                 problems.append(f'{where}: image {src} not found in {content / "images"}')
 
     guide_titles = {g.title for g in sop.guides}
-    problems += [f'guide {t!r} listed twice' for t in guide_titles if sum(g.title == t for g in sop.guides) > 1]
     if ONLINE_VOLUNTEER_GUIDE not in guide_titles:
-        problems.append(f'guides.json: missing guide {ONLINE_VOLUNTEER_GUIDE!r}')
+        problems.append(f'{content / GUIDES_DIR}: missing guide {ONLINE_VOLUNTEER_GUIDE!r}')
     for r in sop.roles:
         for t in r.guides:
             if t not in guide_titles:
                 problems.append(f'role {r.name!r} guides: unknown guide {t!r}')
         check_mentions(r.job_description, f'role {r.name!r} job_description')
-        if r.guide_markdown_path:
-            check_mentions(Path(r.guide_markdown_path).read_text(encoding='utf-8'), r.guide_markdown_path)
-    role_slugs = {slugify(r.name) for r in sop.roles}
-    for path in sorted((content / ROLE_GUIDES_DIR).glob('*.md')):
-        if path.stem not in role_slugs:
-            problems.append(f'{path}: no role named like {path.stem!r}; the file name must be the role\'s address')
+    for g in sop.guides:
+        expected = f'{slugify(g.title)}.md'
+        if Path(g.markdown_path).name != expected:
+            problems.append(f'{g.markdown_path}: title {g.title!r} needs the file name {expected!r}')
+        check_mentions(g.body, g.markdown_path)
 
     for s in sop.sessions:
         where = f'session {s.name!r}'
@@ -76,8 +75,25 @@ def find_problems(sop: SOP, content: Path) -> list[str]:
             problems.append(f'{where}: The Idea file {s.the_idea_markdown_path} not found')
         else:
             check_mentions(idea, s.the_idea_markdown_path)
+        for path in s.idea_views.values():
+            check_mentions(Path(path).read_text(encoding='utf-8'), path)
+
+    ai_dir = content.parent / AI_GENERATED_DIR
+    views = {Path(p).resolve() for s in sop.sessions for p in s.idea_views.values()}
+    for path in sorted(ai_dir.glob('*/*.md')):
+        if path.resolve() not in views:
+            problems.append(f'{path}: no staffed role of a session matches this <session>/<role> address')
 
     return problems
+
+
+def find_warnings(sop: SOP, content: Path) -> list[str]:
+    """Not fatal: AI-generated views of The Idea that are out of date."""
+    return [
+        f'{v.path}: {v.state}; The Idea of {v.session!r} or the job_description of {v.role!r} changed since this view was generated'
+        if v.state == 'stale' else f'{v.path}: no generation stamp on its first line'
+        for v in view_statuses(sop, content.parent / AI_GENERATED_DIR) if v.state in ('stale', 'unstamped')
+    ]
 
 
 def _slug_problems(kind: str, names: list[str]) -> list[str]:

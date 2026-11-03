@@ -208,3 +208,10 @@ span.mention { color: var(--muted); }
   table.schedule { display: none; }
   .schedule-list { display: block; }
 }
+
+/* Links from a section to its source file in the repo. */
+.source { margin-left: 0.6em; font-size: 0.7rem; font-weight: normal; color: var(--muted, #888); vertical-align: middle; }
+.idea-source { text-align: right; margin: 0; }
+.ai-note { font-size: 0.9em; color: var(--muted, #888); font-style: italic; }
+.guide { margin-top: 2.5rem; }
+@media print { .source, .idea-source { display: none; } }

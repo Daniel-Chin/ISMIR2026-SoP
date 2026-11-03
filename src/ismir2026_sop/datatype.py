@@ -5,8 +5,12 @@ ONLINE_VOLUNTEER_GUIDE = 'For Online Volunteers'
 
 @dataclass(frozen=True)
 class Guide:
+    # From the file's first line, `# Title`; the file name is the title's address.
     title: str
-    url: str
+    # The markdown after the title line.
+    body: str
+    # Repo path of content/guides/<title-address>.md.
+    markdown_path: str
 
 @dataclass(frozen=True)
 class Role:
@@ -17,8 +21,6 @@ class Role:
     job_for_who: str = ''
     # Extra guides, by title; online volunteers also get ONLINE_VOLUNTEER_GUIDE automatically.
     guides: list[str] = field(default_factory=list)
-    # Repo path of content/role_guides/<role-slug>.md, if any; set by the loader, not read from the JSON.
-    guide_markdown_path: str = field(default='', metadata={'derived': True})
 
     @property
     def is_online(self) -> bool:
@@ -46,6 +48,9 @@ class Session:
     runsheet: list[Job]
     # Repo path of the session's JSON file; set by the loader, not read from the JSON.
     source_path: str = field(default='', metadata={'derived': True})
+    # Role name -> repo path of the AI-generated view of The Idea for that role, where one exists;
+    # set by the loader from ai_generated/<session>/<role>.md.
+    idea_views: dict[RoleName, str] = field(default_factory=dict, metadata={'derived': True})
 
 @dataclass(frozen=True)
 class SOP:

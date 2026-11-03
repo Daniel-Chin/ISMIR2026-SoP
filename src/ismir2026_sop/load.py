@@ -2,12 +2,14 @@
 
 Layout:
     content/roles.json              list of roles
-    content/guides.json             list of guides (title, url) that roles refer to
+    content/guides/<slug>.md        one guide each; first line `# Title`, where the
+                                    title slugifies to <slug>; roles refer to the title
     content/sessions/<any>.json     one session each; menu order = file name order
     content/sessions/<any>.md       The Idea, referenced from the session JSON
                                     by a path relative to that JSON file
-    content/role_guides/<slug>.md   optional detailed SOP for the role whose
-                                    name slugifies to <slug>
+    ai_generated/<session>/<role>.md
+                                    optional LLM-written view of a session's Idea for one
+                                    role (slugs of the names); next to content/
 """
 
 import dataclasses
@@ -18,7 +20,8 @@ from typing import Any
 from .datatype import Guide, Job, Role, Session, SOP, Staffing
 from .slug import slugify
 
-ROLE_GUIDES_DIR = 'role_guides'
+GUIDES_DIR = 'guides'
+AI_GENERATED_DIR = 'ai_generated'
 
 
 class SOPError(Exception):
@@ -29,14 +32,11 @@ def load_sop(content_dir: Path) -> SOP:
     roles_path = content_dir / 'roles.json'
     roles_data = _expect(_read_json(roles_path), list, str(roles_path))
     roles = [_role(d, f'{roles_path}[{i}]') for i, d in enumerate(roles_data)]
-    roles = [_with_role_guide(r, content_dir / ROLE_GUIDES_DIR) for r in roles]
-    guides_path = content_dir / 'guides.json'
-    guides_data = _expect(_read_json(guides_path), list, str(guides_path))
-    guides = [_guide(d, f'{guides_path}[{i}]') for i, d in enumerate(guides_data)]
+    guides = [_guide(p) for p in sorted((content_dir / GUIDES_DIR).glob('*.md'))]
     session_paths = sorted((content_dir / 'sessions').glob('*.json'))
     if not session_paths:
         raise SOPError(f'no session files found in {content_dir / "sessions"}')
-    sessions = [_session(p) for p in session_paths]
+    sessions = [_with_idea_views(_session(p), content_dir.parent / AI_GENERATED_DIR) for p in session_paths]
     return SOP(sessions=sessions, roles=roles, guides=guides)
 
 
@@ -87,18 +87,25 @@ def _role(data: Any, where: str) -> Role:
     )
 
 
-def _with_role_guide(role: Role, role_guides_dir: Path) -> Role:
-    path = role_guides_dir / f'{slugify(role.name)}.md'
+def _guide(path: Path) -> Guide:
+    first, _, body = path.read_text(encoding='utf-8').partition('\n')
+    if not first.startswith('# '):
+        raise SOPError(f'{path}: the first line must be the title, as `# Title`')
     # Stored relative to the working directory, so it is also the repo path.
-    return dataclasses.replace(role, guide_markdown_path=path.as_posix()) if path.is_file() else role
+    return Guide(title=first[2:].strip(), body=body.lstrip('\n'), markdown_path=path.as_posix())
 
 
-def _guide(data: Any, where: str) -> Guide:
-    d = _fields(Guide, data, where)
-    return Guide(
-        title=_expect(d['title'], str, f'{where}.title'),
-        url=_expect(d['url'], str, f'{where}.url'),
-    )
+def idea_view_path(ai_dir: Path, session_name: str, role_name: str) -> Path:
+    return ai_dir / slugify(session_name) / f'{slugify(role_name)}.md'
+
+
+def _with_idea_views(session: Session, ai_dir: Path) -> Session:
+    views = {}
+    for s in session.staffing:
+        path = idea_view_path(ai_dir, session.name, s.role)
+        if path.is_file():
+            views[s.role] = path.as_posix()
+    return dataclasses.replace(session, idea_views=views)
 
 
 def _staffing(data: Any, where: str) -> Staffing:
