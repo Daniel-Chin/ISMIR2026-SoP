@@ -49,13 +49,13 @@
     {
       "time_info": "T−2 min",
       "roles": ["Q&A Tracker"],
-      "short_description": "Sit in the corner of the stage. Join Zoom on the provided laptop and disconnect audio+video (see screenshots). Keep the Q&A panel open at all times. On-site questions first, then online questions. No switching back and forth.",
-      "more_info": "![Click the arrow next to Audio](images/audio_menu.png) ![Choose \"Leave computer audio\"](images/leave_computer_audio.png)"
+      "short_description": "Sit in the corner of the stage. Join Zoom on the provided laptop and disconnect audio+video (see screenshots). Keep the Q&A panel (screenshot) open at all times. On-site questions first, then online questions. No switching back and forth.",
+      "more_info": "![Click the arrow next to Audio](images/audio_menu.png) ![Choose \"Leave computer audio\"](images/leave_computer_audio.png) ![The Q&A button in Zoom](images/q&a_button.png)"
     },
     {
       "time_info": "Throughout",
       "roles": ["Webinar Sentinel On-Site"],
-      "short_description": "Sit on-site in the backstage but view only the Zoom Webinar on the provided laptop. Not only listen, but try to understand the presentations --- you catch more issues this way. Keep the on-site screen visible so any mismatch is catched, but pay main attention to the webinar. Use the provided headphones. Upon issues, use judgement: Either unmute to raise the issue, or contact the [[Zoom Master]] immediately by walking to them.",
+      "short_description": "Sit on-site in the backstage but view only the Zoom Webinar on the provided laptop. Not only listen, but try to understand the presentations --- you catch more issues this way. Keep the auditorium screen visible so any mismatch is catched, but pay main attention to the webinar. Use the provided headphones. Upon issues, use judgement: Either unmute to raise the issue, or contact the [[Zoom Master]] immediately by walking to them.",
       "more_info": ""
     },
     {
@@ -86,7 +86,7 @@
       "time_info": "End",
       "roles": ["Q&A Tracker"],
       "short_description": "Clear the Q&A queue for the next event.",
-      "more_info": "Manually dismiss every outstanding question."
+      "more_info": "manually click "dismiss" on every outstanding question."
     }
   ]
 }
