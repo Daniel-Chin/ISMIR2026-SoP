@@ -3,8 +3,8 @@
     index.html                      Menu
     roles/index.html                All roles and the session types they appear in
     roles/<role>/index.html         Detailed SOP of a role, from content/role_guides/<role>.md
-    <session>/index.html            The Idea
-    <session>/runsheet/index.html   Runsheet (?mode=...&roles=a,b)
+    <session>/index.html            The Idea, Staffing, Runsheet (?mode=...&roles=a,b)
+    <session>/runsheet/index.html   Redirects to <session>/#runsheet
     schedule-for-venue-av-it/       Date x time grid of events staffed by Venue AV/IT
     static/                         CSS and JS
     images/                         copied from content/images/
@@ -48,8 +48,8 @@ def build_site(sop: SOP, out: Path, content: Path) -> None:
             _write(out / 'roles' / slugify(role.name) / 'index.html', _role_guide_page(sop, role, roles, guide_urls))
     for session in sop.sessions:
         slug = slugify(session.name)
-        _write(out / slug / 'index.html', _idea_page(session, roles))
-        _write(out / slug / 'runsheet' / 'index.html', _runsheet_page(session, roles, guide_urls))
+        _write(out / slug / 'index.html', _session_page(session, roles))
+        _write(out / slug / 'runsheet' / 'index.html', _runsheet_redirect_page())
     if schedule.EVENTS_CSV.exists():
         _write(
             out / 'schedule-for-venue-av-it' / 'index.html',
@@ -65,8 +65,8 @@ def _write(path: Path, text: str) -> None:
 
 
 def filtered_runsheet_href(root: str, session: Session, role: str) -> str:
-    """The role's cheatsheet; uses the same URL parameters as the runsheet controls."""
-    return f'{root}{slugify(session.name)}/runsheet/?mode=filter&roles={slugify(role)}'
+    """The role's cheatsheet; uses the same URL parameters as the session page's controls."""
+    return f'{root}{slugify(session.name)}/?mode=filter&roles={slugify(role)}#runsheet'
 
 
 def _mention_linker(session: Session, roles: dict[str, Role], root: str) -> md.MentionLinker:
@@ -115,17 +115,6 @@ def _page(title: str, root: str, body: str, *, scripts: str = '', source: str = 
 </body>
 </html>
 '''
-
-
-def _session_header(session: Session, root: str, current: str) -> str:
-    slug = slugify(session.name)
-    tabs = [('idea', 'The Idea', f'{root}{slug}/'), ('runsheet', 'Runsheet', f'{root}{slug}/runsheet/')]
-    links = ''.join(
-        f'<a href="{href}" aria-current="page">{label}</a>' if key == current
-        else f'<a href="{href}">{label}</a>'
-        for key, label, href in tabs
-    )
-    return f'<h1>{escape(session.name)}</h1>\n<nav class="tabs">{links}</nav>'
 
 
 def _staffing_summary(session: Session) -> str:
@@ -244,44 +233,26 @@ def _role_guide_page(sop: SOP, role: Role, roles: dict[str, Role], guide_urls: d
     return _page(f'SOP for {role.name}', root, body, source=role.guide_markdown_path)
 
 
-def _idea_page(session: Session, roles: dict[str, Role]) -> str:
+def _session_page(session: Session, roles: dict[str, Role]) -> str:
+    """The Idea, Staffing, and Runsheet, under one Mode/Roles panel."""
     root = '../'
     link_for = _mention_linker(session, roles, root)
     idea = Path(session.the_idea_markdown_path).read_text(encoding='utf-8')
-    staff = '\n'.join(
-        f'''<section class="role" id="{slugify(s.role)}">
-  <h3>{s.count}× <a href="{filtered_runsheet_href(root, session, s.role)}">{escape(s.role)}</a>{' <span class="volunteer-chip">Volunteer</span>' if roles[s.role].is_volunteer else ''}{_anchor(slugify(s.role))}</h3>
-  <div class="prose">{md.render(roles[s.role].job_description, link_for, root)}</div>{_job_for_who(roles[s.role])}{_role_guide_link(roles[s.role], root)}
-</section>'''
-        for s in session.staffing
-    )
-    body = f'''{_session_header(session, root, 'idea')}
-<article class="prose idea">
-{md.render(idea, link_for, root, anchor_prefix='')}
-</article>
-<h2 id="staffing">Staffing{_anchor("staffing")}</h2>
-{staff}'''
-    return _page(session.name, root, body, source=session.source_path)
-
-
-def _runsheet_page(session: Session, roles: dict[str, Role], guide_urls: dict[str, str]) -> str:
-    root = '../../'
-    link_for = _mention_linker(session, roles, root)
     checkboxes = '\n'.join(
         f'<label><input type="checkbox" value="{slugify(s.role)}"> {escape(s.role)}</label>'
         for s in session.staffing
     )
-    role_descs = '\n'.join(
-        f'''<section class="role role-desc" data-role="{slugify(s.role)}" hidden>
-  <h3>{escape(s.role)}</h3>
-  <div class="prose">{md.render(roles[s.role].job_description, link_for, root)}</div>{_job_for_who(roles[s.role])}{_guides(roles[s.role], guide_urls)}{_role_guide_link(roles[s.role], root)}
+    staff = '\n'.join(
+        f'''<section class="role staff" id="{slugify(s.role)}" data-role="{slugify(s.role)}">
+  <h3>{s.count}× <a href="{filtered_runsheet_href(root, session, s.role)}">{escape(s.role)}</a>{' <span class="volunteer-chip">Volunteer</span>' if roles[s.role].is_volunteer else ''}{_anchor(slugify(s.role))}</h3>
+  <div class="prose">{md.render(roles[s.role].job_description, link_for, root)}</div>{_job_for_who(roles[s.role])}{_role_guide_link(roles[s.role], root)}
 </section>'''
         for s in session.staffing
     )
     rows = []
     for i, job in enumerate(session.runsheet, 1):
         chips = ' '.join(
-            f'<a class="role-chip" data-role="{slugify(r)}" href="../#{slugify(r)}">{escape(r)}</a>'
+            f'<a class="role-chip" data-role="{slugify(r)}" href="{filtered_runsheet_href(root, session, r)}">{escape(r)}</a>'
             for r in job.roles
         )
         details = ''
@@ -295,7 +266,7 @@ def _runsheet_page(session: Session, roles: dict[str, Role], guide_urls: dict[st
   <td class="who">{chips}</td>
   <td class="what"><div class="short">{md.render_inline(job.short_description, link_for, root)}</div>{details}</td>
 </tr>''')
-    body = f'''{_session_header(session, root, 'runsheet')}
+    body = f'''<h1>{escape(session.name)}</h1>
 <form class="controls" id="controls" hidden>
   <label class="mode">Mode
     <select id="mode">
@@ -308,10 +279,18 @@ def _runsheet_page(session: Session, roles: dict[str, Role], guide_urls: dict[st
     <legend>Roles</legend>
     {checkboxes}
   </fieldset>
-  <button type="button" id="expand-all">Expand all</button>
 </form>
-<p class="status" id="status" aria-live="polite"></p>
-{role_descs}
+<h2 id="the-idea">The Idea{_anchor("the-idea")}</h2>
+<article class="prose idea">
+{md.render(idea, link_for, root, anchor_prefix='')}
+</article>
+<h2 id="staffing"><span id="staffing-title">Staffing</span>{_anchor("staffing")}</h2>
+<p class="status" id="staffing-status" aria-live="polite" hidden></p>
+{staff}
+<h2 id="runsheet">Runsheet{_anchor("runsheet")}</h2>
+<div class="controls runsheet-controls" id="runsheet-controls" hidden>
+  <span class="status" id="status" aria-live="polite"></span>
+</div>
 <table class="runsheet">
 <thead><tr><th>Time</th><th>Who</th><th>What</th></tr></thead>
 <tbody>
@@ -319,10 +298,25 @@ def _runsheet_page(session: Session, roles: dict[str, Role], guide_urls: dict[st
 </tbody>
 </table>'''
     return _page(
-        f'{session.name} runsheet', root, body,
+        session.name, root, body,
         scripts=f'<script src="{root}static/runsheet.js"></script>',
         source=session.source_path,
     )
+
+
+def _runsheet_redirect_page() -> str:
+    """Old runsheet URL: forward to the session page's Runsheet section, keeping the query and any #row-N."""
+    return '''<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Redirecting…</title>
+<script>location.replace('../' + location.search + (location.hash || '#runsheet'));</script>
+<noscript><meta http-equiv="refresh" content="0; url=../#runsheet"></noscript>
+</head>
+<body><a href="../#runsheet">Runsheet</a></body>
+</html>
+'''
 
 
 def _venue_av_it_schedule_page(sop: SOP, events: list[schedule.Event]) -> str:

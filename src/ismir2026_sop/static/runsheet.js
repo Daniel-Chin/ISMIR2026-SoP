@@ -1,27 +1,39 @@
-// Runsheet controls. State lives in the URL: ?mode=highlight&roles=zoom-volunteer,room-volunteer
+// Session page controls. State lives in the URL: ?mode=highlight&roles=zoom-volunteer,room-volunteer
+// The Mode/Roles panel drives both the Staffing list and the Runsheet.
 (() => {
   const MODES = ['mastermind', 'highlight', 'filter'];
   const controls = document.getElementById('controls');
+  const runsheetControls = document.getElementById('runsheet-controls');
   const modeSelect = document.getElementById('mode');
   const picker = document.getElementById('role-picker');
   const boxes = [...picker.querySelectorAll('input[type=checkbox]')];
   const rows = [...document.querySelectorAll('tr.job')];
   const chips = [...document.querySelectorAll('.role-chip')];
-  const roleDescs = [...document.querySelectorAll('.role-desc')];
+  const staff = [...document.querySelectorAll('.staff')];
   const status = document.getElementById('status');
-  const expandAll = document.getElementById('expand-all');
+  const staffingStatus = document.getElementById('staffing-status');
+  const staffingTitle = document.getElementById('staffing-title');
 
-  const params = new URLSearchParams(location.search);
-  const urlMode = params.get('mode');
-  const urlRoles = new Set((params.get('roles') || '').split(',').filter(Boolean));
-  modeSelect.value = MODES.includes(urlMode) ? urlMode : 'mastermind';
-  boxes.forEach((b) => { b.checked = urlRoles.has(b.value); });
+  function load(search) {
+    const params = new URLSearchParams(search);
+    const urlMode = params.get('mode');
+    const urlRoles = new Set((params.get('roles') || '').split(',').filter(Boolean));
+    modeSelect.value = MODES.includes(urlMode) ? urlMode : 'mastermind';
+    boxes.forEach((b) => { b.checked = modeSelect.value === 'mastermind' || urlRoles.has(b.value); });
+  }
 
+  // Mastermind means every box ticked: keep the dropdown and the boxes consistent.
+  function syncModeToBoxes() {
+    if (boxes.every((b) => b.checked)) modeSelect.value = 'mastermind';
+    else if (modeSelect.value === 'mastermind') modeSelect.value = 'filter';
+  }
+
+  let prevMode = null; // the mode the page last showed
   function apply() {
     const mode = modeSelect.value;
+    prevMode = mode;
     const selected = new Set(boxes.filter((b) => b.checked).map((b) => b.value));
     document.body.dataset.mode = mode;
-    picker.hidden = mode === 'mastermind';
 
     let shown = 0;
     let hits = 0;
@@ -33,11 +45,14 @@
       if (!row.hidden) shown++;
     });
     chips.forEach((c) => c.classList.toggle('selected', mode !== 'mastermind' && selected.has(c.dataset.role)));
-    // Exactly one role ticked: show its job description above the table.
-    const only = mode !== 'mastermind' && selected.size === 1 ? [...selected][0] : null;
-    roleDescs.forEach((d) => { d.hidden = d.dataset.role !== only; });
+    // Staffing lists every role in mastermind, otherwise only the ticked ones.
+    staff.forEach((s) => { s.hidden = mode !== 'mastermind' && !selected.has(s.dataset.role); });
 
-    if (mode !== 'mastermind' && selected.size === 0) {
+    const none = mode !== 'mastermind' && selected.size === 0;
+    staffingStatus.textContent = none ? 'Tick at least one role.' : '';
+    staffingStatus.hidden = !none;
+    staffingTitle.textContent = mode === 'mastermind' ? 'Staffing' : 'Select Job(s)';
+    if (none) {
       status.textContent = 'Tick at least one role.';
     } else if (mode === 'filter') {
       status.textContent = `Showing ${shown} of ${rows.length} jobs.`;
@@ -49,29 +64,49 @@
 
     // Slugs are URL-safe, so build the query by hand to keep the commas readable.
     let query = '';
-    if (mode !== 'mastermind' || selected.size) {
+    if (mode !== 'mastermind') {
       query = `?mode=${mode}`;
       if (selected.size) query += `&roles=${[...selected].join(',')}`;
     }
     history.replaceState(null, '', location.pathname + query + location.hash);
   }
 
-  const details = [...document.querySelectorAll('tr.job details')];
-  function syncExpandLabel() {
-    expandAll.textContent = details.length && details.every((d) => d.open) ? 'Collapse all' : 'Expand all';
+  // Opening on a role's anchor in Staffing: make sure that role is shown.
+  function revealTarget() {
+    const target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+    if (target && target.classList.contains('staff') && target.hidden) {
+      const box = boxes.find((b) => b.value === target.dataset.role);
+      if (box) box.checked = true;
+      syncModeToBoxes();
+      apply();
+    }
+    target?.scrollIntoView();
   }
-  expandAll.hidden = details.length === 0;
-  expandAll.addEventListener('click', () => {
-    const open = !details.every((d) => d.open);
-    details.forEach((d) => { d.open = open; });
-    syncExpandLabel();
-  });
-  details.forEach((d) => d.addEventListener('toggle', syncExpandLabel));
 
-  modeSelect.addEventListener('change', apply);
-  boxes.forEach((b) => b.addEventListener('change', apply));
+  // Links to this same page with a view (role chips, mentions, Staffing headings) switch the view in place.
+  document.addEventListener('click', (e) => {
+    const a = e.target.closest('a[href]');
+    if (!a || e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    const url = new URL(a.href, location.href);
+    if (url.origin !== location.origin || url.pathname !== location.pathname || !url.search) return;
+    e.preventDefault();
+    load(url.search);
+    history.replaceState(null, '', location.pathname + location.search + url.hash);
+    apply();
+    revealTarget();
+  });
+
+  // Entering mastermind ticks every box; leaving it via the dropdown starts from none.
+  modeSelect.addEventListener('change', () => {
+    if (modeSelect.value === 'mastermind') boxes.forEach((b) => { b.checked = true; });
+    else if (prevMode === 'mastermind') boxes.forEach((b) => { b.checked = false; });
+    apply();
+  });
+  boxes.forEach((b) => b.addEventListener('change', () => { syncModeToBoxes(); apply(); }));
+  load(location.search);
   controls.hidden = false;
+  runsheetControls.hidden = false;
   apply();
-  // Showing the controls and filtering rows shifts the layout after the browser's own jump to #row-N.
-  document.getElementById(decodeURIComponent(location.hash.slice(1)))?.scrollIntoView();
+  // Showing the controls and filtering rows shifts the layout after the browser's own jump to the hash.
+  revealTarget();
 })();

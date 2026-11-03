@@ -41,4 +41,4 @@ Pushing to `main` builds and deploys to GitHub Pages ([.github/workflows/pages.y
 
 ## Runsheet links
 
-A runsheet's view is kept in the URL, so a cheatsheet can be bookmarked or shared.
+A session page's view (mode and roles, applied to both Staffing and the Runsheet) is kept in the URL, so a cheatsheet can be bookmarked or shared.

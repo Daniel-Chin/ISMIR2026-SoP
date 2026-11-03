@@ -83,7 +83,7 @@ h3 { font-size: 1.1rem; margin: 0 0 0.25rem; }
 .mention { font-weight: 600; white-space: nowrap; }
 span.mention { color: var(--muted); }
 
-/* The Idea: staffing */
+/* Staffing */
 .role { border-left: 3px solid var(--line); padding: 0.25rem 0 0.25rem 1rem; margin: 1rem 0; }
 .job-for-who {
   margin: 0.5rem 0 0;
@@ -93,6 +93,7 @@ span.mention { color: var(--muted); }
   font-size: 0.9em;
 }
 .role:target { border-left-color: var(--hit-edge); }
+.role[hidden] { display: none; }
 .volunteer-chip {
   display: inline-block;
   margin-left: 0.4rem;
@@ -105,7 +106,7 @@ span.mention { color: var(--muted); }
   vertical-align: middle;
 }
 
-/* Runsheet controls */
+/* Mode/Roles panel, and the Runsheet's own panel */
 .controls {
   display: flex;
   flex-wrap: wrap;
@@ -116,13 +117,13 @@ span.mention { color: var(--muted); }
   border-radius: 8px;
 }
 .controls[hidden] { display: none; }
-.controls select, .controls button { font: inherit; padding: 0.25rem 0.5rem; }
+.runsheet-controls { margin-bottom: 0.5rem; }
+.runsheet-controls .status { margin: 0; }
+.controls select { font: inherit; padding: 0.25rem 0.5rem; }
 .controls .mode { display: flex; align-items: center; gap: 0.5rem; font-weight: 600; }
 .controls fieldset { border: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; }
-.controls fieldset[hidden] { display: none; }
 .controls legend { float: left; font-weight: 600; margin-right: 0.5rem; }
 .controls label { white-space: nowrap; }
-.controls button[hidden] { display: none; }
 .status { color: var(--muted); min-height: 1.5em; margin: 0.5rem 0; }
 
 /* Runsheet table */
