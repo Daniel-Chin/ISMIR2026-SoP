@@ -68,8 +68,8 @@
     {
       "time_info": "T−2 min",
       "roles": ["Q&A Producer"],
-      "short_description": "Sit in the corner of the stage. Join Zoom on the provided laptop and disconnect audio+video. Keep the Q&A panel open at all times. During Q&A: On-site questions first, then online questions. No switching back and forth.",
-      "more_info": "During Q&A no signal is needed: once on-site questions are done, read the online questions."
+      "short_description": "Sit in the corner of the stage. Join Zoom on the provided laptop and disconnect audio+video (see screenshots). Keep the Q&A panel open at all times. During Q&A: On-site questions first, then online questions. No switching back and forth.",
+      "more_info": "During Q&A no signal is needed: once on-site questions are done, read the online questions. ![Click the arrow next to Audio](images/audio_menu.png) ![Choose \"Leave computer audio\"](images/leave_computer_audio.png)"
     },
     {
       "time_info": "T",

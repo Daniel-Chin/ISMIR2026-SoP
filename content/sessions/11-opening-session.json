@@ -49,8 +49,8 @@
     {
       "time_info": "T−2 min",
       "roles": ["Q&A Tracker"],
-      "short_description": "Sit in the corner of the stage. Join Zoom on the provided laptop and disconnect audio+video. Keep the Q&A panel open at all times. On-site questions first, then online questions. No switching back and forth.",
-      "more_info": ""
+      "short_description": "Sit in the corner of the stage. Join Zoom on the provided laptop and disconnect audio+video (see screenshots). Keep the Q&A panel open at all times. On-site questions first, then online questions. No switching back and forth.",
+      "more_info": "![Click the arrow next to Audio](images/audio_menu.png) ![Choose \"Leave computer audio\"](images/leave_computer_audio.png)"
     },
     {
       "time_info": "Throughout",
