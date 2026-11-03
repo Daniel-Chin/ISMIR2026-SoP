@@ -8,6 +8,7 @@ Jobs for [[Zoom Master]].
     - [Sheet for Award Session Chairs](https://docs.google.com/spreadsheets/d/1JPkY1TY8BfC07ZicIe6FDiZt94PALu3r6AFXhavpwlY/edit?gid=332004949#gid=332004949)
     - [Sheet for Keynote Inviter](https://docs.google.com/spreadsheets/d/1JPkY1TY8BfC07ZicIe6FDiZt94PALu3r6AFXhavpwlY/edit?gid=1970761264#gid=1970761264)
   - Rename Zoom display name.
+- Download all pre-recorded videos into 2 of the laptops, organize them by session, and sort them by position.
 - Poster Hall:
   - Set up 10 poster kiosks. Each laptop: has Zoom client, log into a unique Zoom account, keep a URL to / window of miniconf, and log into Slack using a non-Admin account.
   - Set up a material desk. Provide tapes and markers.

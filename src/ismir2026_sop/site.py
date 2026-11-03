@@ -307,7 +307,6 @@ def _session_page(session: Session, roles: dict[str, Role]) -> str:
         view = strip_stamp(Path(path).read_text(encoding='utf-8'))
         rslug = slugify(role_name)
         ideas.append(f'''<article class="prose idea" data-idea="{rslug}" hidden>
-<p class="ai-note">Written by an AI for the {escape(role_name)}, from The Idea and the job description. Tick more roles to see the full versions.</p>
 {md.render(view, link_for, root, anchor_prefix=f'{rslug}-')}{_guides(roles[role_name], root)}
   <p class="role-page"><a href="{_role_href(root, role_name)}">All about the {escape(role_name)}</a></p>
 </article>''')

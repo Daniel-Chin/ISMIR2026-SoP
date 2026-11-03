@@ -25,7 +25,7 @@
     {
       "time_info": "T−1 week",
       "roles": ["On-site Session Chair", "Online Session Chair"],
-      "short_description": "[[On-site Session Chair]] and [[Online Session Chair]] say hi to each other on Slack and agree on how to split the work. See the detailed SOP of each role.",
+      "short_description": "[[On-site Session Chair]] and [[Online Session Chair]] say hi to each other on Slack and agree on how to split the work.",
       "more_info": ""
     },
     {
@@ -42,7 +42,7 @@
     },
     {
       "time_info": "T−1 day",
-      "roles": ["On-site Session Chair"],
+      "roles": ["Online Session Chair"],
       "short_description": "Use your own laptop to test open all slide submissions. Your laptop will not be used during the Oral Session, but is a good sanity check.",
       "more_info": ""
     },
@@ -61,7 +61,7 @@
     {
       "time_info": "T−8 min",
       "roles": ["On-site Session Chair"],
-      "short_description": "Go to the stage laptop and check the Google Sheet.",
+      "short_description": "Go to the stage laptop and check the [Sheet for Session Chair](https://docs.google.com/spreadsheets/d/1JPkY1TY8BfC07ZicIe6FDiZt94PALu3r6AFXhavpwlY/edit?gid=1217880391#gid=1217880391).",
       "more_info": "Do not download slides. During presentation, for Google slides, use the web view; for slides files, downloading is fast. This ensures up-to-date slides.\nIf the previous event before your session uses the auditorium, do this instead at T-1 min."
     },
     {
@@ -109,7 +109,7 @@
     {
       "time_info": "T<sub>y</sub>",
       "roles": ["On-site Session Chair"],
-      "short_description": "where T<sub>y</sub> is the start of each presentation. Make sure the presenter is ready and by the stage. Open / Download the right slides from the Sheet for Session Chair. Introduce the paper title and the presenter. Be brief, nice, and non-distracting.",
+      "short_description": "where T<sub>y</sub> is the start of each presentation. Make sure the presenter is ready and by the stage. Open / Download the right slides from the [Sheet for Session Chair](https://docs.google.com/spreadsheets/d/1JPkY1TY8BfC07ZicIe6FDiZt94PALu3r6AFXhavpwlY/edit?gid=1217880391#gid=1217880391). Introduce the paper title and the presenter. Be brief, nice, and non-distracting.",
       "more_info": "Tip. Extra words easily distract the audience. The presentations are fast. If a person spends 15 seconds thinking about what you just said, they've missed the first slide.\nIf the presenter is not ready in 30 seconds, fallback to playing the pre-recorded video."
     },
     {
