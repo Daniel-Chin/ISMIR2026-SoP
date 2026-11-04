@@ -138,9 +138,9 @@
     },
     {
       "time_info": "End",
-      "roles": ["Venue AV/IT", "Zoom Master"],
-      "short_description": "[[Zoom Master]] reminds [[Venue AV/IT]] to screenshare 'quit this Webinar and go to the Zoom Meeting for Poster Session.'",
-      "more_info": ""
+      "roles": ["Zoom Master"],
+      "short_description": "End webinar for all.",
+      "more_info": "Webinar has to end before the Poster Session Zoom Meeting can be started."
     },
     {
       "time_info": "End",
