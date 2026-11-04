@@ -2,7 +2,7 @@
   "name": "Industry Panel",
   "the_idea_markdown_path": "41-industry-panel.md",
   "staffing": [
-    {"role": "Q&A Tracker", "count": 1, "uptime": 0.3},
+    {"role": "Industry Chair", "count": 1, "uptime": 0.3},
     {"role": "Mic Runner", "count": 2, "uptime": 0.3},
     {"role": "Webinar Sentinel On-Site", "count": 1},
     {"role": "Webinar Sentinel Online", "count": 1},
@@ -11,10 +11,70 @@
   ],
   "runsheet": [
     {
+      "time_info": "T−11 min",
+      "roles": ["Venue AV/IT", "Zoom Master"],
+      "short_description": "Disconnect webinar audio+video from the auditorium. (Display the holding slide.)",
+      "more_info": ""
+    },
+    {
+      "time_info": "T−11 min",
+      "roles": ["Zoom Master", "Webinar Sentinel On-Site"],
+      "short_description": "[[Webinar Sentinel On-Site]] confirm where [[Zoom Master]] will sit.",
+      "more_info": ""
+    },
+    {
+      "time_info": "T−10 min",
+      "roles": ["Zoom Master"],
+      "short_description": "Disable Zoom Chat and raised hand (for attendees).",
+      "more_info": "Chat > menu > attendees can chat with: nobody. Host Tools > attendees > raise hand: off."
+    },
+    {
+      "time_info": "T−10 min",
+      "roles": ["Zoom Master"],
+      "short_description": "In the Zoom webinar, promote the 3 online panelists, the remote [[Industry Chair]], the Moderator, and the on-site panelist (if presenting slides) to panelist; promote [[Webinar Sentinel On-Site]] and backstage to cohost.",
+      "more_info": "Use [#panelist-names](https://ismir2026.slack.com/archives/C0CER5XPX19) to identify users."
+    },
+    {
+      "time_info": "T−8 min",
+      "roles": ["Zoom Master"],
+      "short_description": "Test audio+video input+output with each online panelist and the [[Industry Chair]], and test screenshare (if any slides). Seat the Moderator and the on-site panelist on stage.",
+      "more_info": ""
+    },
+    {
+      "time_info": "T−5 min",
+      "roles": ["Industry Chair"],
+      "short_description": "Join the Zoom Webinar remotely (you will be promoted to panelist). Test your audio. Agree with the Moderator on when Q&A starts and how they will hand over to you for online questions.",
+      "more_info": ""
+    },
+    {
+      "time_info": "T−3 min",
+      "roles": ["Mic Runner"],
+      "short_description": "Grab a mic and keep it for the whole session. Make sure the Moderator and the on-site panelist each have a mic too.",
+      "more_info": ""
+    },
+    {
+      "time_info": "T−2 min",
+      "roles": ["Venue AV/IT", "Zoom Master"],
+      "short_description": "Connect webinar audio+video to the auditorium.",
+      "more_info": ""
+    },
+    {
+      "time_info": "T−2 min",
+      "roles": ["Industry Chair"],
+      "short_description": "Open the Q&A panel (screenshot) and keep it open at all times. Stay muted with video off until Q&A.",
+      "more_info": "![The Q&A button in Zoom](images/q&a_button.png)"
+    },
+    {
       "time_info": "T",
       "roles": ["Zoom Master"],
-      "short_description": "TODO",
-      "more_info": ""
+      "short_description": "The Moderator starts the session and introduces the panelists (including the remote [[Industry Chair]]).",
+      "more_info": "Note that the livestream view contains only the podium area, not the entire stage. Remind on-site speakers to stay in the camera view."
+    },
+    {
+      "time_info": "Throughout",
+      "roles": ["Webinar Sentinel On-Site"],
+      "short_description": "Sit on-site in the backstage but view only the Zoom Webinar on the provided laptop. Use the provided headphones. Upon issues, use judgement: Either unmute to raise the issue, or contact the [[Zoom Master]] immediately by walking to them.",
+      "more_info": "Pay special attention to the online panelists' audio, both in the webinar and in the room."
     },
     {
       "time_info": "Throughout",
@@ -23,8 +83,32 @@
       "more_info": ""
     },
     {
+      "time_info": "Throughout",
+      "roles": ["Zoom Master"],
+      "short_description": "Sit in the corner of the audience, ready to fix online panelists' audio/video.",
+      "more_info": ""
+    },
+    {
+      "time_info": "Q&A",
+      "roles": ["Industry Chair"],
+      "short_description": "Once on-site questions are done and the Moderator hands over, unmute (video on), pick the most interesting online questions and read them to the panel. Mark each as answered.",
+      "more_info": "On-site questions first, then online questions. No switching back and forth."
+    },
+    {
+      "time_info": "Q&A",
+      "roles": ["Mic Runner"],
+      "short_description": "Whenever a question from the on-site audience is taken, give your mic to them.",
+      "more_info": ""
+    },
+    {
       "time_info": "End",
-      "roles": ["Q&A Tracker"],
+      "roles": ["Zoom Master"],
+      "short_description": "Demote panelists to attendees, especially when there is a subsequent session.",
+      "more_info": ""
+    },
+    {
+      "time_info": "End",
+      "roles": ["Zoom Master"],
       "short_description": "Clear the Q&A queue for the next event.",
       "more_info": "Manually click 'dismiss' on every outstanding question."
     }

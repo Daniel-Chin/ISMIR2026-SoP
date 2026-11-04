@@ -1,1 +1,4 @@
-...
+- Hybrid, using Zoom Webinar. Moderator (Gus Xia) on-site, plus 4 panelists from the Platinum, Gold and Silver sponsors (1 on-site, 3 online).
+- Moderated discussion, followed by Q&A from the on-site and online audience.
+- The [[Industry Chair]] (remote, as a Zoom panelist) tracks the online Q&A: they pick the most interesting online questions and relay them to the panel.
+- During Q&A: on-site questions first, then online questions. No switching back and forth.

@@ -21,6 +21,13 @@
     "job_description": "Sit on stage, not introduced. Relay online questions to the Speaker."
   },
   {
+    "name": "Industry Chair",
+    "is_volunteer": false,
+    "is_onsite": false,
+    "guides": ["About Webinar Q&A"],
+    "job_description": "During the Industry Panel, join the Zoom Webinar remotely as a panelist. Pick the most interesting online questions and read them to the panel."
+  },
+  {
     "name": "Mic Runner",
     "is_volunteer": true,
     "is_onsite": true,
