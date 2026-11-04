@@ -10,6 +10,12 @@ Jobs for [[Zoom Master]].
   - Rename Zoom display name.
 - Download all pre-recorded videos into 2 of the laptops, organize them by session, and sort them by position.
 - Poster Hall:
-  - Set up 10 poster kiosks. Each laptop: has Zoom client, log into a unique Zoom account, keep a URL to / window of miniconf, and log into Slack using a non-Admin account.
+  - Set up 10 poster kiosks. Each laptop: 
+    - has Zoom client; 
+      - log into a unique Zoom account; 
+      - In Audio settings, turn of auto gain.
+        - (Auto gain breaks manual gain control for mics.)
+    - keep a URL to / window of miniconf;
+    - log into Slack using a non-Admin account.
   - Set up a material desk. Provide tapes and markers.
   - Set up a helpdesk with a checked-out laptop. Install Zoom client, log into the Zoom Meeting host account, and keep a URL to / window of miniconf.
