@@ -43,13 +43,13 @@
     {
       "time_info": "T",
       "roles": ["Poster Session Helpdesk On-site", "Zoom Master"],
-      "short_description": "Meet to know one another. Review cheatsheet on [the idea page](../).",
+      "short_description": "Meet to know one another. Review the [Troubleshoot cheatsheet](#poster-session-helpdesk-on-site-troubleshoot-cheatsheet).",
       "more_info": ""
     },
     {
       "time_info": "T+1",
       "roles": ["Poster Session Helpdesk Online", "Zoom Master"],
-      "short_description": "[[Poster Session Helpdesk Online]], join the meeting and stay in the Hub; Rename yourself to “{name} (volunteer)”; Send a message in Zoom Chat to the Meeting Host saying 'make_me_cohost()'; Review cheatsheet on [the idea page](../). [[Zoom Master]], make them co-host.",
+      "short_description": "[[Poster Session Helpdesk Online]], join the meeting and stay in the Hub; Rename yourself to “{name} (volunteer)”; Send a message in Zoom Chat to the Meeting Host saying 'make_me_cohost()'; Review the [Troubleshoot cheatsheet](#poster-session-helpdesk-online-troubleshoot-cheatsheet). [[Zoom Master]], make them co-host.",
       "more_info": ""
     },
     {
