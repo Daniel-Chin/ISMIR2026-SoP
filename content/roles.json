@@ -28,6 +28,18 @@
     "job_description": "During the Industry Panel, join the Zoom Webinar remotely as a panelist. Pick the most interesting online questions and read them to the panel."
   },
   {
+    "name": "Unconference Chair",
+    "is_volunteer": false,
+    "is_onsite": false,
+    "job_description": "Run the Unconference opening plenary: introduce the proposed topics and form the groups. Also host one of the 4 rooms as an [[Unconference Room Host]]. At the end, make a concluding statement to everyone, on-site and online."
+  },
+  {
+    "name": "Unconference Room Host",
+    "is_volunteer": false,
+    "is_onsite": true,
+    "job_description": "Host one Unconference room (an on-site room + its Zoom breakout room). Facilitate the discussion and balance on-site and online participation: regularly check in with the online participants and invite them to speak."
+  },
+  {
     "name": "Mic Runner",
     "is_volunteer": true,
     "is_onsite": true,

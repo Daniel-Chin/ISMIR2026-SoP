@@ -2,24 +2,58 @@
   "name": "Unconference",
   "the_idea_markdown_path": "90-unconference.md",
   "staffing": [
-    {"role": "Q&A Tracker", "count": 1, "uptime": 0.3},
+    {"role": "Unconference Chair", "count": 1},
+    {"role": "Unconference Room Host", "count": 3},
     {"role": "Mic Runner", "count": 2, "uptime": 0.3},
-    {"role": "Webinar Sentinel On-Site", "count": 1},
-    {"role": "Webinar Sentinel Online", "count": 1},
-    {"role": "Venue AV/IT", "count": 1},
     {"role": "Zoom Master", "count": 1}
   ],
   "runsheet": [
     {
-      "time_info": "T",
+      "time_info": "T - 30min",
       "roles": ["Zoom Master"],
-      "short_description": "TODO",
+      "short_description": "In each of the 4 on-site rooms, log the room computer into the Zoom Meeting as its own account, renamed to the room name (e.g. \"Room A (on-site)\"). Check camera, mic and speakers.",
       "more_info": ""
     },
     {
-      "time_info": "Throughout",
-      "roles": ["Webinar Sentinel Online"],
-      "short_description": "Monitor the Webinar and report issues immediately to [#vol-alerts](https://ismir2026.slack.com/archives/C0CDNPPNJ0Z).",
+      "time_info": "T - 15min",
+      "roles": ["Zoom Master"],
+      "short_description": "Pre-create 4 breakout rooms named after the on-site rooms. Make the 4 hosts co-hosts so they can move between rooms if needed.",
+      "more_info": ""
+    },
+    {
+      "time_info": "T",
+      "roles": ["Unconference Chair"],
+      "short_description": "Opening plenary (main room): introduce the proposed topics from Dotstorming and form the groups, one per room.",
+      "more_info": ""
+    },
+    {
+      "time_info": "T",
+      "roles": ["Mic Runner"],
+      "short_description": "During the plenary, bring the mic to on-site participants who speak.",
+      "more_info": ""
+    },
+    {
+      "time_info": "End of plenary",
+      "roles": ["Zoom Master"],
+      "short_description": "Assign each on-site room account to its breakout room, open the breakout rooms, and allow online participants to choose their room.",
+      "more_info": ""
+    },
+    {
+      "time_info": "End of plenary",
+      "roles": ["Unconference Chair", "Unconference Room Host"],
+      "short_description": "Go to your on-site room. Facilitate ~45 min of discussion, balancing on-site and online participation.",
+      "more_info": ""
+    },
+    {
+      "time_info": "Breakout + 40min",
+      "roles": ["Zoom Master"],
+      "short_description": "Broadcast a 5-minute warning to all breakout rooms; then close the breakout rooms so everyone returns to the main room.",
+      "more_info": ""
+    },
+    {
+      "time_info": "End",
+      "roles": ["Unconference Chair"],
+      "short_description": "Make a concluding statement to everyone, on-site and online.",
       "more_info": ""
     }
   ]
