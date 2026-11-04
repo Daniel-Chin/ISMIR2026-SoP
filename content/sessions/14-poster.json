@@ -24,7 +24,7 @@
     {
       "time_info": "T−4 min",
       "roles": ["Zoom Master"],
-      "short_description": "The helpdesk laptop promotes each kiosk laptop to cohost. Open the breakout session while allowing participants to choose room (see screenshot in More Info). Each laptop enters a breakout room. Each laptop starts “recording to this computer",
+      "short_description": "The helpdesk laptop promotes each kiosk laptop to cohost. Open the breakout session while allowing participants to choose room (see screenshot in More Info).",
       "more_info": "![Screenshot with instructions](images/open_breakout.png)",
       "dev_comment": "“Allow participants to choose room” is present in account settings too, but ticking it as the default room behavior didn’t work — you still have to manually do this every meeting."
     },
@@ -32,7 +32,7 @@
       "time_info": "T−3 min",
       "roles": ["Zoom Master"],
       "short_description": "For each kiosk laptop: enter a breakout room; start “recording to this computer”; start the Live-Overview observer app.",
-      "more_info": "Check which kiosks indicated not to be recorded."
+      "more_info": "P2-9 indicated not to be recorded."
     },
     {
       "time_info": "T−1 min",
