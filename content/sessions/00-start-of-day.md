@@ -15,6 +15,8 @@ Jobs for [[Zoom Master]].
       - log into a unique Zoom account; 
       - In Audio settings, turn of auto gain.
         - (Auto gain breaks manual gain control for mics.)
+      - In Sharescreen settings > Advanced, tick "Use Mac System Picker".
+      - In Video settings, untick Auto Frame.
     - keep a URL to / window of miniconf;
     - log into Slack using a non-Admin account.
   - Set up a material desk. Provide tapes and markers.
