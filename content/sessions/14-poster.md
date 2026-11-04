@@ -1,4 +1,4 @@
-![Poster hall preview photo. Zoom sessions are available at each poster booth.](images/poster_hall_preview.jpg)
+![Poster hall preview photo. Zoom sessions are available at each poster kiosk.](images/poster_hall_preview.jpg)
 
 - Runs 60 minutes.
 - Hybrid. By each poster is a TV that serves as a window to the online participants.
