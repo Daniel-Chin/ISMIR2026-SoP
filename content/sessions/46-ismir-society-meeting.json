@@ -11,15 +11,111 @@
   ],
   "runsheet": [
     {
+      "time_info": "T−11 min",
+      "roles": ["Venue AV/IT", "Zoom Master"],
+      "short_description": "Disconnect webinar audio+video from the auditorium. (Display the holding slide.)",
+      "more_info": ""
+    },
+    {
+      "time_info": "T−11 min",
+      "roles": ["Zoom Master", "Webinar Sentinel On-Site"],
+      "short_description": "[[Webinar Sentinel On-Site]] confirm where [[Zoom Master]] will sit.",
+      "more_info": ""
+    },
+    {
+      "time_info": "T−10 min",
+      "roles": ["Zoom Master"],
+      "short_description": "Disable Zoom Chat and raised hand (for attendees).",
+      "more_info": "Chat > menu > attendees can chat with: nobody. Host Tools > attendees > raise hand: off."
+    },
+    {
+      "time_info": "T−10 min",
+      "roles": ["Zoom Master"],
+      "short_description": "In the Zoom webinar, promote all online panelists, all on-site panelists (if presenting slides), and the [[Q&A Tracker]] to panelist; promote [[Webinar Sentinel On-Site]] and backstage to cohost.",
+      "more_info": "Use [#panelist-names](https://ismir2026.slack.com/archives/C0CER5XPX19) to identify users."
+    },
+    {
+      "time_info": "T−8 min",
+      "roles": ["Zoom Master"],
+      "short_description": "Test audio+video input+output with each online panelist (and screenshare, if any slides). Tell them on-site questions come first, then online questions relayed by the [[Q&A Tracker]]. Seat the on-site panelists on stage.",
+      "more_info": ""
+    },
+    {
+      "time_info": "T−3 min",
+      "roles": ["Q&A Tracker", "Mic Runner"],
+      "short_description": "Grab a mic and keep it for the whole session.",
+      "more_info": ""
+    },
+    {
+      "time_info": "T−3 min",
+      "roles": ["Mic Runner"],
+      "short_description": "Make sure every on-site panelist has a mic.",
+      "more_info": ""
+    },
+    {
+      "time_info": "T−2 min",
+      "roles": ["Venue AV/IT", "Zoom Master"],
+      "short_description": "Connect webinar audio+video to the auditorium.",
+      "more_info": ""
+    },
+    {
+      "time_info": "T−2 min",
+      "roles": ["Zoom Master"],
+      "short_description": "Remind [[Venue AV/IT]] to display the online panelists on the stage-facing TV.",
+      "more_info": "So that on-site panelists can see the online panelists."
+    },
+    {
+      "time_info": "T−2 min",
+      "roles": ["Venue AV/IT"],
+      "short_description": "Display the online panelists (Zoom gallery view) on the stage-facing TV.",
+      "more_info": ""
+    },
+    {
+      "time_info": "T−2 min",
+      "roles": ["Q&A Tracker"],
+      "short_description": "Sit in the corner of the stage. Join Zoom on the provided laptop and disconnect audio+video (see screenshots). Keep the Q&A panel (screenshot) open at all times.",
+      "more_info": "![Click the arrow next to Audio](images/audio_menu.png) ![Choose \"Leave computer audio\"](images/leave_computer_audio.png) ![The Q&A button in Zoom](images/q&a_button.png)"
+    },
+    {
       "time_info": "T",
       "roles": ["Zoom Master"],
-      "short_description": "TODO",
-      "more_info": ""
+      "short_description": "The session starts. Make sure the online panelists stay visible on the stage-facing TV and on the auditorium screen.",
+      "more_info": "Note that the livestream view contains only the podium area, not the entire stage. Remind on-site panelists to stay in the camera view."
+    },
+    {
+      "time_info": "Throughout",
+      "roles": ["Webinar Sentinel On-Site"],
+      "short_description": "Sit on-site in the backstage but view only the Zoom Webinar on the provided laptop. Use the provided headphones. Upon issues, use judgement: Either unmute to raise the issue, or contact the [[Zoom Master]] immediately by walking to them.",
+      "more_info": "Pay special attention to the online panelists' audio, both in the webinar and in the room."
     },
     {
       "time_info": "Throughout",
       "roles": ["Webinar Sentinel Online"],
       "short_description": "Monitor the Webinar and report issues immediately to [#vol-alerts](https://ismir2026.slack.com/archives/C0CDNPPNJ0Z).",
+      "more_info": ""
+    },
+    {
+      "time_info": "Throughout",
+      "roles": ["Zoom Master"],
+      "short_description": "Sit in the corner of the audience, ready to fix online panelists' audio/video.",
+      "more_info": ""
+    },
+    {
+      "time_info": "Q&A",
+      "roles": ["Q&A Tracker"],
+      "short_description": "Once on-site questions are done, read the online questions to the panel. Mark each as answered.",
+      "more_info": "On-site questions first, then online questions. No switching back and forth."
+    },
+    {
+      "time_info": "Q&A",
+      "roles": ["Mic Runner"],
+      "short_description": "Whenever a question from the on-site audience is taken, give your mic to them.",
+      "more_info": ""
+    },
+    {
+      "time_info": "End",
+      "roles": ["Zoom Master"],
+      "short_description": "Demote panelists to attendees, especially when there is a subsequent session.",
       "more_info": ""
     },
     {
