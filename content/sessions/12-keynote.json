@@ -38,19 +38,19 @@
     {
       "time_info": "T−10 min",
       "roles": ["Zoom Master"],
-      "short_description": "In the Zoom webinar, promote the Speaker, [[Q&A Producer]], and [[Webinar Sentinel On-Site]] to panelist; and backstage to cohost.",
+      "short_description": "In the Zoom webinar, promote the Speaker and [[Q&A Producer]] to panelist; promote [[Webinar Sentinel On-Site]] and backstage to cohost.",
       "more_info": ""
     },
     {
       "time_info": "T−8 min",
       "roles": ["Zoom Master"],
-      "short_description": "Help the Speaker connect laptop to HDMI (if on their own laptop), test aduio+video input+output (if online), and test screenshare and sound share (always). Direct the Speaker to the [[Q&A Producer]] for coordination.",
+      "short_description": "Help the Speaker connect laptop to HDMI (if on their own laptop), test audio+video input+output (if online), and test screenshare and sound share (always). Direct the Speaker to the [[Q&A Producer]] for coordination.",
       "more_info": "Zoom Client: [zoom.us/download](https://zoom.us/download)"
     },
     {
       "time_info": "T−5 min",
       "roles": ["Q&A Producer"],
-      "short_description": "Ask whether the Speaker will take questions during the talk. If yes, state that taking on-site questions is their responsibility, and clarify whether they will take even online questions during the talk. If yes, agree on a signal that means there's an online question during the talk..",
+      "short_description": "Ask whether the Speaker will take questions during the talk. If yes, state that taking on-site questions is their responsibility, and clarify whether they will take even online questions during the talk. If yes, agree on a signal that means there's an online question during the talk.",
       "more_info": ""
     },
     {
@@ -80,7 +80,7 @@
     {
       "time_info": "Throughout",
       "roles": ["Webinar Sentinel On-Site"],
-      "short_description": "Sit on-site in the backstage but view only the Zoom Webinar on the provided laptop. Not only listen, but try to understand and enjoy the talk --- you catch more issues this way. Keep the auditorium screen visible so any mismatch is catched, but pay main attention to the webinar. Use the provided headphones. Upon issues, use judgement: Either unmute to raise the issue, or contact the [[Zoom Master]] immediately by walking to them.",
+      "short_description": "Sit on-site in the backstage but view only the Zoom Webinar on the provided laptop. Not only listen, but try to understand and enjoy the talk --- you catch more issues this way. Keep the auditorium screen visible so any mismatch is caught, but pay main attention to the webinar. Use the provided headphones. Upon issues, use judgement: Either unmute to raise the issue, or contact the [[Zoom Master]] immediately by walking to them.",
       "more_info": ""
     },
     {

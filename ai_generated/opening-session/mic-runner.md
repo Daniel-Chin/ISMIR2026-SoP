@@ -1,4 +1,4 @@
-<!-- generated from content/sessions/11-opening-session.md sha256:5d41d44edcab -->
+<!-- generated from content/sessions/11-opening-session.md sha256:ddf41eab0b5b -->
 The Opening Session is the conference's opening welcome: each chair or team presents the information that matters to everyone. It takes place on-site in the auditorium and is streamed over Zoom Webinar.
 
 ### Your job
