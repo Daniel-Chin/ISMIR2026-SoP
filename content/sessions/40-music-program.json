@@ -16,6 +16,12 @@
     },
     {
       "time_info": "Throughout",
+      "roles": ["Webinar Sentinel On-Site"],
+      "short_description": "Sit on-site in the backstage but view only the Zoom Webinar on the provided laptop. Not only listen, but enjoy the performances --- you catch more issues this way. Use the provided headphones. Upon issues, use judgement: Either unmute to raise the issue, or contact the [[Zoom Master]] immediately by walking to them.",
+      "more_info": ""
+    },
+    {
+      "time_info": "Throughout",
       "roles": ["Webinar Sentinel Online"],
       "short_description": "Monitor the Webinar and report issues immediately to [#vol-alerts](https://ismir2026.slack.com/archives/C0CDNPPNJ0Z).",
       "more_info": ""
