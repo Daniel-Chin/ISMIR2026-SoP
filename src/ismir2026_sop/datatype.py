@@ -51,6 +51,8 @@ class Session:
     # Role name -> repo path of the AI-generated view of The Idea for that role, where one exists;
     # set by the loader from ai_generated/<session>/<role>.md.
     idea_views: dict[RoleName, str] = field(default_factory=dict, metadata={'derived': True})
+    # Role name -> YouTube link of a walkthrough video for that role; set by the loader from content/videos.json.
+    videos: dict[RoleName, str] = field(default_factory=dict, metadata={'derived': True})
 
 @dataclass(frozen=True)
 class SOP:

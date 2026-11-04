@@ -214,3 +214,6 @@ span.mention { color: var(--muted); }
 .ai-note { font-size: 0.9em; color: var(--muted, #888); font-style: italic; }
 .guide { margin-top: 2.5rem; }
 @media print { .source { display: none; } }
+
+.video { max-width: 48rem; margin: 0 0 1rem; }
+.video iframe { width: 100%; aspect-ratio: 16 / 9; border: 0; }

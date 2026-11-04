@@ -1,0 +1,19 @@
+{
+  "dev_comment": "Session name -> role name -> YouTube link. Embedded above the runsheet when exactly that one role is ticked.",
+  "Tutorial": {
+    "Tutorial Moderator": "https://youtu.be/-ksNhjQ2-Kc",
+    "Zoom Master": "https://youtu.be/uKBWB6yPZS0"
+  },
+  "Opening Session": {
+    "Q&A Tracker": "https://youtu.be/NlBeKTOAXu8",
+    "Mic Runner": "https://youtu.be/p6Dk7iHHUIw",
+    "Webinar Sentinel On-Site": "https://youtu.be/Me2N9JjhigY",
+    "Webinar Sentinel Online": "https://youtu.be/5s9uhYThBgY",
+    "Zoom Master": "https://youtu.be/OXP1FHiljDo"
+  },
+  "Keynote": {
+    "Q&A Producer": "https://youtu.be/C4MzvUGiUHg",
+    "Mic Runner": "https://youtu.be/DgKHzv0EiZA",
+    "Webinar Sentinel On-Site": "https://youtu.be/X1xUygNPFuE"
+  }
+}

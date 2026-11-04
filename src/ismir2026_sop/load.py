@@ -7,6 +7,7 @@ Layout:
     content/sessions/<any>.json     one session each; menu order = file name order
     content/sessions/<any>.md       The Idea, referenced from the session JSON
                                     by a path relative to that JSON file
+    content/videos.json             optional {session name: {role name: YouTube link}}
     ai_generated/<session>/<role>.md
                                     optional LLM-written view of a session's Idea for one
                                     role (slugs of the names); next to content/
@@ -37,7 +38,27 @@ def load_sop(content_dir: Path) -> SOP:
     if not session_paths:
         raise SOPError(f'no session files found in {content_dir / "sessions"}')
     sessions = [_with_idea_views(_session(p), content_dir.parent / AI_GENERATED_DIR) for p in session_paths]
+    sessions = _with_videos(sessions, content_dir / 'videos.json')
     return SOP(sessions=sessions, roles=roles, guides=guides)
+
+
+def _with_videos(sessions: list[Session], path: Path) -> list[Session]:
+    if not path.is_file():
+        return sessions
+    data = _expect(_read_json(path), dict, str(path))
+    by_name = {s.name: s for s in sessions}
+    out = {s.name: {} for s in sessions}
+    for name, videos in data.items():
+        if name == 'dev_comment':
+            continue
+        if name not in by_name:
+            raise SOPError(f'{path}: unknown session {json.dumps(name)}')
+        staffed = {s.role for s in by_name[name].staffing}
+        for role, url in _expect(videos, dict, f'{path}.{name}').items():
+            if role not in staffed:
+                raise SOPError(f'{path}.{name}: role {json.dumps(role)} is not staffed in this session')
+            out[name][role] = _expect(url, str, f'{path}.{name}.{role}')
+    return [dataclasses.replace(s, videos=out[s.name]) for s in sessions]
 
 
 def _read_json(path: Path) -> Any:

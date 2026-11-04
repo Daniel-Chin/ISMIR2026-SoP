@@ -16,6 +16,7 @@
   const ideas = [...document.querySelectorAll('article[data-idea]')];
   const ideaSources = [...document.querySelectorAll('[data-idea-source]')];
   const ideaTitle = document.getElementById('idea-title');
+  const videos = [...document.querySelectorAll('[data-video]')];
   const staffingHeading = document.getElementById('staffing');
 
   function load(search) {
@@ -55,6 +56,7 @@
     const only = mode !== 'mastermind' && selected.size === 1 ? [...selected][0] : '';
     const view = ideas.some((a) => a.dataset.idea === only) ? only : '';
     ideas.forEach((a) => { a.hidden = a.dataset.idea !== view; });
+    videos.forEach((v) => { v.hidden = v.dataset.video !== only; });
     ideaSources.forEach((a) => { a.hidden = a.dataset.ideaSource !== view; });
     // A role's view already merges The Idea with its job description: retitle it, and drop Staffing.
     ideaTitle.textContent = view ? `For the ${boxes.find((b) => b.value === view).parentElement.textContent.trim()}` : 'The Idea';

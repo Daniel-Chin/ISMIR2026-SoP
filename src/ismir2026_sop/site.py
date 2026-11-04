@@ -13,6 +13,7 @@
 """
 
 import os
+import re
 import shutil
 from html import escape
 from pathlib import Path
@@ -294,6 +295,13 @@ def _guides_page(sop: SOP, roles: dict[str, Role]) -> str:
     return _page('Guides', root, body)
 
 
+def _youtube_id(url: str) -> str:
+    m = re.match(r'https?://(?:youtu\.be/|(?:www\.)?youtube\.com/(?:watch\?v=|embed/|shorts/))([\w-]+)', url)
+    if not m:
+        raise ValueError(f'not a YouTube link: {url}')
+    return m.group(1)
+
+
 def _session_page(session: Session, roles: dict[str, Role]) -> str:
     """The Idea, Staffing, and Runsheet, under one Mode/Roles panel."""
     root = '../'
@@ -343,6 +351,13 @@ def _session_page(session: Session, roles: dict[str, Role]) -> str:
   <td class="who">{chips}</td>
   <td class="what"><div class="short">{md.render_inline(job.short_description, link_for, root)}</div>{details}</td>
 </tr>''')
+    # One walkthrough video per role; runsheet.js shows the one of the one ticked role.
+    videos = '\n'.join(
+        f'''<div class="video" data-video="{slugify(role_name)}" hidden>
+  <iframe src="https://www.youtube-nocookie.com/embed/{escape(_youtube_id(url))}" title="{escape(session.name)}: {escape(role_name)}" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen loading="lazy"></iframe>
+</div>'''
+        for role_name, url in session.videos.items()
+    )
     body = f'''<h1>{escape(session.name)}</h1>
 <form class="controls" id="controls" hidden>
   <label class="mode">Mode
@@ -363,6 +378,7 @@ def _session_page(session: Session, roles: dict[str, Role]) -> str:
 <p class="status" id="staffing-status" aria-live="polite" hidden></p>
 {staff}
 <h2 id="runsheet">Runsheet{_anchor("runsheet")}{_source(session.source_path)}</h2>
+{videos}
 <div class="controls runsheet-controls" id="runsheet-controls" hidden>
   <span class="status" id="status" aria-live="polite"></span>
 </div>
