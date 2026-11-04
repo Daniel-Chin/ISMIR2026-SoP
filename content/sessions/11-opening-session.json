@@ -92,7 +92,7 @@
       "time_info": "End",
       "roles": ["Q&A Tracker"],
       "short_description": "Clear the Q&A queue for the next event.",
-      "more_info": "manually click 'dismiss' on every outstanding question."
+      "more_info": "Manually click 'dismiss' on every outstanding question."
     }
   ]
 }

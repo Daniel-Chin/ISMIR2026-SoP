@@ -1,8 +1,9 @@
-<!-- generated from content/sessions/12-keynote.md sha256:51a5b63a8177 -->
+<!-- generated from content/sessions/12-keynote.md sha256:d4cf89eab306 -->
 The Keynote is a 60-minute talk by an invited Speaker, who may be on-site or remote, followed by Q&A. It takes place in the 300-capacity auditorium A6-008 and is streamed via Zoom Webinar 500.
 
 ### Your job
 - Configure the Zoom Webinar under time constraints.
+- If the Speaker is remote, promote them to panelist; use [#panelist-names](https://ismir2026.slack.com/archives/C0CER5XPX19) to identify them.
 
 ### Q&A
 - Online questions are text only, via the Zoom Webinar Q&A tool. Raising hands is not supported.

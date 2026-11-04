@@ -7,9 +7,81 @@
   ],
   "runsheet": [
     {
+      "time_info": "T−11 min",
+      "roles": ["Zoom Master"],
+      "short_description": "Disconnect webinar audio+video from the room. (Display the holding slide.)",
+      "more_info": ""
+    },
+    {
+      "time_info": "T−10 min",
+      "roles": ["Tutorial Moderator", "Zoom Master"],
+      "short_description": "Meet to know one another. [[Tutorial Moderator]] confirm where [[Zoom Master]] will sit.",
+      "more_info": ""
+    },
+    {
+      "time_info": "T−10 min",
+      "roles": ["Zoom Master"],
+      "short_description": "In the Zoom webinar, promote the tutorial presenters and [[Tutorial Moderator]] to panelist. Disable Zoom Chat and raised hand (for attendees).",
+      "more_info": "Chat > menu > attendees can chat with: nobody. Host Tools > attendees > raise hand: off."
+    },
+    {
+      "time_info": "T−8 min",
+      "roles": ["Tutorial Moderator", "Zoom Master"],
+      "short_description": "Greet the presenters (on-site and online). For online presenters: test audio+video input+output and screenshare (and sound share if they play audio). For on-site presenters: test the room laptop/HDMI and slides.",
+      "more_info": "Online presenters are asked to join the webinar 10 minutes in advance and wait for promotion. Ask presenters about their planned breaks and Q&A points, and note them."
+    },
+    {
+      "time_info": "T−2 min",
+      "roles": ["Tutorial Moderator"],
+      "short_description": "Grab a mic and keep it for the whole session. Join Zoom on the provided laptop and disconnect audio+video (see screenshots). Keep the Q&A panel (screenshot) open at all times.",
+      "more_info": "![Click the arrow next to Audio](images/audio_menu.png) ![Choose \"Leave computer audio\"](images/leave_computer_audio.png) ![The Q&A button in Zoom](images/q&a_button.png)"
+    },
+    {
+      "time_info": "T−1 min",
+      "roles": ["Zoom Master"],
+      "short_description": "Connect webinar audio+video to the room.",
+      "more_info": ""
+    },
+    {
       "time_info": "T",
       "roles": ["Tutorial Moderator"],
-      "short_description": "TODO",
+      "short_description": "Announce the tutorial starts. Introduce yourself as the volunteer who moderates the tutorial. Introduce the presenters and let them take over.",
+      "more_info": ""
+    },
+    {
+      "time_info": "Throughout",
+      "roles": ["Tutorial Moderator"],
+      "short_description": "Act as the on-site proxy for online presenters: relay what happens in the room (e.g. audio/slide issues, audience reactions) and speak up when the presenter cannot be heard or seen. If a panelist account is making noises, mute it.",
+      "more_info": ""
+    },
+    {
+      "time_info": "Throughout",
+      "roles": ["Zoom Master"],
+      "short_description": "Sit in the corner of the audience. Watch the webinar and the room screen; fix mismatches immediately.",
+      "more_info": ""
+    },
+    {
+      "time_info": "During\nQ&A",
+      "roles": ["Tutorial Moderator"],
+      "short_description": "Take on-site questions first, then online questions from the Zoom Q&A panel. No switching back and forth. Give your mic to on-site askers; read online questions aloud.",
+      "more_info": ""
+    },
+    {
+      "time_info": "Breaks",
+      "roles": ["Tutorial Moderator", "Zoom Master"],
+      "short_description": "Announce when the tutorial resumes. Display the holding slide during the break.",
+      "more_info": ""
+    },
+    {
+      "time_info": "End",
+      "roles": ["Tutorial Moderator"],
+      "short_description": "Thank the presenters. Clear the Q&A queue for the next event.",
+      "more_info": "Manually click 'dismiss' on every outstanding question."
+    },
+    {
+      "time_info": "End",
+      "roles": ["Zoom Master"],
+      "short_description": "Demote the presenters from panelists to attendees.",
       "more_info": ""
     }
   ]

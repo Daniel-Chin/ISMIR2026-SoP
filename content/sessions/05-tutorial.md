@@ -1,1 +1,8 @@
-...
+- Hybrid. Using Zoom Webinar. Presenters may be on-site or online.
+- Presenters talk; the audience asks questions at Q&A points chosen by the presenters. Questions do not interrupt presentations unless the presenters invite it.
+- Online presenters join the Zoom Webinar 10 minutes in advance. The [[Zoom Master]] promotes them to panelist and tests their audio+video input+output and screenshare.
+- The [[Tutorial Moderator]] combines three jobs:
+  - greeter of the presenters (especially online ones),
+  - on-site proxy for online presenters (speaks up for them in the room, and tells them what the room sees and hears),
+  - Q&A tracker (on-site questions first, then online questions from the Zoom Q&A panel).
+- Webinar Q&A otherwise uses the same design as [Keynote Session](../keynote/#qa).

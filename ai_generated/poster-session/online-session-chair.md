@@ -1,4 +1,4 @@
-<!-- generated from content/sessions/14-poster.md sha256:272f7553e5eb -->
+<!-- generated from content/sessions/14-poster.md sha256:4e36b128bea7 -->
 The Poster Session runs 60 minutes.
 
 - Hybrid: by each on-site poster is a TV that serves as a window to the online participants. One Zoom breakout room per paper. Not streamed on YouTube or Webinar.

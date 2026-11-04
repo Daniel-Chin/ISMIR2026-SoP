@@ -1,4 +1,4 @@
-<!-- generated from content/sessions/14-poster.md sha256:d65b80a1b1ea -->
+<!-- generated from content/sessions/14-poster.md sha256:c52b633eaefa -->
 ![Poster hall preview photo. Zoom sessions are available at each poster kiosk.](images/poster_hall_preview.jpg)
 
 The Poster Session runs 60 minutes in the Upper Atrium, A6.

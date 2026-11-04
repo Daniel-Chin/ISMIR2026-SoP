@@ -47,7 +47,7 @@
     "is_onsite": true,
     "guides": ["For All Volunteers", "For Zoom Co-Hosts", "Assisting Online Attendees", "Assisting with Zoom", "Assisting with Slack", "About Webinar Q&A"],
     "job_for_who": "High commitment. Has to miss parts of the conference.",
-    "job_description": "Configure Zoom Meetings / Webinars under time constraints. Follow the Virtual Chair around on the first day to observe jobs."
+    "job_description": "Configure Zoom Meetings / Webinars under time constraints. Follow the Virtual Chair around on the first day to observe jobs. Use [#panelist-names](https://ismir2026.slack.com/archives/C0CER5XPX19) to identify users to promote to panelists."
   },
   {
     "name": "Poster Session Helpdesk On-site",
