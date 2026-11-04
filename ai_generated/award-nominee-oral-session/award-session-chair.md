@@ -8,7 +8,8 @@ The Award Nominee Oral Session presents the award-nominated papers: each paper g
   - If they cannot attend live, they share a 10 minute video, which you play instead of a live presenter.
 - Arrange timing and seating within the session.
 - Introduce every talk. Check name pronunciations beforehand.
-- Keep time during the presentations.
+- Keep time during the presentations. Signal on-site presenters with gestures/cards. Online presenters cannot see those: your only way to give them time cues is Zoom text chat.
+- You sit with the [[Q&A Tracker]] at the side laptop in the corner of the stage, which is logged into the Webinar as a panelist. Send online time cues from there.
 - Start and end each Q&A.
 
 ### Online presenters

@@ -75,7 +75,7 @@
     {
       "time_info": "T−1 min",
       "roles": ["Q&A Tracker"],
-      "short_description": "Sit in the corner of the stage. Join Zoom on the provided laptop and disconnect audio+video (see screenshots). Keep the Q&A panel (screenshot) open at all times.",
+      "short_description": "Sit with the [[Award Session Chair]] in the corner of the stage. Join Zoom on the provided laptop and disconnect audio+video (see screenshots). Keep the Q&A panel (screenshot) open at all times.",
       "more_info": "![Click the arrow next to Audio](images/audio_menu.png) ![Choose \"Leave computer audio\"](images/leave_computer_audio.png) ![The Q&A button in Zoom](images/q&a_button.png)"
     },
     {
@@ -99,8 +99,8 @@
     {
       "time_info": "T",
       "roles": ["Award Session Chair"],
-      "short_description": "Introduce your name, institution, and your role as the Award Session Chair. Announce the form of presentation + Q&A, and introduce your gestures/cards for '8 minutes passed' and '10 minutes passed'. Sit with the [[Q&A Tracker]] in the corner of the stage.",
-      "more_info": "Cards: maybe simply write with pen and paper?"
+      "short_description": "Introduce your name, institution, and your role as the Award Session Chair. Announce the form of presentation + Q&A, and introduce your gestures/cards for '8 minutes passed' and '10 minutes passed'. Sit with the [[Q&A Tracker]] at the laptop in the corner of the stage. That laptop is logged into the Webinar as a panelist.",
+      "more_info": "Cards: maybe simply write with pen and paper?\nOnline presenters cannot see your cards: give them time cues in the Zoom text chat, from the laptop."
     },
     {
       "time_info": "T<sub>y</sub>-10 min",
@@ -129,13 +129,13 @@
     {
       "time_info": "T<sub>y</sub>+8 min",
       "roles": ["Award Session Chair"],
-      "short_description": "Signal the presenter.",
+      "short_description": "Signal the presenter. If the presenter is online, instead send '8 minutes passed' via Zoom Chat (To: Panelists) from the laptop.",
       "more_info": ""
     },
     {
       "time_info": "T<sub>y</sub>+10 min",
       "roles": ["Award Session Chair"],
-      "short_description": "Signal the presenter again. From this point on, use your judgement whether to barge in and stop the presentation. Consider remaining time.",
+      "short_description": "Signal the presenter again (online presenter: Zoom Chat '10 minutes passed', To: Panelists, from the laptop). From this point on, use your judgement whether to barge in and stop the presentation. Consider remaining time.",
       "more_info": "Consider that this session is the last one in the afternoon."
     },
     {
