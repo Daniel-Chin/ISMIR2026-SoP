@@ -1,0 +1,1 @@
+- On-site only; no hybrid, no online stream.

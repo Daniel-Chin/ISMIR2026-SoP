@@ -1,0 +1,9 @@
+{
+  "name": "On-site Majlis",
+  "the_idea_markdown_path": "50-majlis-on-site.md",
+  "staffing": [
+    {"role": "Venue AV/IT", "count": 1}
+  ],
+  "runsheet": [
+  ]
+}

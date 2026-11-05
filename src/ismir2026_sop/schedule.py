@@ -18,7 +18,7 @@ CATEGORY_TO_SESSION_TYPE: dict[str, str | None] = {
     'Awards': 'Awards and Closing Session',
     'Registration': None,
     'Tutorials': 'Tutorial',
-    'Majlis': 'Majlis',
+    'Majlis': None,  # split by title in Event.session_type
     'Social': None,
     'Lunch': None,
     'Music': 'Music Program',
@@ -37,6 +37,7 @@ def auditorium_display_mode(session_type: str) -> str:
         'Oral Session': 'Projector shows: Stage laptop',
         'Award Nominee Oral Session': 'Projector shows: Mixed, needs switching',
         'Special Session': 'Projector shows: Webinar',
+        'On-site Majlis': 'No Zoom! \nProjector shows: Stage laptop',
     }.get(session_type, 'Projector shows: TBD')
 
 
@@ -54,6 +55,13 @@ class Event:
     def session_type(self) -> str | None:
         if self.category not in CATEGORY_TO_SESSION_TYPE:
             raise KeyError(f'event {self.uid}: unmapped category {self.category!r}; add it to CATEGORY_TO_SESSION_TYPE')
+        if self.category == 'Majlis':
+            # Each majlis is either on-site or online; the title says which.
+            if '(On-site)' in self.title:
+                return 'On-site Majlis'
+            if '(Online)' in self.title:
+                return 'Online Majlis'
+            raise ValueError(f'event {self.uid}: Majlis title {self.title!r} must contain "(On-site)" or "(Online)"')
         return CATEGORY_TO_SESSION_TYPE[self.category]
 
 
