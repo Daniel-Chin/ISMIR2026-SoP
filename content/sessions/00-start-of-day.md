@@ -21,3 +21,4 @@ Jobs for [[Zoom Master]].
     - log into Slack using a non-Admin account.
   - Set up a material desk. Provide tapes and markers.
   - Set up a helpdesk with a checked-out laptop. Install Zoom client, log into the Zoom Meeting host account, and keep a URL to / window of miniconf.
+  - Bring the posters of the day's first Poster Session from the War Room to the helpdesk.

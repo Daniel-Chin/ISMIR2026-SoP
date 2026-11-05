@@ -95,6 +95,12 @@
       "more_info": ""
     },
     {
+      "time_info": "T+50 min",
+      "roles": ["Zoom Master"],
+      "short_description": "If there is another Poster Session later in the same day, bring its posters from the War Room to the helpdesk.",
+      "more_info": ""
+    },
+    {
       "time_info": "End",
       "roles": ["Zoom Master"],
       "short_description": "From the helpdesk laptop: End meeting for all.",
