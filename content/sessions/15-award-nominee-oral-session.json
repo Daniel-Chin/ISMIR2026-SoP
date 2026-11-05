@@ -45,7 +45,7 @@
     {
       "time_info": "T−8 min",
       "roles": ["Award Session Chair"],
-      "short_description": "Go to the stage laptop. Keep the [Sheet for Session Chair](https://docs.google.com/spreadsheets/d/1JPkY1TY8BfC07ZicIe6FDiZt94PALu3r6AFXhavpwlY/edit?gid=1217880391#gid=1217880391) open.",
+      "short_description": "Go to the stage laptop. Keep the [Sheet for Award Session Chair](https://docs.google.com/spreadsheets/d/1JPkY1TY8BfC07ZicIe6FDiZt94PALu3r6AFXhavpwlY/edit?gid=332004949#gid=332004949) open.",
       "more_info": "Do not download slides. During presentation, for Google slides, use the web view; for slides files, downloading is fast. This ensures up-to-date slides.\nIf the previous event before your session uses the auditorium, do this instead at T-1 min."
     },
     {
@@ -112,7 +112,7 @@
       "time_info": "T<sub>y</sub>-1 min",
       "roles": ["Zoom Master"],
       "short_description": "here T<sub>y</sub> is the start of each presentation. For one whole minute, monitor the attendee list. When the next presenter joins, promote them to panelist.",
-      "more_info": ""
+      "more_info": "Use the [Sheet for Award Session Chair](https://docs.google.com/spreadsheets/d/1JPkY1TY8BfC07ZicIe6FDiZt94PALu3r6AFXhavpwlY/edit?gid=332004949#gid=332004949) for panelist name."
     },
     {
       "time_info": "T<sub>y</sub>",
