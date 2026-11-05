@@ -1,4 +1,4 @@
-<!-- generated from content/sessions/46-ismir-society-meeting.md sha256:e668b76b87b0 -->
+<!-- generated from content/sessions/46-ismir-society-meeting.md sha256:9912183c18dc -->
 The ISMIR Society Meeting is a board meeting in which the conference chairs meet the ISMIR steering committee, run as a hybrid panel discussion with some panelists on-site and some online, and broadcast to all conference attendees over Zoom Webinar.
 
 ### Your job

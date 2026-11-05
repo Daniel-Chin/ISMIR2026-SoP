@@ -1,9 +1,9 @@
-<!-- generated from content/sessions/90-unconference.md sha256:4f24aea0028e -->
-The Unconference is a hybrid session run on a Zoom Meeting, not a Webinar, because it uses breakout rooms: a short plenary in A6-008 streamed on the Meeting, then ~45 minutes of discussion across 4 hybrid rooms (A6-008, A6-007, A6-005, A6-004).
+<!-- generated from content/sessions/90-unconference.md sha256:00dd6b8f8dba -->
+The Unconference is a session run on a Zoom Meeting, not a Webinar, because it uses breakout rooms: a hybrid plenary in A6-008 on the Meeting hub, then ~45 minutes of discussion in 2 on-site rooms and 2 Zoom breakout rooms, then a hybrid reconvene in A6-008.
 
 ### Your job
 - Configure the Zoom Meeting and its breakout rooms under time constraints.
-- Set up the room systems of A6-004 and A6-005 ([[Venue AV/IT]] supports A6-007 and A6-008). Each on-site room joins its breakout room as one Zoom account (room computer + camera + mic).
-- During the plenary, promote the 4 room hosts (the [[Unconference Chair]] and the [[Unconference Room Host]]s) to co-host in the hub. Use [#panelist-names](https://ismir2026.slack.com/archives/C0CER5XPX19) to identify users.
-- Keep breakout rooms closed during the plenary. Create them after the topics are out, named after the topics, one per on-site room.
+- During the plenary, promote the online hosts to co-host in the hub, so they can move between breakout rooms. Use [#panelist-names](https://ismir2026.slack.com/archives/C0CER5XPX19) to identify users.
+- Keep breakout rooms closed during the plenary. After the topics are announced, create 2 breakout rooms named after the 2 online topics.
 - Online participants choose their own breakout room, guided by a notice you share in the hub.
+- On-site rooms are not connected to Zoom during the discussion. A6-008 reconnects to the hub for the reconvene, after the breakout rooms close.

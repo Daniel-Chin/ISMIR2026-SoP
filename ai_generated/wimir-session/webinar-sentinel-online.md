@@ -1,4 +1,4 @@
-<!-- generated from content/sessions/45-wimir-session.md sha256:85b76ae762fe -->
+<!-- generated from content/sessions/45-wimir-session.md sha256:4632c3ada383 -->
 The WIMIR Session is a hybrid talk + Q&A session streamed over Zoom Webinar, in which all speakers are online and screenshare their slides from their own computers.
 
 ### Your job

@@ -1,4 +1,4 @@
-<!-- generated from content/sessions/12-keynote.md sha256:9de516436af9 -->
+<!-- generated from content/sessions/12-keynote.md sha256:56687c261c35 -->
 The Keynote is a 60-minute talk by an invited Speaker, who may be on-site or remote, followed by Q&A. It takes place in the 300-capacity auditorium A6-008 and is streamed via Zoom Webinar 500.
 
 ### Your job

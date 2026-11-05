@@ -1,4 +1,4 @@
-<!-- generated from content/sessions/41-industry-panel.md sha256:fd6698c91592 -->
+<!-- generated from content/sessions/41-industry-panel.md sha256:76e64fbcb65e -->
 The Industry Panel is a hybrid moderated discussion streamed over Zoom Webinar, with on-site Moderator Gus Xia and 4 sponsor panelists (1 on-site, 3 online), followed by Q&A from the on-site and online audience.
 
 ### Your job

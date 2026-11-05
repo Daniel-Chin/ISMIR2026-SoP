@@ -1,4 +1,4 @@
-<!-- generated from content/sessions/15-award-nominee-oral-session.md sha256:15a9987edb84 -->
+<!-- generated from content/sessions/15-award-nominee-oral-session.md sha256:9342b64ed81a -->
 The Award Nominee Oral Session presents the award-nominated papers: each paper gets a 10-minute presentation and a 5-minute Q&A. It takes place in the 300-capacity auditorium A6-008 and is streamed via Zoom Webinar 500.
 
 ### Your job
