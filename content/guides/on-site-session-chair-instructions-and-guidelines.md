@@ -72,5 +72,5 @@ and each online presenter shows on the TV. Report issues to the [[Poster Session
 - At the end, thank the presenters.
 
 ## Contacts
-- TODO: organizer contact for session chairs.
+- Program questions: contact the SPC.
 - Onsite issues: Onsite volunteers and the AV team.

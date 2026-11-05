@@ -47,6 +47,5 @@ Follow your runsheets (linked above) for the minute-by-minute steps. Suggestions
 - At the end, thank the presenters in #poster-session-?.
 
 ## Contacts
-
-- TODO: organizer contact for session chairs.
-- Zoom issues: [#internal-helpdesk-for-volunteer-and-organizers](https://ismir2026.slack.com/archives/C0CAA9DBFJ6) (TODO: confirm chairs have access).
+- Program questions: contact the SPC.
+- Zoom issues: [#internal-helpdesk-for-volunteer-and-organizers](https://ismir2026.slack.com/archives/C0CAA9DBFJ6).
