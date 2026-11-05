@@ -38,6 +38,7 @@ def auditorium_display_mode(session_type: str) -> str:
         'Award Nominee Oral Session': 'Projector shows: Mixed, needs switching',
         'Special Session': 'Projector shows: Webinar',
         'On-site Majlis': 'No Zoom! \nProjector shows: Stage laptop',
+        'ISMIR Society Meeting': 'Both on-site panelists and online panelists.\nStage-facing TV needs to show online panelists.',
     }.get(session_type, 'Projector shows: TBD')
 
 
