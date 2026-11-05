@@ -11,7 +11,7 @@ The Keynote is a 60-minute talk by an invited Speaker, who may be on-site or rem
 ### Q&A
 - On-site & online questions are supported. Besides the Q&A session, the Speaker may take questions during the talk.
 - Online questions are text only. A [[Q&A Producer]] sits on stage with you, organizes and clarifies them, signals (e.g. raises a hand) when one is ready, and reads it when the Speaker takes it.
-- During the Q&A, take on-site questions first, then online questions. No switching back and forth.
+- During the Q&A, take on-site questions first, then online questions. No need to switch back and forth.
 - A [[Mic Runner]] gives their mic to each on-site person asking.
 
 ### Stage

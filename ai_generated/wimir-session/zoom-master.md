@@ -7,4 +7,4 @@ The WIMIR Session is a hybrid talk + Q&A session streamed over Zoom Webinar, in 
 - Test audio, video, screenshare and sound share with each online speaker, then stay ready to fix them and to switch between speakers throughout.
 
 ### Q&A
-- On-site questions first, then online questions (text only, via the Zoom Webinar Q&A tool), relayed by the Q&A Tracker. No switching back and forth.
+- On-site questions first, then online questions (text only, via the Zoom Webinar Q&A tool), relayed by the Q&A Tracker. No need to switch back and forth.

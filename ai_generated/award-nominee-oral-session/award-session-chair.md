@@ -19,7 +19,7 @@ The Award Nominee Oral Session presents the award-nominated papers: each paper g
 
 ### Q&A
 - Questions do not interrupt the presentation.
-- On-site & online questions are supported. Take on-site questions first, then online questions. No switching back and forth.
+- On-site & online questions are supported. Take on-site questions first, then online questions. No need to switch back and forth.
 - When you take an on-site question, a [[Mic Runner]] gives their mic to the person asking.
 - Online questions are text only, via the Zoom Webinar Q&A tool. A [[Q&A Tracker]] organizes them and relays them when you turn to them.
 

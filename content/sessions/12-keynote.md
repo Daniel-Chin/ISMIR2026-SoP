@@ -4,7 +4,7 @@
 
 ### Q&A
 - On-site & online questions are supported. We support not only a Q&A session but also live speaker-audience interaction.
-- During the Q&A, take on-site questions first, then online questions. No switching back and forth.
+- During the Q&A, take on-site questions first, then online questions. No need to switch back and forth.
 - Online questions are text only, via the Zoom Webinar Q&A tool. Raising hands is not supported.
 - For text questions in the Q&A tool, a [[Q&A Producer]] organizes and clarifies the questions before relaying them. 
 - Use cards / gestures for robust & confident flow. When there is a clarified question, no matter during the talk or during Q&A, the [[Q&A Producer]] signals (e.g. raises a hand). When the Speaker takes the question, the [[Q&A Producer]] reads it.

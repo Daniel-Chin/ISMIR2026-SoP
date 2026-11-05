@@ -4,4 +4,4 @@ The ISMIR Society Meeting is a board meeting in which the conference chairs meet
 ### Your job
 - Sit on stage, not introduced. Relay online questions to the panel, and mark each as answered.
 - Online questions are text only, via the Zoom Webinar Q&A tool. Raising hands is not supported.
-- During Q&A, on-site questions come first, then online questions. No switching back and forth.
+- During Q&A, on-site questions come first, then online questions. No need to switch back and forth.

@@ -11,5 +11,5 @@ The Special Session takes place on-site in A6-008 and is hybrid, using Zoom Webi
 - Relay online and local questions to the panelists.
 - Keep time.
 - Online questions are text only, via the Zoom Webinar Q&A tool. Track them and relay them; you don't need to clarify them.
-- On-site questions first, then online questions. No switching back and forth.
+- On-site questions first, then online questions. No need to switch back and forth.
 - The audience may bring lunch into the auditorium.

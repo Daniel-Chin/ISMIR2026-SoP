@@ -4,4 +4,4 @@ The Industry Panel is a hybrid moderated discussion streamed over Zoom Webinar, 
 ### Your job
 - Join the Zoom Webinar remotely as a panelist.
 - Track the online Q&A: pick the most interesting online questions and read them to the panel.
-- During Q&A, on-site questions come first, then online questions. No switching back and forth: wait for the Moderator to hand over to you.
+- During Q&A, on-site questions come first, then online questions. No need to switch back and forth: wait for the Moderator to hand over to you.

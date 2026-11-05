@@ -8,5 +8,5 @@ The ISMIR Society Meeting is a board meeting in which the conference chairs meet
 - Remind [[Venue AV/IT]] to display the online panelists on the stage-facing TV.
 
 ### Q&A
-- On-site questions first, then online questions. No switching back and forth.
+- On-site questions first, then online questions. No need to switch back and forth.
 - The [[Q&A Tracker]] relays online questions to the panel.

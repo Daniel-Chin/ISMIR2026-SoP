@@ -3,7 +3,7 @@
 
 ### Q&A
 - On-site & online questions are supported.
-- During Q&A: on-site questions first, then online questions. No switching back and forth.
+- During Q&A: on-site questions first, then online questions. No need to switch back and forth.
 - Online questions are text only, via the Zoom Webinar Q&A tool. Raising hands is not supported.
 - The [[Q&A Tracker]] sits on stage, relays online questions to the Speaker, and marks each as answered.
 - Because the Speaker is remote, the [[Q&A Tracker]] may need to barge in: "We have a question. Is now a good time?".

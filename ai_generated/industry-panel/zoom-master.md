@@ -7,5 +7,5 @@ The Industry Panel is a hybrid moderated discussion streamed over Zoom Webinar, 
 - Test audio and video with each online panelist and the Industry Chair, then stay ready to fix their audio/video throughout.
 
 ### Q&A
-- On-site questions first, then online questions. No switching back and forth.
+- On-site questions first, then online questions. No need to switch back and forth.
 - The remote Industry Chair picks the most interesting online questions and reads them to the panel. You clear the Q&A queue at the end.

@@ -19,7 +19,7 @@
 - On-site & online questions are supported. 
 - Online questions are text only, via the Zoom Webinar Q&A tool. Raising hands is not supported.
 - For text questions in the Q&A tool, a [[Q&A Tracker]] organizes the questions before relaying them. Text questions arriving during the presentation will wait for the Q&A.
-- The [[Award Session Chair]] starts and ends each Q&A, and takes on-site questions first, then online questions. No switching back and forth.
+- The [[Award Session Chair]] starts and ends each Q&A, and takes on-site questions first, then online questions. No need to switch back and forth.
 - When the [[Award Session Chair]] takes an on-site question, a [[Mic Runner]] gives their mic to the person asking.
 
 ### Google Sheet "For Session Chair"

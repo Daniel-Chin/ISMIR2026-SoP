@@ -104,7 +104,7 @@
       "time_info": "Q&A",
       "roles": ["Q&A Tracker"],
       "short_description": "Once on-site questions are done, read the online questions to the panel. Mark each as answered.",
-      "more_info": "On-site questions first, then online questions. No switching back and forth."
+      "more_info": "On-site questions first, then online questions. No need to switch back and forth."
     },
     {
       "time_info": "Q&A",
