@@ -4,22 +4,11 @@
   "staffing": [
     {"role": "Unconference Chair", "count": 1},
     {"role": "Unconference Room Host", "count": 3},
-    {"role": "Mic Runner", "count": 2, "uptime": 0.3},
+    {"role": "Mic Runner", "count": 4},
+    {"role": "Venue AV/IT", "count": 1},
     {"role": "Zoom Master", "count": 1}
   ],
   "runsheet": [
-    {
-      "time_info": "T - 30min",
-      "roles": ["Zoom Master"],
-      "short_description": "In each of the 4 on-site rooms, log the room computer into the Zoom Meeting as its own account, renamed to the room name (e.g. \"Room A (on-site)\"). Check camera, mic and speakers.",
-      "more_info": ""
-    },
-    {
-      "time_info": "T - 15min",
-      "roles": ["Zoom Master"],
-      "short_description": "Pre-create 4 breakout rooms named after the on-site rooms. Make the 4 hosts co-hosts so they can move between rooms if needed.",
-      "more_info": ""
-    },
     {
       "time_info": "T",
       "roles": ["Unconference Chair"],
@@ -33,15 +22,27 @@
       "more_info": ""
     },
     {
-      "time_info": "End of plenary",
+      "time_info": "T",
       "roles": ["Zoom Master"],
-      "short_description": "Assign each on-site room account to its breakout room, open the breakout rooms, and allow online participants to choose their room.",
-      "more_info": ""
+      "short_description": "During the plenary, promote the 4 room hosts ([[Unconference Chair]] and [[Unconference Room Host]]s) to co-host in the hub, so they can move between breakout rooms later. Do not open breakout rooms yet.",
+      "more_info": "Use [#panelist-names](https://ismir2026.slack.com/archives/C0CER5XPX19) to identify users."
     },
     {
       "time_info": "End of plenary",
-      "roles": ["Unconference Chair", "Unconference Room Host"],
-      "short_description": "Go to your on-site room. Facilitate ~45 min of discussion, balancing on-site and online participation.",
+      "roles": ["Zoom Master"],
+      "short_description": "Once the topics are out, create 4 breakout rooms named after the topics, and note which on-site room hosts each topic. Open the breakout rooms, allowing participants to choose their room.",
+      "more_info": "![Screenshot with instructions](images/open_breakout.png)"
+    },
+    {
+      "time_info": "End of plenary",
+      "roles": ["Zoom Master"],
+      "short_description": "Screenshare this notice (in More Info) in the hub. Press 'pause' in the Zoom top bar to freeze the screenshare.",
+      "more_info": "![Hub notice.](images/unconference_hub_notice.png)"
+    },
+    {
+      "time_info": "End of plenary",
+      "roles": ["Unconference Chair", "Unconference Room Host", "Mic Runner"],
+      "short_description": "Go to your on-site room. Hosts facilitate ~45 min of discussion, balancing on-site and online participation. Mic runners make sure every on-site speaker uses a mic.",
       "more_info": ""
     },
     {
