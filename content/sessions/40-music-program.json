@@ -9,10 +9,22 @@
   ],
   "runsheet": [
     {
+      "time_info": "T−5 min",
+      "roles": ["Zoom Master", "Venue AV/IT"],
+      "short_description": "On the backstage Zoom client, turn on Original Sound and turn off automatic gain adjustment.",
+      "more_info": "Check this every time --- Zoom settings may reset after updates or re-login."
+    },
+    {
       "time_info": "T",
       "roles": ["Zoom Master"],
       "short_description": "TODO",
       "more_info": ""
+    },
+    {
+      "time_info": "T<sub>y</sub>-1 min",
+      "roles": ["Zoom Master"],
+      "short_description": "where T<sub>y</sub> is the start of each remote performance. Remind remote performers: in Zoom audio settings, turn on Original Sound and turn off automatic gain adjustment (\"Automatically adjust microphone volume\").",
+      "more_info": "Zoom's default audio processing (noise suppression, auto gain) degrades music."
     },
     {
       "time_info": "Throughout",
