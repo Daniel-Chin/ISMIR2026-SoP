@@ -3,15 +3,18 @@
 - Formats: discussions, short informal presentations, demos, brainstorming, etc. No preparation required.
 
 ### Flow
-1. **Short plenary** in A6-008, streamed on the same Zoom Meeting (breakout rooms not opened yet): introduce the proposed topics and identify those attracting the most interest.
-2. **Breakout**: the Zoom breakout rooms are created after the plenary, named after the chosen topics. Participants split into smaller groups, on-site or online, for ~45 minutes of informal discussion.
+1. **Opening plenary** (hybrid) in A6-008, on the Zoom Meeting hub. Participants vote on topics online using Dotstorming; the top 4 topics are taken.
+2. **On-site vote**: on-site participants vote again among the top 4 to select 2 topics. The [[Unconference Chair]] announces each topic together with its room (A6-008 or A6-007) and its host.
+3. **Discussion** (~45 min), on-site and online groups run separately (not hybrid):
+   - **On-site**: the 2 on-site topics go to A6-008 and A6-007. A6-008 disconnects from Zoom.
+   - **Online**: the remaining 2 topics, as 2 Zoom breakout rooms. The Chair announces the online hosts.
+4. **Reconvene** (hybrid): online breakout rooms close; on-site participants walk back to A6-008, which reconnects to the Zoom hub. Each group's presenter shares its conclusions: 2 "online conclusions" and 2 "on-site conclusions".
+5. The Chair closes the session.
 
 ### Rooms
-- 4 hybrid rooms: A6-008, A6-007, A6-005, A6-004. Each on-site room hosts one topic and is paired with one Zoom breakout room; the on-site room joins its breakout room as one Zoom account (room computer + camera + mic).
-- [[Venue AV/IT]] supports the room systems of A6-007 and A6-008. The [[Zoom Master]] sets up A6-004 and A6-005.
-- Each room has an [[Unconference Room Host]] who facilitates and balances on-site and online participation. Room hosts receive hybrid Q&A instructions and training beforehand (guide: Hosting a Hybrid Discussion).
-- Each room has a [[Mic Runner]].
-- Room hosts are promoted to Zoom co-host in the hub during the plenary, so they can move between breakout rooms.
+- On-site: A6-008 (plenary + one topic) and A6-007 (one topic). Neither room is connected to Zoom during discussion.
+- [[Venue AV/IT]] supports A6-008's room system, including disconnecting and reconnecting it to Zoom.
+- Each group (on-site or online) has a host, assigned by the Chair when topics are announced, and picks a presenter for the reconvene.
+- Online hosts are promoted to Zoom co-host in the hub during the plenary, so they can move between breakout rooms.
 - Online participants see a notice in the hub telling them how to choose a breakout room.
-- One of the 4 hosts is the [[Unconference Chair]], who also runs the opening plenary and makes a concluding statement to everyone, on-site and online.
 - Breakout rooms are a Zoom *Meeting* feature (not Webinar), so this session runs on a Zoom Meeting.

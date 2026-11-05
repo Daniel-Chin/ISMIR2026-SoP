@@ -4,7 +4,7 @@
   "staffing": [
     {"role": "Unconference Chair", "count": 1},
     {"role": "Unconference Room Host", "count": 3},
-    {"role": "Mic Runner", "count": 4},
+    {"role": "Mic Runner", "count": 2},
     {"role": "Venue AV/IT", "count": 1},
     {"role": "Zoom Master", "count": 1}
   ],
@@ -12,25 +12,31 @@
     {
       "time_info": "T",
       "roles": ["Unconference Chair"],
-      "short_description": "Opening plenary (main room): introduce the proposed topics from Dotstorming and form the groups, one per room.",
+      "short_description": "Opening plenary (A6-008, hybrid): run the online topic vote on Dotstorming and take the top 4 topics.",
       "more_info": ""
     },
     {
       "time_info": "T",
       "roles": ["Mic Runner"],
-      "short_description": "During the plenary, bring the mic to on-site participants who speak.",
+      "short_description": "During the plenary and the reconvene, bring the mic to on-site participants who speak.",
       "more_info": ""
     },
     {
       "time_info": "T",
       "roles": ["Zoom Master"],
-      "short_description": "During the plenary, promote the 4 room hosts ([[Unconference Chair]] and [[Unconference Room Host]]s) to co-host in the hub, so they can move between breakout rooms later. Do not open breakout rooms yet.",
+      "short_description": "During the plenary, promote the online hosts to co-host in the hub, so they can move between breakout rooms later. Do not open breakout rooms yet.",
       "more_info": "Use [#panelist-names](https://ismir2026.slack.com/archives/C0CER5XPX19) to identify users."
+    },
+    {
+      "time_info": "After online vote",
+      "roles": ["Unconference Chair"],
+      "short_description": "Run an on-site vote among the top 4 to select 2 on-site topics. Announce each topic with its room and host: the 2 on-site topics (A6-008, A6-007), and the remaining 2 topics online, each with an online host.",
+      "more_info": ""
     },
     {
       "time_info": "End of plenary",
       "roles": ["Zoom Master"],
-      "short_description": "Once the topics are out, create 4 breakout rooms named after the topics, and note which on-site room hosts each topic. Open the breakout rooms, allowing participants to choose their room.",
+      "short_description": "Create 2 breakout rooms named after the online topics. Open the breakout rooms, allowing participants to choose their room.",
       "more_info": "![Screenshot with instructions](images/open_breakout.png)"
     },
     {
@@ -41,20 +47,44 @@
     },
     {
       "time_info": "End of plenary",
+      "roles": ["Venue AV/IT", "Zoom Master"],
+      "short_description": "Disconnect A6-008 from Zoom.",
+      "more_info": ""
+    },
+    {
+      "time_info": "End of plenary",
       "roles": ["Unconference Chair", "Unconference Room Host", "Mic Runner"],
-      "short_description": "Go to your on-site room. Hosts facilitate ~45 min of discussion, balancing on-site and online participation. Mic runners make sure every on-site speaker uses a mic.",
+      "short_description": "Go to your assigned on-site room or online breakout room. Hosts facilitate ~45 min of discussion and have the group pick a presenter for the reconvene.",
       "more_info": ""
     },
     {
       "time_info": "Breakout + 40min",
       "roles": ["Zoom Master"],
-      "short_description": "Broadcast a 5-minute warning to all breakout rooms; then close the breakout rooms so everyone returns to the main room.",
+      "short_description": "Broadcast a 5-minute warning to all breakout rooms; then close the breakout rooms so everyone returns to the hub.",
+      "more_info": ""
+    },
+    {
+      "time_info": "Breakout + 45min",
+      "roles": ["Unconference Room Host"],
+      "short_description": "On-site in A6-007: bring the group back to A6-008.",
+      "more_info": ""
+    },
+    {
+      "time_info": "Breakout + 45min",
+      "roles": ["Venue AV/IT", "Zoom Master"],
+      "short_description": "Reconnect A6-008 to the Zoom hub.",
+      "more_info": ""
+    },
+    {
+      "time_info": "Reconvene",
+      "roles": ["Unconference Chair"],
+      "short_description": "Invite each group's presenter to share conclusions: 2 online conclusions and 2 on-site conclusions.",
       "more_info": ""
     },
     {
       "time_info": "End",
       "roles": ["Unconference Chair"],
-      "short_description": "Make a concluding statement to everyone, on-site and online.",
+      "short_description": "Close the session for everyone, on-site and online.",
       "more_info": ""
     }
   ]
