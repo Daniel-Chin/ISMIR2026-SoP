@@ -14,6 +14,50 @@
   "Keynote": {
     "Q&A Producer": "https://youtu.be/C4MzvUGiUHg",
     "Mic Runner": "https://youtu.be/DgKHzv0EiZA",
-    "Webinar Sentinel On-Site": "https://youtu.be/X1xUygNPFuE"
+    "Webinar Sentinel On-Site": "https://youtu.be/X1xUygNPFuE",
+    "Webinar Sentinel Online": "https://youtu.be/iaAgn9qdi10",
+    "Zoom Master": "https://youtu.be/iLAw0NdNaS4"
+  },
+  "Oral Session": {
+    "Webinar Sentinel On-Site": "https://youtu.be/6xtGazKwcuk",
+    "Webinar Sentinel Online": "https://youtu.be/Ep2Zh6eDZ9M",
+    "Zoom Master": "https://youtu.be/b4jw_KHWtjw"
+  },
+  "Poster Session": {
+    "Poster Session Helpdesk On-site": "https://youtu.be/yyLNHbTvXaY",
+    "Poster Session Helpdesk Online": "https://youtu.be/NrW4A11qRy4",
+    "Zoom Master": "https://youtu.be/YemBPGSi-fQ"
+  },
+  "Award Nominee Oral Session": {
+    "Q&A Tracker": "https://youtu.be/xNAJ-_KS7Zg",
+    "Mic Runner": "https://youtu.be/Pq4LP06_yeE",
+    "Prep Room Assistant": "https://youtu.be/WXOx09nKboA",
+    "Webinar Sentinel On-Site": "https://youtu.be/5C0CF_pbf-E",
+    "Webinar Sentinel Online": "https://youtu.be/s9oY8RgR0xc",
+    "Zoom Master": "https://youtu.be/Q5_5Y558jDE"
+  },
+  "Special Session": {
+    "Special Session Assistant": "https://youtu.be/C5vFaGfutSE",
+    "Mic Runner": "https://youtu.be/2jIr8LkUQU0",
+    "Zoom Master": "https://youtu.be/ZpddSGF37bE"
+  },
+  "Industry Panel": {
+    "Mic Runner": "https://youtu.be/uXSg6zpYbHo",
+    "Webinar Sentinel On-Site": "https://youtu.be/ah997kmKHlA",
+    "Webinar Sentinel Online": "https://youtu.be/B898vPRrSIQ",
+    "Zoom Master": "https://youtu.be/NMGprraMHBc"
+  },
+  "WIMIR Session": {
+    "Q&A Tracker": "https://youtu.be/C42tOZdiw4o",
+    "Mic Runner": "https://youtu.be/JDTzv_uNGMA",
+    "Webinar Sentinel On-Site": "https://youtu.be/v-F4WiCretI",
+    "Webinar Sentinel Online": "https://youtu.be/9nzGkN5U5xs",
+    "Zoom Master": "https://youtu.be/4J1MiKVVgEM"
+  },
+  "Awards and Closing Session": {
+    "Q&A Tracker": "https://youtu.be/r0HynunpkB4",
+    "Mic Runner": "https://youtu.be/Vb89HazT5as",
+    "Webinar Sentinel On-Site": "https://youtu.be/W3wNLZKt8vc",
+    "Webinar Sentinel Online": "https://youtu.be/LDcHAuQJiac"
   }
 }
