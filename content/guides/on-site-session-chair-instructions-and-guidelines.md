@@ -53,7 +53,9 @@ on Slack in #oral-session-?; these are taken to the Poster part. Welcome attende
 joining online and the video is pre-recorded. Extra words distract the audience from the talk.
 - Do not download slides in advance: open them from the Sheet when each talk starts, so they are up to date. 
 Use the web view for Google Slides.
-- If a presenter is not ready within 30 seconds, fall back to playing their pre-recorded video.
+- If a presenter is not ready, or has a technical issue that can be solved soon, move on to the next presenter and 
+come back to this paper later. Announce the change briefly.
+- If there are persistent hard technical issues, fall back to playing the pre-recorded video.
 - Keep time strictly: the Poster part and its Zoom Meeting start right after the Oral part. Signal at 2 and 3 minutes. 
 After 3 minutes, use your judgement on stopping the talk, given the remaining time. If you stop a talk, warmly welcome 
 the audience to that paper's poster.

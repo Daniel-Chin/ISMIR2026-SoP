@@ -110,7 +110,7 @@
       "time_info": "T<sub>y</sub>",
       "roles": ["On-site Session Chair"],
       "short_description": "where T<sub>y</sub> is the start of each presentation. Make sure the presenter is ready and by the stage. Open / Download the right slides from the [Sheet for Session Chair](https://docs.google.com/spreadsheets/d/1JPkY1TY8BfC07ZicIe6FDiZt94PALu3r6AFXhavpwlY/edit?gid=1217880391#gid=1217880391). Introduce the paper title and the presenter. Be brief, nice, and non-distracting.",
-      "more_info": "Tip. Extra words easily distract the audience. The presentations are fast. If a person spends 15 seconds thinking about what you just said, they've missed the first slide.\nIf the presenter is not ready in 30 seconds, fallback to playing the pre-recorded video."
+      "more_info": "Tip. Extra words easily distract the audience. The presentations are fast. If a person spends 15 seconds thinking about what you just said, they've missed the first slide.\nIf the presenter is not ready, or has a technical issue that can be solved soon, move on to the next presenter and come back to this paper later (announce the change briefly).\nIf there are persistent hard technical issues, fallback to playing the pre-recorded video."
     },
     {
       "time_info": "T<sub>y</sub>",
