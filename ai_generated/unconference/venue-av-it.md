@@ -1,4 +1,4 @@
-<!-- generated from content/sessions/90-unconference.md sha256:7b01d516c4a3 -->
+<!-- generated from content/sessions/90-unconference.md sha256:628d2f7a5798 -->
 The Unconference is a session run on a Zoom Meeting: a hybrid plenary in A6-008, then ~45 minutes of non-hybrid discussion in on-site rooms and Zoom breakout rooms, then a hybrid reconvene in A6-008.
 
 ### Your job

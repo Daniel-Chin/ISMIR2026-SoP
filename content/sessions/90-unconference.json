@@ -3,7 +3,9 @@
   "the_idea_markdown_path": "90-unconference.md",
   "staffing": [
     {"role": "Unconference Chair", "count": 1},
-    {"role": "Unconference Room Host", "count": 3},
+    {"role": "Unconference Room Host", "count": 6},
+    {"role": "Unconference Room Volunteer On-Site", "count": 2},
+    {"role": "Unconference Room Volunteer Online", "count": 4},
     {"role": "Mic Runner", "count": 2},
     {"role": "Venue AV/IT", "count": 1},
     {"role": "Zoom Master", "count": 1}
@@ -22,28 +24,28 @@
       "more_info": ""
     },
     {
-      "time_info": "T",
+      "time_info": "After online vote",
       "roles": ["Zoom Master"],
-      "short_description": "During the plenary, promote the online hosts to co-host in the hub, so they can move between breakout rooms later. Do not open breakout rooms yet.",
-      "more_info": "Use [#panelist-names](https://ismir2026.slack.com/archives/C0CER5XPX19) to identify users."
+      "short_description": "Create 4 breakout rooms named after the top 4 topics. Open the breakout rooms, allowing participants to choose their room.",
+      "more_info": "![Screenshot with instructions](images/open_breakout.png)"
+    },
+    {
+      "time_info": "After online vote",
+      "roles": ["Zoom Master"],
+      "short_description": "Screenshare this notice (in More Info) in the hub. Press 'pause' in the Zoom top bar to freeze the screenshare.",
+      "more_info": "![Hub notice.](images/unconference_hub_notice.png)"
+    },
+    {
+      "time_info": "After online vote",
+      "roles": ["Unconference Room Volunteer Online"],
+      "short_description": "Join your assigned breakout room (one per volunteer). Help people join, make sure someone takes the Room Host role (moderate, keep notes, present conclusions), and keep time.",
+      "more_info": ""
     },
     {
       "time_info": "After online vote",
       "roles": ["Unconference Chair"],
-      "short_description": "Run an on-site vote among the top 4 to select 2 on-site topics. Announce each topic with its room and host: the 2 on-site topics (A6-008, A6-007), and the remaining 2 topics online, each with an online host.",
+      "short_description": "Run an on-site vote among the top 4 to select 2 on-site topics. Announce each with its room (A6-008, A6-007).",
       "more_info": ""
-    },
-    {
-      "time_info": "End of plenary",
-      "roles": ["Zoom Master"],
-      "short_description": "Create 2 breakout rooms named after the online topics. Open the breakout rooms, allowing participants to choose their room.",
-      "more_info": "![Screenshot with instructions](images/open_breakout.png)"
-    },
-    {
-      "time_info": "End of plenary",
-      "roles": ["Zoom Master"],
-      "short_description": "Screenshare this notice (in More Info) in the hub. Press 'pause' in the Zoom top bar to freeze the screenshare.",
-      "more_info": "![Hub notice.](images/unconference_hub_notice.png)"
     },
     {
       "time_info": "End of plenary",
@@ -53,8 +55,14 @@
     },
     {
       "time_info": "End of plenary",
-      "roles": ["Unconference Chair", "Unconference Room Host", "Mic Runner"],
-      "short_description": "Go to your assigned on-site room or online breakout room. Hosts facilitate ~45 min of discussion and have the group pick a presenter for the reconvene.",
+      "roles": ["Unconference Room Volunteer On-Site"],
+      "short_description": "Go to your assigned on-site room (A6-008 or A6-007). Help people find the room, make sure someone takes the Room Host role (moderate, keep notes, present conclusions), and keep time (~45 min).",
+      "more_info": ""
+    },
+    {
+      "time_info": "Discussion start",
+      "roles": ["Unconference Room Volunteer On-Site", "Unconference Room Volunteer Online"],
+      "short_description": "Introduce yourself to the room as the volunteer, and announce that the group needs a Room Host: someone to moderate, keep notes, and present the conclusions at the reconvene.",
       "more_info": ""
     },
     {
@@ -64,9 +72,15 @@
       "more_info": ""
     },
     {
+      "time_info": "Breakout + 40min",
+      "roles": ["Unconference Room Volunteer On-Site", "Unconference Room Volunteer Online"],
+      "short_description": "Give your group a 5-minute warning, and make sure the Room Host is ready to present conclusions.",
+      "more_info": ""
+    },
+    {
       "time_info": "Breakout + 45min",
-      "roles": ["Unconference Room Host"],
-      "short_description": "On-site in A6-007: bring the group back to A6-008.",
+      "roles": ["Unconference Room Volunteer On-Site"],
+      "short_description": "In A6-007: bring the group back to A6-008.",
       "more_info": ""
     },
     {
@@ -78,7 +92,7 @@
     {
       "time_info": "Reconvene",
       "roles": ["Unconference Chair"],
-      "short_description": "Invite each group's presenter to share conclusions: 2 online conclusions and 2 on-site conclusions.",
+      "short_description": "Invite each group's Room Host to share conclusions: 4 online and 2 on-site.",
       "more_info": ""
     },
     {

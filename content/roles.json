@@ -32,14 +32,28 @@
     "guides": ["Hosting a Hybrid Discussion", "For Zoom Co-Hosts"],
     "is_volunteer": false,
     "is_onsite": false,
-    "job_description": "Run the Unconference opening plenary: run the topic votes and announce each topic with its room and host. Also host one of the groups as an [[Unconference Room Host]]. At the reconvene, invite each group's presenter to share conclusions, then close the session for everyone, on-site and online."
+    "job_description": "Run the Unconference opening plenary: run the topic votes and announce the topics with their rooms. Do not take a breakout room role. At the reconvene, invite each group's [[Unconference Room Host]] to share conclusions, then close the session for everyone, on-site and online."
   },
   {
     "name": "Unconference Room Host",
     "guides": ["Hosting a Hybrid Discussion", "For Zoom Co-Hosts"],
     "is_volunteer": false,
+    "is_onsite": false,
+    "job_description": "Host one Unconference group, either on-site or in a Zoom breakout room. Not necessarily pre-assigned: any participant can take this role, and the room's [[Unconference Room Volunteer On-Site]] or [[Unconference Room Volunteer Online]] makes sure someone does. Moderate the discussion, keep notes, and present the group's conclusions at the reconvene."
+  },
+  {
+    "name": "Unconference Room Volunteer On-Site",
+    "is_volunteer": true,
     "is_onsite": true,
-    "job_description": "Host one Unconference group, either on-site or in a Zoom breakout room. Facilitate the discussion, and have the group pick a presenter to share its conclusions at the reconvene."
+    "guides": ["For All Volunteers"],
+    "job_description": "Support one on-site Unconference room (A6-008 or A6-007). Make sure people can find and join the room, make sure someone takes the [[Unconference Room Host]] role (moderate, keep notes, present conclusions), and keep time."
+  },
+  {
+    "name": "Unconference Room Volunteer Online",
+    "is_volunteer": true,
+    "is_onsite": false,
+    "guides": ["For All Volunteers"],
+    "job_description": "Support one Unconference Zoom breakout room. Make sure people can join the room, make sure someone takes the [[Unconference Room Host]] role (moderate, keep notes, present conclusions), and keep time."
   },
   {
     "name": "Mic Runner",
