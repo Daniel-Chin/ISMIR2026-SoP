@@ -54,10 +54,21 @@
     "Webinar Sentinel Online": "https://youtu.be/9nzGkN5U5xs",
     "Zoom Master": "https://youtu.be/4J1MiKVVgEM"
   },
+  "ISMIR Society Meeting": {
+    "Q&A Tracker": "https://youtu.be/7MrQ-1ZNAw4",
+    "Mic Runner": "https://youtu.be/qer8D7Pxjx0",
+    "Webinar Sentinel On-Site": "https://youtu.be/jYCrqbnVtf0",
+    "Webinar Sentinel Online": "https://youtu.be/7B8g1MA5daE"
+  },
   "Awards and Closing Session": {
     "Q&A Tracker": "https://youtu.be/r0HynunpkB4",
     "Mic Runner": "https://youtu.be/Vb89HazT5as",
     "Webinar Sentinel On-Site": "https://youtu.be/W3wNLZKt8vc",
     "Webinar Sentinel Online": "https://youtu.be/LDcHAuQJiac"
+  },
+  "Unconference": {
+    "Unconference Room Volunteer On-Site": "https://youtu.be/NpbFpYU5aHk",
+    "Unconference Room Volunteer Online": "https://youtu.be/LBvlCPeGmTU",
+    "Mic Runner": "https://youtu.be/7oyE0rtrKts"
   }
 }
