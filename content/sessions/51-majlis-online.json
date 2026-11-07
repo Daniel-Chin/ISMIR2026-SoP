@@ -2,13 +2,20 @@
   "name": "Online Majlis",
   "the_idea_markdown_path": "51-majlis-online.md",
   "staffing": [
-    {"role": "Online Majlis Crew", "count": 1}
+    {"role": "Online Majlis Crew", "count": 1},
+    {"role": "Zoom Master", "count": 1}
   ],
   "runsheet": [
     {
       "time_info": "T−10 min",
       "roles": ["Online Majlis Crew"],
-      "short_description": "Join the Zoom Webinar as co-host.",
+      "short_description": "Join the Zoom Webinar. Use the Q&A tool to submit a question 'I am volunteer, plz make me cohost.'",
+      "more_info": ""
+    },
+    {
+      "time_info": "T−5 min",
+      "roles": ["Zoom Master"],
+      "short_description": "Promote each [[Online Majlis Crew]] to panelist and then co-host. Delete the question from Q&A",
       "more_info": ""
     },
     {
