@@ -4,8 +4,11 @@
 - Turn off all laptops.
 - Share recordings.
   - Download recordings from Zoom.
-  - Mask elements as requested by participants.
-  - Split webinar recording by events. Refer to [github.com/Daniel-Chin/ISMIR2026-Kit/blob/main/scripts/event_boundaries_to_ffmpeg.py](https://github.com/Daniel-Chin/ISMIR2026-Kit/blob/main/scripts/event_boundaries_to_ffmpeg.py)
-  - Upload to slack channel [#yesterday-on-videotape](https://ismir2026.slack.com/archives/C0C7ME3JWAH). 
-  - Announce videos ready in relevant channels, e.g. poster session channels. Example message:
-    - Video recordings of this event have been released in [#yesterday-on-videotape](https://ismir2026.slack.com/archives/C0C7ME3JWAH).
+  - If tutorial day:
+    - Send videos to registrants via email.
+  - If not tutorial day:
+    - Mask elements as requested by participants.
+    - Split webinar recording by events. Refer to [github.com/Daniel-Chin/ISMIR2026-Kit/blob/main/scripts/event_boundaries_to_ffmpeg.py](https://github.com/Daniel-Chin/ISMIR2026-Kit/blob/main/scripts/event_boundaries_to_ffmpeg.py)
+    - Upload to slack channel [#yesterday-on-videotape](https://ismir2026.slack.com/archives/C0C7ME3JWAH). 
+    - Announce videos ready in relevant channels, e.g. poster session channels. Example message:
+      - Video recordings of this event have been released in [#yesterday-on-videotape](https://ismir2026.slack.com/archives/C0C7ME3JWAH).
