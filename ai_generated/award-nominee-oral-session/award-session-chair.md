@@ -1,4 +1,4 @@
-<!-- generated from content/sessions/15-award-nominee-oral-session.md sha256:9342b64ed81a -->
+<!-- generated from content/sessions/15-award-nominee-oral-session.md sha256:bbcae65f74bf -->
 The Award Nominee Oral Session presents the award-nominated papers: each paper gets a 10-minute presentation and a 5-minute Q&A. It takes place in the 300-capacity auditorium A6-008 and is streamed via Zoom Webinar 500.
 
 ### Your job
@@ -26,7 +26,7 @@ The Award Nominee Oral Session presents the award-nominated papers: each paper g
 ### Google Sheet "For Session Chair"
 - [Sheet for Award Session Chair](https://docs.google.com/spreadsheets/d/1JPkY1TY8BfC07ZicIe6FDiZt94PALu3r6AFXhavpwlY/edit?gid=332004949#gid=332004949)
 - Grouped by session, sorted by presentation order. Each paper shows:
-  - CMT ID, title, session_index, position_in_session, chair_onsite, chair_remote, pre-recorded_video, slides_pdf, slides_preferred.
+  - CMT ID, title, award_session_index, position_in_session, chair_onsite, chair_remote, presenter, slides_pdf, slides_preferred.
 
 ### Stage laptops
 - Two stage laptops, preferably MacBook (for maximum compatibility). The presenter uses the stage laptop for slides.

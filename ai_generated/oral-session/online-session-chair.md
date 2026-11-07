@@ -1,4 +1,4 @@
-<!-- generated from content/sessions/13-oral.md sha256:cd7710af2101 -->
+<!-- generated from content/sessions/13-oral.md sha256:8f3808d787e0 -->
 The Oral Session runs 30 minutes in the 300-capacity auditorium A6-008 and is streamed over Zoom Webinar. It holds 10 presentations of 3 minutes each, back to back, with no Q&A.
 
 - If the presenter is on-site, they present on stage. Otherwise, the pre-recorded video already on Miniconf is played.

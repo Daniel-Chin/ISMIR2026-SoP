@@ -56,6 +56,14 @@
     "job_description": "Support one Unconference Zoom breakout room. Make sure people can join the room, make sure someone takes the [[Unconference Room Host]] role (moderate, keep notes, present conclusions), and keep time."
   },
   {
+    "name": "Online Majlis Crew",
+    "is_volunteer": true,
+    "is_onsite": false,
+    "guides": ["For All Volunteers", "For Zoom Co-Hosts", "Promote to & Demote from Panelist", "Assisting Online Attendees", "Assisting with Zoom"],
+    "job_for_who": "Familiar with Zoom. Zoom Webinar training is provided, including promoting attendees to panelist.",
+    "job_description": "Support one Online Majlis, a Zoom Webinar with 40+ participants, as a co-host. Promote participants who should speak to panelist, and help online participants with Zoom issues."
+  },
+  {
     "name": "Mic Runner",
     "is_volunteer": true,
     "is_onsite": true,
@@ -80,7 +88,7 @@
     "name": "Zoom Master",
     "is_volunteer": true,
     "is_onsite": true,
-    "guides": ["For All Volunteers", "For Zoom Co-Hosts", "Assisting Online Attendees", "Assisting with Zoom", "Assisting with Slack", "About Webinar Q&A"],
+    "guides": ["For All Volunteers", "For Zoom Co-Hosts", "Assisting Online Attendees", "Assisting with Zoom", "Assisting with Slack", "About Webinar Q&A", "Promote to & Demote from Panelist"],
     "job_for_who": "High commitment. Has to miss parts of the conference.",
     "job_description": "Configure Zoom Meetings / Webinars under time constraints. Follow the Virtual Chair around on the first day to observe jobs. Use [#panelist-names](https://ismir2026.slack.com/archives/C0CER5XPX19) to identify users to promote to panelists."
   },

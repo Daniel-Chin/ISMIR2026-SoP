@@ -1,4 +1,4 @@
-<!-- generated from content/sessions/13-oral.md sha256:61bb62f45014 -->
+<!-- generated from content/sessions/13-oral.md sha256:d06ffd473781 -->
 The Oral Session runs 30 minutes in the 300-capacity auditorium A6-008 and is streamed over Zoom Webinar. It holds 10 presentations of 3 minutes each, back to back, with no Q&A.
 
 - If the presenter is on-site, they present on stage. Otherwise, the pre-recorded video already on Miniconf is played.
@@ -14,7 +14,7 @@ The Oral Session runs 30 minutes in the 300-capacity auditorium A6-008 and is st
 ### Google Sheet "For Session Chair"
 - [Sheet for Session Chair](https://docs.google.com/spreadsheets/d/1JPkY1TY8BfC07ZicIe6FDiZt94PALu3r6AFXhavpwlY/edit?gid=1217880391#gid=1217880391)
 - Grouped by session, sorted by presentation order. Each paper shows:
-  - CMT ID, title, session_index, position_in_session, chair_onsite, chair_remote, pre-recorded_video, slides_pdf, slides_preferred.
+  - CMT ID, title, session_index, position_in_session, chair_onsite, chair_remote, modality, presenter, pre-recorded_video, slides_pdf, slides_preferred, Fun Facts.
 
 ### Stage laptops
 - Two stage laptops, preferably MacBook (for maximum compatibility).
