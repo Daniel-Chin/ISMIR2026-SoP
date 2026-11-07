@@ -5,7 +5,8 @@
 - Share recordings.
   - Download recordings from Zoom.
   - If tutorial day:
-    - Send videos to registrants via email.
+    - Send videos to the private slack channels.
+    - Mention in yesterday-on-videotape but don't include the video.
   - If not tutorial day:
     - Mask elements as requested by participants.
     - Split webinar recording by events. Refer to [github.com/Daniel-Chin/ISMIR2026-Kit/blob/main/scripts/event_boundaries_to_ffmpeg.py](https://github.com/Daniel-Chin/ISMIR2026-Kit/blob/main/scripts/event_boundaries_to_ffmpeg.py)
