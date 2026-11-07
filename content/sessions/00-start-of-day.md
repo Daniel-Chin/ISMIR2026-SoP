@@ -13,9 +13,9 @@ Jobs for [[Zoom Master]].
   - Set up 10 poster kiosks. Each laptop: 
     - has Zoom client; 
       - log into a unique Zoom account; 
-      - In Audio settings, turn of auto gain.
+      - In Audio settings, turn off auto gain (adaptive volume).
         - (Auto gain breaks manual gain control for mics.)
-      - In Sharescreen settings > Advanced, tick "Use Mac System Picker".
+      - In Sharescreen settings > Advanced, untick "Use Mac System Picker".
       - In Video settings, untick Auto Frame.
     - keep a URL to / window of miniconf;
     - log into Slack using a non-Admin account.

@@ -31,7 +31,7 @@
     {
       "time_info": "T−3 min",
       "roles": ["Zoom Master"],
-      "short_description": "For each kiosk laptop: enter a breakout room, start the Live-Overview observer app, open the poster on miniconf. [if presenter online] Minimize miniconf. [if presenter on-site] start screenshare, click the purple System Picker icon on the top system menu bar, click Presenter Overlay, click Large, show the Zoom floating menu bar. [always] Start “recording to this computer”. [if presenter on-site] Click the green button with a downward arrow to show the remote view, and keep it visible for the presenter.",
+      "short_description": "For each kiosk laptop: enter a breakout room, start the Live-Overview observer app, start “recording to this computer”.",
       "more_info": "P2-9 indicated not to be recorded."
     },
     {
