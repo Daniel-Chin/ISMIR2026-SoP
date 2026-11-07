@@ -7,6 +7,7 @@
     <session>/index.html            The Idea (or its AI-generated view for the one ticked role),
                                     Staffing, Runsheet (?mode=...&roles=a,b)
     <session>/runsheet/index.html   Redirects to <session>/#runsheet
+    majlis/index.html               Disambiguation: links to every Majlis session type
     schedule-for-venue-av-it/       Date x time grid of events staffed by Venue AV/IT
     static/                         CSS and JS
     images/                         copied from content/images/
@@ -55,6 +56,7 @@ def build_site(sop: SOP, out: Path, content: Path) -> None:
         slug = slugify(session.name)
         _write(out / slug / 'index.html', _session_page(session, roles))
         _write(out / slug / 'runsheet' / 'index.html', _runsheet_redirect_page())
+    _write(out / 'majlis' / 'index.html', _majlis_page(sop))
     if schedule.EVENTS_CSV.exists():
         _write(
             out / 'schedule-for-venue-av-it' / 'index.html',
@@ -152,6 +154,21 @@ def _menu_page(sop: SOP) -> str:
     )
     body = f'{_top_tabs("", "sessions")}\n<ul class="menu">\n{items}\n</ul>'
     return _page(SITE_TITLE, '', body)
+
+
+def _majlis_page(sop: SOP) -> str:
+    root = '../'
+    items = '\n'.join(
+        f'<li><h2><a href="{root}{slugify(s.name)}/">{escape(s.name)}</a></h2></li>'
+        for s in sop.sessions
+        if 'majlis' in slugify(s.name)
+    )
+    body = f'<h1>Majlis</h1>\n<p>Which Majlis do you mean?</p>\n<ul class="menu">\n{items}\n</ul>'
+    # Carry this page's ?query and #hash over to the chosen session page.
+    script = '''<script>
+document.querySelectorAll('ul.menu a').forEach((a) => { a.href += location.search + location.hash; });
+</script>'''
+    return _page('Majlis', root, body, scripts=script)
 
 
 def _role_href(root: str, role: str) -> str:

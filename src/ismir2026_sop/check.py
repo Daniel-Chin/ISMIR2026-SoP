@@ -10,7 +10,7 @@ from .md import find_images, find_mentions
 from .slug import slugify
 
 # Top-level output paths that a session address must not take.
-RESERVED_SLUGS = {'static', 'images', 'roles', 'guides', 'schedule-for-venue-av-it'}
+RESERVED_SLUGS = {'static', 'images', 'roles', 'guides', 'majlis', 'schedule-for-venue-av-it'}
 
 
 def find_problems(sop: SOP, content: Path) -> list[str]:
