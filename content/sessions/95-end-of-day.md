@@ -13,3 +13,4 @@
     - Upload to slack channel [#yesterday-on-videotape](https://ismir2026.slack.com/archives/C0C7ME3JWAH). 
     - Announce videos ready in relevant channels, e.g. poster session channels. Example message:
       - Video recordings of this event have been released in [#yesterday-on-videotape](https://ismir2026.slack.com/archives/C0C7ME3JWAH).
+    - Inform Saptarshi Chakraborty for captioning.
