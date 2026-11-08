@@ -22,7 +22,7 @@
       "time_info": "T−10 min",
       "roles": ["Zoom Master"],
       "short_description": "In the Zoom webinar, promote the tutorial presenters and [[Tutorial Moderator]] to panelist. Disable Zoom Chat and raised hand (for attendees).",
-      "more_info": "Chat > menu > attendees can chat with: nobody. Host Tools > attendees > raise hand: off."
+      "more_info": "Chat > menu > attendees can chat with: nobody. Host Tools > attendees > raise hand: off.\nUse use [#panelist-names](https://ismir2026.slack.com/archives/C0CER5XPX19)"
     },
     {
       "time_info": "T−8 min",
