@@ -1,7 +1,6 @@
 Jobs for [[Zoom Master]].
 
 - Deploy 1 laptop in the Auditorium backstage for the Webinar Sentinel On-Site, 2 laptops on the Auditorium stage for Speaker and Session Chair, and 1 laptop on the Auditorium stage for Q&A Tracker/Producer. For each laptop:
-  - Connect to the event-critical wifi.
   - Add to the desktop: 
     - Link to Zoom Webinar.
     - [Sheet for Session Chair](https://docs.google.com/spreadsheets/d/1JPkY1TY8BfC07ZicIe6FDiZt94PALu3r6AFXhavpwlY/edit?gid=1217880391#gid=1217880391)
@@ -11,6 +10,7 @@ Jobs for [[Zoom Master]].
 - Download all pre-recorded videos into 2 of the laptops, organize them by session, and sort them by position.
 - Poster Hall:
   - Set up 10 poster kiosks. Each laptop: 
+    - Connect to the event-critical wifi.
     - has Zoom client; 
       - log into a unique Zoom account; 
       - In Audio settings, turn off auto gain (adaptive volume).
