@@ -37,7 +37,7 @@
     {
       "time_info": "T−8 min",
       "roles": ["Zoom Master"],
-      "short_description": "Test audio+video input+output with each online panelist and the [[Industry Chair]], and test screenshare (if any slides). Seat the Moderator and the on-site panelist on stage.",
+      "short_description": "Test audio+video input+output with each online panelist and the [[Industry Chair]], and test screenshare with \"Share sound\" ticked (if any slides/audio). Seat the Moderator and the on-site panelist on stage.",
       "more_info": ""
     },
     {
@@ -61,7 +61,7 @@
     {
       "time_info": "T−2 min",
       "roles": ["Industry Chair"],
-      "short_description": "Open the Q&A panel (screenshot) and keep it open at all times. Stay muted with video off until Q&A.",
+      "short_description": "Open the Q&A panel (screenshot) and keep it open at all times. Stay muted with video off except when speaking.",
       "more_info": "![The Q&A button in Zoom](images/q&a_button.png)"
     },
     {
@@ -69,6 +69,24 @@
       "roles": ["Zoom Master"],
       "short_description": "The Moderator starts the session and introduces the panelists (including the remote [[Industry Chair]]).",
       "more_info": "Note that the livestream view contains only the podium area, not the entire stage. Remind on-site speakers to stay in the camera view."
+    },
+    {
+      "time_info": "T",
+      "roles": ["Industry Chair"],
+      "short_description": "Announce the agenda: 4 × 10-min sponsor presentations, then 30-min Q&A.",
+      "more_info": ""
+    },
+    {
+      "time_info": "Presentations",
+      "roles": ["Industry Chair"],
+      "short_description": "Keep time (10 min each). The Moderator introduces each next speaker.",
+      "more_info": ""
+    },
+    {
+      "time_info": "Presentations",
+      "roles": ["Zoom Master"],
+      "short_description": "Switch screenshare between presenters. Remind online presenters to tick \"Share sound\" if needed.",
+      "more_info": ""
     },
     {
       "time_info": "Throughout",
@@ -91,7 +109,7 @@
     {
       "time_info": "Q&A",
       "roles": ["Industry Chair"],
-      "short_description": "Once on-site questions are done and the Moderator hands over, unmute (video on), pick the most interesting online questions and read them to the panel. Mark each as answered.",
+      "short_description": "Keep time (30 min). Once on-site questions are done and the Moderator hands over, unmute (video on), pick the most interesting online questions and read them to the panel. Mark each as answered.",
       "more_info": "On-site questions first, then online questions. No need to switch back and forth."
     },
     {
