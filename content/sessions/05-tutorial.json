@@ -71,18 +71,6 @@
       "roles": ["Tutorial Moderator", "Zoom Master"],
       "short_description": "Announce when the tutorial resumes. Display the holding slide during the break.",
       "more_info": ""
-    },
-    {
-      "time_info": "End",
-      "roles": ["Tutorial Moderator"],
-      "short_description": "Thank the presenters. Clear the Q&A queue for the next event.",
-      "more_info": "Manually click 'dismiss' on every outstanding question."
-    },
-    {
-      "time_info": "End",
-      "roles": ["Zoom Master"],
-      "short_description": "Demote the presenters from panelists to attendees.",
-      "more_info": ""
     }
   ]
 }
