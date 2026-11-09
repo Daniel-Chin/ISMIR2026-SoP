@@ -31,7 +31,7 @@
     {
       "time_info": "T−10 min",
       "roles": ["Zoom Master"],
-      "short_description": "In the Zoom webinar, promote the 3 online panelists, the remote [[Industry Chair]], the Moderator, and the on-site panelist (if presenting slides) to panelist; promote [[Webinar Sentinel On-Site]] and backstage to cohost.",
+      "short_description": "In the Zoom webinar, promote the 2 online panelists, the remote [[Industry Chair]], the Moderator, and the on-site panelist (if presenting slides) to panelist; promote [[Webinar Sentinel On-Site]] and backstage to cohost.",
       "more_info": "Use [#panelist-names](https://ismir2026.slack.com/archives/C0CER5XPX19) to identify users."
     },
     {
@@ -67,19 +67,13 @@
     {
       "time_info": "T",
       "roles": ["Zoom Master"],
-      "short_description": "The Moderator starts the session and introduces the panelists (including the remote [[Industry Chair]]).",
+      "short_description": "The Moderator starts the session, introduces the panelists (including the remote [[Industry Chair]]) and announces the agenda: 3 × 10-min sponsor presentations, then a 30-min discussion and a 30-min Q&A.",
       "more_info": "Note that the livestream view contains only the podium area, not the entire stage. Remind on-site speakers to stay in the camera view."
     },
     {
-      "time_info": "T",
-      "roles": ["Industry Chair"],
-      "short_description": "Announce the agenda: 4 × 10-min sponsor presentations, then 30-min Q&A.",
-      "more_info": ""
-    },
-    {
       "time_info": "Presentations",
-      "roles": ["Industry Chair"],
-      "short_description": "Keep time (10 min each). The Moderator introduces each next speaker.",
+      "roles": ["Zoom Master"],
+      "short_description": "The Moderator keeps time (10 min each) and introduces each next speaker.",
       "more_info": ""
     },
     {
@@ -107,9 +101,21 @@
       "more_info": ""
     },
     {
+      "time_info": "Discussion",
+      "roles": ["Zoom Master"],
+      "short_description": "The Moderator leads a 30-min discussion with the panelists and keeps time.",
+      "more_info": ""
+    },
+    {
+      "time_info": "Q&A",
+      "roles": ["Zoom Master"],
+      "short_description": "The Moderator keeps time (30 min), takes on-site questions first, then hands over to the [[Industry Chair]] for online questions.",
+      "more_info": ""
+    },
+    {
       "time_info": "Q&A",
       "roles": ["Industry Chair"],
-      "short_description": "Keep time (30 min). Once on-site questions are done and the Moderator hands over, unmute (video on), pick the most interesting online questions and read them to the panel. Mark each as answered.",
+      "short_description": "Once on-site questions are done and the Moderator hands over, unmute (video on), pick the most interesting online questions and read them to the panel. Mark each as answered.",
       "more_info": "On-site questions first, then online questions. No need to switch back and forth."
     },
     {
