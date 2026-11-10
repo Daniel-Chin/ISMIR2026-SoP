@@ -37,7 +37,7 @@
     {
       "time_info": "T−1 min",
       "roles": ["Zoom Master"],
-      "short_description": "Use the helpdesk laptop to screenshare this notice (in More Info) in the Hub. Press 'pause' in Zoom top bar to freeze the screenshare for the laptop to navigate away.",
+      "short_description": "Use the helpdesk laptop to screenshare this notice (in More Info) in the Hub. Press 'pause' in Zoom top bar to freeze the screenshare for the laptop to navigate away, but know that new joiners see a blank screen instead of the freezed screen, so press 'resume share' with the image once in a while.",
       "more_info": "![Hub notice.](images/poster_hub_notice.png)"
     },
     {
