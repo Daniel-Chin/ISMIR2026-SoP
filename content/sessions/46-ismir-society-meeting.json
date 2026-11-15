@@ -31,7 +31,7 @@
     {
       "time_info": "T−10 min",
       "roles": ["Zoom Master"],
-      "short_description": "In the Zoom webinar, promote all online panelists, all on-site panelists (if presenting slides), and the [[Q&A Tracker]] to panelist; promote [[Webinar Sentinel On-Site]] and backstage to cohost.",
+      "short_description": "In the Zoom webinar, promote all online panelists, all on-site panelists (if presenting slides), and the [[Q&A Tracker]] to panelist; promote backstage to cohost. Keep [[Webinar Sentinel On-Site]] as attendee.",
       "more_info": "Use [#panelist-names](https://ismir2026.slack.com/archives/C0CER5XPX19) to identify users."
     },
     {
@@ -85,7 +85,7 @@
     {
       "time_info": "Throughout",
       "roles": ["Webinar Sentinel On-Site"],
-      "short_description": "Sit on-site in the backstage but view only the Zoom Webinar on the provided laptop. Use the provided headphones. Upon issues, use judgement: Either unmute to raise the issue, or contact the [[Zoom Master]] immediately by walking to them.",
+      "short_description": "Sit on-site in the backstage but view only the Zoom Webinar on the provided laptop. Use the provided headphones. You join as a regular attendee (not a panelist or cohost) so you see exactly what the online audience sees. Upon issues, contact the [[Zoom Master]] immediately by walking to them.",
       "more_info": "Pay special attention to the online panelists' audio, both in the webinar and in the room."
     },
     {

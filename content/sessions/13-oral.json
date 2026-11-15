@@ -79,13 +79,13 @@
     {
       "time_info": "T−3 min",
       "roles": ["Zoom Master"],
-      "short_description": "In the Zoom webinar, promote the [[Webinar Sentinel On-Site]] to panelist; and backstage to cohost.",
+      "short_description": "In the Zoom webinar, promote backstage to cohost. Keep [[Webinar Sentinel On-Site]] as attendee.",
       "more_info": ""
     },
     {
       "time_info": "Throughout",
       "roles": ["Webinar Sentinel On-Site"],
-      "short_description": "Sit on-site in the backstage but view only the Zoom Webinar on the provided laptop. Not only listen, but try to understand and enjoy the presentations --- you catch more issues this way. Keep the auditorium screen visible so any mismatch is caught, but pay main attention to the webinar. Use the provided headphones. Upon issues, use judgement: Either unmute to raise the issue, or contact the [[Zoom Master]] immediately by walking to them.",
+      "short_description": "Sit on-site in the backstage but view only the Zoom Webinar on the provided laptop. Not only listen, but try to understand and enjoy the presentations --- you catch more issues this way. Keep the auditorium screen visible so any mismatch is caught, but pay main attention to the webinar. Use the provided headphones. You join as a regular attendee (not a panelist or cohost) so you see exactly what the online audience sees. Upon issues, contact the [[Zoom Master]] immediately by walking to them.",
       "more_info": ""
     },
     {
